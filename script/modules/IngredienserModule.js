@@ -45,9 +45,7 @@ const IngredienserModule = (function(){
         }
     ];
 
-    const getAllIngredienser = () => {
-        return ingredienser;
-    };
+    const getAllIngredienser = () => ingredienser;
 
     return {getAllIngredienser};
 

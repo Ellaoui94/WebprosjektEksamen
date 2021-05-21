@@ -32,9 +32,7 @@ const RestaurantModule = (function() {
         }
     ];
 
-    const getAllRestauranter = () => {
-        return restauranter;
-    };
+    const getAllRestauranter = () => restauranter;
 
     return {getAllRestauranter};
 

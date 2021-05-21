@@ -35,9 +35,7 @@ const AnsatteModule = (function(){
         },
     ];
 
-    const getAllAnsatte = () => {
-        return ansatte;
-    };
+    const getAllAnsatte = () => ansatte;
 
     return {getAllAnsatte};
 

@@ -66,7 +66,7 @@ const MatOgDrikkeModule = (function(){
     const muligeIngredienser = IngredienserModule.getAllIngredienser
 
     // Funksjon som beregner kostnad på noe på menyen utifra kostnad på ingrediensene
-    function getKostnad(){
+    const getKostnad = () => {
         let kostnad = 0
         this.ingredienser.forEach(rettIngrediens => {
             muligeIngredienser.forEach(ingrediens => {
@@ -79,14 +79,12 @@ const MatOgDrikkeModule = (function(){
     };
 
     // Funksjon som beregner prisen på noe på menyen
-    function getPris(){
+    const getPris = () => {
         pris = this.kostnad * 2;
         return pris;
     };
 
-    const getAllMatOgDrikke = () => {
-        return matOgDrikke;
-    };
+    const getAllMatOgDrikke = () => matOgDrikke;
 
     return {getAllMatOgDrikke};
 
