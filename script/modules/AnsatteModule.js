@@ -22,7 +22,17 @@ const AnsatteModule = (function(){
             stillingsprosent: 100,
             timelønn: 200,
             bilde: "bildefil.png"
-        }
+        },
+        {
+            id: 00002,
+            navn: "Anders Andersen",
+            alder: 43,
+            stilling: "Leder",
+            arbeidssted: "Gyldne Pizza Sentrum",
+            stillingsprosent: 100,
+            timelønn: 250,
+            bilde: "bildefil.png"
+        },
     ];
 
     const getAllAnsatte = () => {

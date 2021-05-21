@@ -1,3 +1,5 @@
+import IngredienserModule from "./IngredienserModule.js";
+
 const MatOgDrikkeModule = (function(){
 
     const matOgDrikke = [
@@ -17,8 +19,8 @@ const MatOgDrikkeModule = (function(){
                 "Allergen 2",
                 "Allergen 3"
             ],
-            kostnad: 50, // Må være bestemt av en funksjon
-            pris: 200 // Må være bestemt av en funksjon
+            kostnad: getKostnad(),
+            pris: getPris()
         },
         {
             // Denne skal ikke brukes i det ferdige produktet
@@ -36,10 +38,51 @@ const MatOgDrikkeModule = (function(){
                 "Allergen 2",
                 "Allergen 3"
             ],
-            kostnad: 50, // Må være bestemt av en funksjon
-            pris: 200 // Må være bestemt av en funksjon
-          }
+            kostnad: getKostnad(),
+            pris: getPris()
+        },
+        {
+            id: 00002,
+            navn: "Enkel Pepperoni",
+            kategori: "Pizza",
+            bilde: "filnavn.png",
+            ingredienser: [
+                "Fin bunn",
+                "Cheddar",
+                "Tomatsaus",
+                "Pepperoni",
+                "Paprika"
+            ],
+            allergener: [
+                "Egg",
+                "Mel",
+                "Melk"
+            ],
+            kostnad: getKostnad(),
+            pris: getPris()
+        }
     ];
+
+    const muligeIngredienser = IngredienserModule.getAllIngredienser
+
+    // Funksjon som beregner kostnad på noe på menyen utifra kostnad på ingrediensene
+    function getKostnad(){
+        let kostnad = 0
+        this.ingredienser.forEach(rettIngrediens => {
+            muligeIngredienser.forEach(ingrediens => {
+                if (rettIngrediens == ingrediens.navn){
+                    kostnad += ingrediens.kostnadPerRett;
+                };
+            });
+        });
+        return kostnad;
+    };
+
+    // Funksjon som beregner prisen på noe på menyen
+    function getPris(){
+        pris = this.kostnad * 2;
+        return pris;
+    };
 
     const getAllMatOgDrikke = () => {
         return matOgDrikke;

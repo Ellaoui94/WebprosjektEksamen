@@ -9,7 +9,7 @@ const RestaurantModule = (function() {
             telefon: "00000000",
             bilde: "bildefil.png",
             kapasitet: 50,
-            leder: "SAMPLE NAME"
+            leder: ["SAMPLE NAME", 00001]
         },
         {
             // Denne skal ikke brukes i det ferdige produktet
@@ -19,7 +19,16 @@ const RestaurantModule = (function() {
             telefon: "99999999",
             bilde: "bildefil.png",
             kapasitet: 50,
-            leder: "PLACE HOLDER"
+            leder: ["PLACE HOLDER", 00000]
+        },
+        {
+            id: 00002,
+            navn: "Gyldne Pizza Sentrum",
+            adresse: "Karl Johans Gate 50, 0159 OSLO",
+            telefon: "45544554",
+            bilde: "filnavn.png",
+            kapasitet: 150,
+            leder: ["Anders Andersen", 00002]
         }
     ];
 
