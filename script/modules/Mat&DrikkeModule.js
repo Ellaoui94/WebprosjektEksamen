@@ -17,8 +17,8 @@ const MatOgDrikkeModule = (function(){
                 "Allergen 2",
                 "Allergen 3"
             ],
-            kostnad: 50,
-            pris: 200
+            kostnad: 50, // Må være bestemt av en funksjon
+            pris: 200 // Må være bestemt av en funksjon
         },
         {
             // Denne skal ikke brukes i det ferdige produktet
@@ -36,8 +36,8 @@ const MatOgDrikkeModule = (function(){
                 "Allergen 2",
                 "Allergen 3"
             ],
-            kostnad: 50,
-            pris: 200
+            kostnad: 50, // Må være bestemt av en funksjon
+            pris: 200 // Må være bestemt av en funksjon
           }
     ];
 
