@@ -3,7 +3,7 @@ import MatOgDrikkeModule from "./modules/Mat&DrikkeModule.js";
 import RestaurantModule from "./modules/RestaurantModule.js";
 import IngredienserModule from "./modules/IngredienserModule.js";
 
-// Funksjon som returnerer økonomisk info om en restaurant
+// Funksjon som returnerer økonomisk info om en restaurant (uferdig)
 function calculateEconomy(restaurant){
 
 };
