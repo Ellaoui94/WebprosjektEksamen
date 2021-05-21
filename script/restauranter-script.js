@@ -3,7 +3,11 @@ import AnsatteModule from "./modules/AnsatteModule.js";
 
 let htmlText = "";
 
-RestaurantModule.getAllRestauranter().forEach(restaurant => {
+let testDiv = document.getElementById("test");
+
+let alleRestauranter = RestaurantModule.getAllRestauranter();
+
+alleRestauranter.forEach(restaurant => {
     // Klasser på alle html-elementer er ikke satt ennå
     // Denne delen er generelt uferdig
     htmlText += `
@@ -43,3 +47,5 @@ RestaurantModule.getAllRestauranter().forEach(restaurant => {
         </article>
     `
 });
+
+testDiv.innerHTML = htmlText;
