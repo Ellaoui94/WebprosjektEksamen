@@ -3,32 +3,41 @@ const RestaurantModule = (function() {
     const restauranter = [
         {
             // Denne skal ikke brukes i det ferdige produktet
-            id: 00000,
-            navn: "PLACEHOLDER",
+            id: "10000",
+            navn: "Gyldne Pizza Grünerløkka",
             adresse: "Gateveien 1, 0000 OSLO",
             telefon: "00000000",
-            bilde: "bildefil.png",
-            kapasitet: 50,
-            leder: ["SAMPLE NAME", 00001]
+            bilde: "placeholderRestaurant.jpg",
+            kapasitet: 100,
+            leder: ["Cecilie Clausen", "20001"] // Skal samkjkøres med AnsattModule
         },
         {
             // Denne skal ikke brukes i det ferdige produktet
-            id: 00001,
-            navn: "SAMPLENAME",
+            id: "10001",
+            navn: "Gyldne Pizza Bjølsen",
             adresse: "Veigata 1, 0001 OSLO",
             telefon: "99999999",
-            bilde: "bildefil.png",
+            bilde: "placeholderRestaurant.jpg",
             kapasitet: 50,
-            leder: ["PLACE HOLDER", 00000]
+            leder: ["Daniel Davidsen", "20000"] // Skal samkjkøres med AnsattModule
         },
         {
-            id: 00002,
+            id: "10002",
             navn: "Gyldne Pizza Sentrum",
-            adresse: "Karl Johans Gate 50, 0159 OSLO",
+            adresse: "Gategata 1, 0002 OSLO",
             telefon: "45544554",
-            bilde: "filnavn.png",
+            bilde: "placeholderRestaurant.jpg",
+            kapasitet: 200,
+            leder: ["Anders Andersen", "20002"] // Skal samkjkøres med AnsattModule
+        },
+        {
+            id: "10003",
+            navn: "Gyldne Pizza Holmen",
+            adresse: "Veiveien 1, 0003 OSLO",
+            telefon: "45677654",
+            bilde: "placeholderRestaurant.jpg",
             kapasitet: 150,
-            leder: ["Anders Andersen", 00002]
+            leder: ["Berit Bergsvik", "20003"] // Skal samkjkøres med AnsattModule
         }
     ];
 

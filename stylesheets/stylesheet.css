@@ -1,0 +1,18 @@
+.edit-button {
+    background-color: hsl(125, 100%, 19%);
+    color: hsl(0,0%,100%);
+};
+
+.delete-button {
+    background-color: hsl(5, 74%, 33%);
+    color: hsl(0,0%,100%);
+};
+
+.button {
+    color: hsl(0,0%,100%);
+}
+
+.card {
+    background-color: hsl(40, 67%, 67%);
+    color: hsl(0,0%,0%);
+};
