@@ -1,51 +1,60 @@
 import RestaurantModule from "./modules/RestaurantModule.js";
-import AnsatteModule from "./modules/AnsatteModule.js";
+// import AnsatteModule from "./modules/AnsatteModule.js";
 
-let htmlText = "";
+let testSection = document.querySelector("#test-section");
 
-let testDiv = document.getElementById("test");
+// let alleRestauranter = RestaurantModule.getAllRestauranter();
 
-let alleRestauranter = RestaurantModule.getAllRestauranter();
+const generateRestauranter = () => {
 
-alleRestauranter.forEach(restaurant => {
-    // Klasser på alle html-elementer er ikke satt ennå
-    // Denne delen er generelt uferdig
-    htmlText += `
-        <article id="${restaurant.id}" class="column">
-            <div class="card">
-                <section>
+    let htmlText = "";
 
-                    SETT IKON HER
+    RestaurantModule.getAllRestauranter().forEach(restaurant => {
+        // Klasser på alle html-elementer er ikke satt ennå
+        // Denne delen er generelt uferdig
+        htmlText += `
+            <article id="${restaurant.id}" class="column">
+                <div class="card">
+                    <section>
+    
+                        SETT IKON HER
+    
+                    </section>
+                    <section class="card-content">
+                        <h3>${restaurant.navn}</h3>
+                    </section>
+                    <section>
+    
+                        SETT KRYSS-KNAPP HER
+    
+                    </section>
+                    <section class="card-image">
+                        <img src="images/${restaurant.bilde}">
+                    </section>
+                    <section class="card-content">
+                        <ul>
+                            <li>ID: ${restaurant.id}</li>
+                            <li>Adresse: ${restaurant.adresse}</li>
+                            <li>Telefon: ${restaurant.telefon}</li>
+                            <li>Kapasitet: ${restaurant.kapasitet}</li>
+                            <li>Leder: ${restaurant.leder[0]}</li>
+                        </ul>
+                    </section>
+                    <section class="card-content">
+    
+                        SETT REDIGER / SLETT KNAPP HER
+    
+                    </section>
+                </div>
+            </article>
+        `;
+    });
 
-                </section>
-                <section>
-                    ${restaurant.navn}
-                </section>
-                <section>
+    testSection.innerHTML = htmlText;
 
-                    SETT KRYSS-KNAPP HER
+};
 
-                </section>
-                <section class="card-image">
-                    <img src="images/${restaurant.bilde}">
-                </section>
-                <section>
-                    <ul>
-                        <li>ID: ${restaurant.id}</li>
-                        <li>Adresse: ${restaurant.adresse}</li>
-                        <li>Telefon: ${restaurant.telefon}</li>
-                        <li>Kapasitet: ${restaurant.kapasitet}</li>
-                        <li>Leder: ${restaurant.leder}</li>
-                    </ul>
-                </section>
-                <section>
+generateRestauranter();
 
-                    SETT REDIGER / SLETT KNAPP HER
 
-                </section>
-            </div>
-        </article>
-    `
-});
 
-testDiv.innerHTML = htmlText;
