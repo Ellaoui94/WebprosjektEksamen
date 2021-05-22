@@ -15,21 +15,12 @@ const generateRestauranter = () => {
         htmlText += `
             <article id="${restaurant.id}" class="column">
                 <div class="card">
-                    <section>
-    
-                        SETT IKON HER
-    
-                    </section>
-                    <section class="card-content">
-                        <h3>${restaurant.navn}</h3>
-                    </section>
-                    <section>
-    
-                        SETT KRYSS-KNAPP HER
-    
+                    <section class="card-header">
+                        <i class="card-header-icon">ic</i>
+                        <h3 class="card-header-title is-centered">${restaurant.navn}</h3>
                     </section>
                     <section class="card-image">
-                        <img src="images/${restaurant.bilde}">
+                        <img src="images/${restaurant.bilde}" alt="Placeholder image">
                     </section>
                     <section class="card-content">
                         <ul>
