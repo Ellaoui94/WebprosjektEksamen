@@ -16,14 +16,12 @@
 .card {
     background: hsl(40, 67%, 67%);
     color: hsl(0,0%,0%);
-<<<<<<< HEAD
 }
 
 /* STILSETTING AV KORT AVSLUTTES HER */
-=======
-};
 
-.has-bg-img { background: url('/images/pizza-ham-salami.png'); 
-    background-size:cover; }
+.has-bg-img { 
+    background: url('/images/pizza-ham-salami.png'); 
+    background-size: cover;
+}
 
->>>>>>> e77672492e11c4ddcc4d587250e355b48e1e62b5
