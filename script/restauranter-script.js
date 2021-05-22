@@ -31,9 +31,9 @@ const generateRestauranter = () => {
                             <li>Leder: ${restaurant.leder[0]}</li>
                         </ul>
                     </section>
-                    <section class="card-footer">
-                        <button type="button" class="card-footer-item edit-button"><span>(ic)</span>Rediger</button>
-                        <button type="button" class="card-footer-item delete-button"><span>(ic)</span>Slett</button>
+                    <section class="card-footer buttons is-small">
+                        <button type="button" class="card-footer-item button edit-button"><span>(ic)</span>Rediger</button>
+                        <button type="button" class="card-footer-item button delete-button"><span>(ic)</span>Slett</button>
                     </section>
                 </div>
             </article>

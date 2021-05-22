@@ -1,18 +1,21 @@
-.edit-button {
-    background-color: hsl(125, 100%, 19%);
-    color: hsl(0,0%,100%);
-};
+
+/* STILSETTING AV KORT BEGYNNER HER */
 
 .delete-button {
-    background-color: hsl(5, 74%, 33%);
-    color: hsl(0,0%,100%);
-};
+    background: hsl(5, 74%, 33%);
+}
 
 .button {
     color: hsl(0,0%,100%);
 }
 
+.edit-button {
+    background: hsl(125, 100%, 19%);
+}
+
 .card {
-    background-color: hsl(40, 67%, 67%);
+    background: hsl(40, 67%, 67%);
     color: hsl(0,0%,0%);
-};
+}
+
+/* STILSETTING AV KORT AVSLUTTES HER */
