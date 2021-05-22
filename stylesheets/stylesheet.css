@@ -10,9 +10,13 @@
 
 .button {
     color: hsl(0,0%,100%);
-}
+};
 
 .card {
     background-color: hsl(40, 67%, 67%);
     color: hsl(0,0%,0%);
 };
+
+.has-bg-img { background: url('/images/pizza-ham-salami.png'); 
+    background-size:cover; }
+
