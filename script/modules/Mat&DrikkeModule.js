@@ -1,5 +1,3 @@
-import IngredienserModule from "./IngredienserModule.js";
-
 const MatOgDrikkeModule = (function(){
 
     const matOgDrikke = [
@@ -20,8 +18,8 @@ const MatOgDrikkeModule = (function(){
                 "hvete",
                 "melk"
             ],
-            kostnad: getKostnad(),
-            pris: getPris()
+           // kostnad: getKostnad(),
+            //pris: getPris()
         },
         {
             // Denne skal ikke brukes i det ferdige produktet
@@ -39,8 +37,8 @@ const MatOgDrikkeModule = (function(){
                 "Melk",
                 "pinneskjerner"
             ],
-            kostnad: getKostnad(),
-            pris: getPris()
+            //kostnad: getKostnad(),
+            //pris: getPris()
         },
         {
             id: "003",
@@ -59,8 +57,8 @@ const MatOgDrikkeModule = (function(){
                 "Mel",
                 "Melk"
             ],
-            kostnad: getKostnad(),
-            pris: getPris()
+            //kostnad: getKostnad(),
+            //pris: getPris()
         },
         {
             id: "004",
@@ -79,8 +77,8 @@ const MatOgDrikkeModule = (function(){
                 "Hvete",
                 "Melk"
             ],
-            kostnad: getKostnad(),
-            pris: getPris()
+            //kostnad: getKostnad(),
+            //pris: getPris()
         },
         {
             id: "005",
@@ -100,8 +98,8 @@ const MatOgDrikkeModule = (function(){
                 "Melk",
                 "Sennep"
             ],
-            kostnad: getKostnad(),
-            pris: getPris()
+            //kostnad: getKostnad(),
+            //pris: getPris()
         },
         {
             id: "006",
@@ -123,8 +121,8 @@ const MatOgDrikkeModule = (function(){
                 "sennep",
                 "Selleri"
             ],
-            kostnad: getKostnad(),
-            pris: getPris()
+           // kostnad: getKostnad(),
+            //pris: getPris()
         },
         {
             id: "007",
@@ -145,8 +143,8 @@ const MatOgDrikkeModule = (function(){
                 "Melk",
                 "Pinnekjerner"
             ],
-            kostnad: getKostnad(),
-            pris: getPris()
+           // kostnad: getKostnad(),
+            //pris: getPris()
         },
         {
             id: "008",
@@ -164,8 +162,8 @@ const MatOgDrikkeModule = (function(){
                 "Hvete",
                 "Melk"
             ],
-            kostnad: getKostnad(),
-            pris: getPris()
+           // kostnad: getKostnad(),
+            //pris: getPris()
         },
         {
             id: "009",
@@ -183,8 +181,8 @@ const MatOgDrikkeModule = (function(){
                 "Hvete",
                 "Melk"
             ],
-            kostnad: getKostnad(),
-            pris: getPris()
+            //kostnad: getKostnad(),
+            //pris: getPris()
         },
         {
             id: "010",
@@ -202,8 +200,8 @@ const MatOgDrikkeModule = (function(){
                 "Hvete",
                 "Melk"
             ],
-            kostnad: getKostnad(),
-            pris: getPris()
+           // kostnad: getKostnad(),
+            //pris: getPris()
         },
         {
             id: "011",
@@ -222,8 +220,8 @@ const MatOgDrikkeModule = (function(){
                 "Melk",
                 "Sterk"
             ],
-            kostnad: getKostnad(),
-            pris: getPris()
+           // kostnad: getKostnad(),
+            //pris: getPris()
         },
         {
             id: "012",
@@ -242,8 +240,8 @@ const MatOgDrikkeModule = (function(){
                 "Melk",
                 "Skalldyr"
             ],
-            kostnad: getKostnad(),
-            pris: getPris()
+           // kostnad: getKostnad(),
+            //pris: getPris()
         },
         {
             id: "013",
@@ -264,8 +262,8 @@ const MatOgDrikkeModule = (function(){
                 "Melk",
                 "Pinnekjerner"
             ],
-            kostnad: getKostnad(),
-            pris: getPris()
+           // kostnad: getKostnad(),
+            //pris: getPris()
         },
         {
             id: "014",
@@ -287,8 +285,8 @@ const MatOgDrikkeModule = (function(){
                 "Melk",
                 "Pinnekjerner"
             ],
-            kostnad: getKostnad(),
-            pris: getPris()
+           // kostnad: getKostnad(),
+            //pris: getPris()
         },
         {id: "015",
          navn: "Cola",
@@ -312,7 +310,14 @@ const MatOgDrikkeModule = (function(){
         },
     ];
 
-    const muligeIngredienser = IngredienserModule.getAllIngredienser
+    const getBy
+
+
+
+
+    /*
+
+    const muligeIngredienser = IngredienserModule.getAllIngredienser;
 
     // Funksjon som beregner kostnad på noe på menyen utifra kostnad på ingrediensene
     const getKostnad = () => {
@@ -332,6 +337,7 @@ const MatOgDrikkeModule = (function(){
         pris = this.kostnad * 2;
         return pris;
     };
+    */
 
     const getAllMatOgDrikke = () => matOgDrikke;
 
