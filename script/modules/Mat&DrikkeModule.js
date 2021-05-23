@@ -1,3 +1,4 @@
+
 const MatOgDrikkeModule = (function(){
 
     const matOgDrikke = [
@@ -7,7 +8,7 @@ const MatOgDrikkeModule = (function(){
             navn: "Focaccia",
             kategori: "Mat",
             type: "Forret",
-            bilde: "bildefil.png",
+            bilde: "focaccia.jpg",
             ingredienser: [
                 "Pesto rosso",
                 "pesto genovese",
@@ -27,7 +28,7 @@ const MatOgDrikkeModule = (function(){
             navn: "Carpaccio di manzo",
             kategori: "Mat",
             type: "Forret",
-            bilde: "bildefil.png",
+            bilde: "carpaccio.jpg",
             ingredienser: [
                 "Tynne, rå skiver av okse indrefilet",
                 "parmiggiano reggiano",
@@ -45,7 +46,7 @@ const MatOgDrikkeModule = (function(){
             navn: "Mozarella di burrata",
             kategori: "Mat",
             type: "Forret",
-            bilde: "filnavn.png",
+            bilde: "burrata.png",
             ingredienser: [
                 "Bløt og kremet mozarella",
                 "Chrrytomater",
@@ -64,8 +65,8 @@ const MatOgDrikkeModule = (function(){
             id: "004",
             navn: "Al prosciutto cotto",
             kategori: "Mat",
-            type: "Pizza",
-            bilde: "filnavn.png",
+            type: "Rød Pizza",
+            bilde: "prosciutto.jpg",
             ingredienser: [
                 "Tomat",
                 "Mozarella",
@@ -84,8 +85,8 @@ const MatOgDrikkeModule = (function(){
             id: "005",
             navn: "Alla diavola",
             kategori: "Mat",
-            type: "Pizza",
-            bilde: "filnavn.png",
+            type: "Rød Pizza",
+            bilde: "pizza-diavola.png",
             ingredienser: [
                 "Tomat",
                 "Mozarella",
@@ -105,8 +106,8 @@ const MatOgDrikkeModule = (function(){
             id: "006",
             navn: "Capriciosa",
             kategori: "Mat",
-            type: "Pizza",
-            bilde: "filnavn.png",
+            type: "Rød Pizza",
+            bilde: "capriciosa.png",
             ingredienser: [
                 "Tomat",
                 "Mozarella",
@@ -128,8 +129,8 @@ const MatOgDrikkeModule = (function(){
             id: "007",
             navn: "Prosciutto di parma",
             kategori: "Mat",
-            type: "Pizza",
-            bilde: "filnavn.png",
+            type: "Rød Pizza",
+            bilde: "parma-pizza.png",
             ingredienser: [
                 "Tomat",
                 "Mozarella",
@@ -150,8 +151,8 @@ const MatOgDrikkeModule = (function(){
             id: "008",
             navn: "Calzone al prosciutto cotto",
             kategori: "Mat",
-            type: "Pizza",
-            bilde: "filnavn.png",
+            type: "Rød Pizza",
+            bilde: "calzone.png",
             ingredienser: [
                 "Tomat",
                 "Mozarella",
@@ -169,8 +170,8 @@ const MatOgDrikkeModule = (function(){
             id: "009",
             navn: "Margherita",
             kategori: "Mat",
-            type: "Pizza",
-            bilde: "filnavn.png",
+            type: "Rød Pizza",
+            bilde: "margherita.png",
             ingredienser: [
                 "Tomat",
                 "Mozarella",
@@ -188,8 +189,8 @@ const MatOgDrikkeModule = (function(){
             id: "010",
             navn: "4 formaggi",
             kategori: "Mat",
-            type: "Pizza",
-            bilde: "filnavn.png",
+            type: "Hvit Pizza",
+            bilde: "4-formaggi.png",
             ingredienser: [
                 "Mozarella",
                 "Pecorino",
@@ -207,7 +208,7 @@ const MatOgDrikkeModule = (function(){
             id: "011",
             navn: "Arlecchino",
             kategori: "Mat",
-            type: "Pizza",
+            type: "Hvit Pizza",
             bilde: "filnavn.png",
             ingredienser: [
                 "Mozarella",
@@ -227,7 +228,7 @@ const MatOgDrikkeModule = (function(){
             id: "012",
             navn: "Mare e monti",
             kategori: "Mat",
-            type: "Pizza",
+            type: "Hvit Pizza",
             bilde: "filnavn.png",
             ingredienser: [
                 "Creme fraiche",
@@ -247,7 +248,7 @@ const MatOgDrikkeModule = (function(){
             id: "013",
             navn: "Poolo bianco",
             kategori: "Mat",
-            type: "Pizza",
+            type: "Hvit Pizza",
             bilde: "filnavn.png",
             ingredienser: [
                 "Mozarella",
@@ -269,7 +270,7 @@ const MatOgDrikkeModule = (function(){
             id: "014",
             navn: "Parma ai pomodori secchi",
             kategori: "Mat",
-            type: "Pizza",
+            type: "Hvit Pizza",
             bilde: "filnavn.png",
             ingredienser: [
                 "Mozarella",
@@ -311,12 +312,14 @@ const MatOgDrikkeModule = (function(){
     ];
 
     const getByTypeForret  = ( type ) => {
-        return matOgDrikke.filter(forretObjects => forretObjects.type == "Forret" );
+        return matOgDrikke.filter(forretObjects => forretObjects.type == "Forret");
     }
 
+    
     const getByTypePizza = ( type ) => {
         return matOgDrikke.filter(pizzaObjects => pizzaObjects.type == "Pizza");
     }
+
 
 
 
@@ -347,7 +350,7 @@ const MatOgDrikkeModule = (function(){
 
     const getAllMatOgDrikke = () => matOgDrikke;
 
-    return {getAllMatOgDrikke, getByType}
+    return {getAllMatOgDrikke, getByTypeForret, getByTypePizza};
 
 }());
 
