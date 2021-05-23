@@ -16,7 +16,6 @@ const generateRestauranter = () => {
             <article id="${restaurant.id}" class="column">
                 <div class="card restaurant-card">
                     <section class="card-header">
-                        
                         <h3 class="card-header-title is-centered"><span class="card-header-icon">(ic)</span>${restaurant.navn}</h3>
                     </section>
                     <section class="card-image">

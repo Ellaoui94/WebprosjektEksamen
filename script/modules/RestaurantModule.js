@@ -4,7 +4,7 @@ const RestaurantModule = (function() {
         {
             // Denne skal ikke brukes i det ferdige produktet
             id: "10000",
-            navn: "Gyldne Pizza Grünerløkka",
+            navn: "Gyldne Pizza Grorud",
             adresse: "Gateveien 1, 0000 OSLO",
             telefon: "00000000",
             bilde: "placeholderRestaurant.jpg",
@@ -14,7 +14,7 @@ const RestaurantModule = (function() {
         {
             // Denne skal ikke brukes i det ferdige produktet
             id: "10001",
-            navn: "Gyldne Pizza Bjølsen",
+            navn: "Gyldne Pizza Lillestrøm",
             adresse: "Veigata 1, 0001 OSLO",
             telefon: "99999999",
             bilde: "placeholderRestaurant.jpg",
@@ -23,7 +23,7 @@ const RestaurantModule = (function() {
         },
         {
             id: "10002",
-            navn: "Gyldne Pizza Sentrum",
+            navn: "Gyldne Pizza Fjellhamar",
             adresse: "Gategata 1, 0002 OSLO",
             telefon: "45544554",
             bilde: "placeholderRestaurant.jpg",
@@ -32,7 +32,7 @@ const RestaurantModule = (function() {
         },
         {
             id: "10003",
-            navn: "Gyldne Pizza Holmen",
+            navn: "Gyldne Pizza Majorstuen",
             adresse: "Veiveien 1, 0003 OSLO",
             telefon: "45677654",
             bilde: "placeholderRestaurant.jpg",
