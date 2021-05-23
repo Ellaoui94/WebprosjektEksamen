@@ -44,62 +44,65 @@ const SearchModule = (function() {
             case "pris":
                 searchByPrice(searchedArray, searchValue);
                 break;
+            case "leder":
+                searchByBoss(searchedArray, searchValue);
+                break;
             default:
                 break;            
         }
     };
 
-    // FELLES FOR ALLE TRE SIDER
+    // FELLES FOR RESTAURANT, ANSATTE, OG MAT & DRIKKE
 
-    const searchById = (searchedArray, searchValue) => searchedArray.filter(o => o.id === searchValue);
+    const searchById = (searchedArray, searchValue) => searchedArray.filter(o => o.id == searchValue);
     
-    const searchByName = (searchedArray, searchValue) => searchedArray.filter(o => o.navn === searchValue);
+    const searchByName = (searchedArray, searchValue) => searchedArray.filter(o => o.navn == searchValue);
 
 
 
     // FELLES FOR RESTAURANT OG ANSATTE
 
-    const searchByPhone = (searchedArray, searchValue) => searchedArray.filter(o => o.telefon === searchValue);
+    const searchByPhone = (searchedArray, searchValue) => searchedArray.filter(o => o.telefon == searchValue);
 
 
 
     // FOR ANSATTE
 
-    const searchByJob = (searchedArray, searchValue) => searchedArray.filter(o => o.stilling === searchValue);
+    const searchByJob = (searchedArray, searchValue) => searchedArray.filter(o => o.stilling == searchValue);
 
-    const searchByAge = (searchedArray, searchValue) => searchedArray.filter(o => o.alder === searchValue);
+    const searchByAge = (searchedArray, searchValue) => searchedArray.filter(o => o.alder == searchValue);
 
-    const searchByWorkplace = (searchedArray, searchValue) => searchedArray.filter(o => o.arbeidssted === searchValue);
+    const searchByWorkplace = (searchedArray, searchValue) => searchedArray.filter(o => o.arbeidssted == searchValue);
 
-    const searchByWorkPercentage = (searchedArray, searchValue) => searchedArray.filter(o => o.stillingsprosent === searchValue);
+    const searchByWorkPercentage = (searchedArray, searchValue) => searchedArray.filter(o => o.stillingsprosent == searchValue);
 
-    const searchByHourlyPay = (searchedArray, searchValue) => searchedArray.filter(o => o.timelønn === searchValue);
+    const searchByHourlyPay = (searchedArray, searchValue) => searchedArray.filter(o => o.timelønn == searchValue);
 
 
 
     // FOR RESTAURANT
 
-    const searchByAddress = (searchedArray, searchValue) => searchedArray.filter(o => o.adresse === searchValue);
+    const searchByAddress = (searchedArray, searchValue) => searchedArray.filter(o => o.adresse == searchValue);
 
-    const searchByCapacity = (searchedArray, searchValue) => searchedArray.filter(o => o.kapasitet === searchValue);
+    const searchByCapacity = (searchedArray, searchValue) => searchedArray.filter(o => o.kapasitet == searchValue);
 
-    const searchByBoss = (searchedArray, searchValue) => searchedArray.filter(o => o.leder[0] === searchValue);
+    const searchByBoss = (searchedArray, searchValue) => searchedArray.filter(o => o.leder[0] == searchValue);
 
 
 
     // FOR MAT & DRIKKE
 
-    const searchByCathegory = (searchedArray, searchValue) => searchedArray.filter(o => o.kategori === searchValue);
+    const searchByCathegory = (searchedArray, searchValue) => searchedArray.filter(o => o.kategori == searchValue);
 
-    const searchByType = (searchedArray, searchValue) => searchedArray.filter(o => o.type === searchValue);
+    const searchByType = (searchedArray, searchValue) => searchedArray.filter(o => o.type == searchValue);
 
-    const searchByIngredient; // Uferdig
+    // const searchByIngredient; // Uferdig
 
-    const searchByAllergen; // Uferdig
+    // const searchByAllergen; // Uferdig
 
-    const searchByCost = (searchedArray, searchValue) => searchedArray.filter(o => o.kostnad === searchValue);
+    const searchByCost = (searchedArray, searchValue) => searchedArray.filter(o => o.kostnad == searchValue);
 
-    const searchByPrice = (searchedArray, searchValue) => searchedArray.filter(o => o.pris === searchValue);
+    const searchByPrice = (searchedArray, searchValue) => searchedArray.filter(o => o.pris == searchValue);
 
 
 

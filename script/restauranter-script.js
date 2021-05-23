@@ -45,6 +45,7 @@ const generateRestauranter = (chosenArray) => {
                 </div>
             </article>
         `;
+        console.log(restaurant);
     });
 
     restaurantSection.innerHTML = htmlText;
@@ -55,9 +56,20 @@ generateRestauranter(alleRestauranter);
 
 // Onclick-events:
 
-/* uferdig kode
 searchButton.onclick = function(){
-    generateRestauranter(SearchModule.searchFunction(alleRestauranter, searchKey.nodeValue, searchValue.value));
+    let searchResult = alleRestauranter.filter(o => o.id == searchValue.value);
+    generateRestauranter(searchResult);
+}
+
+
+/*
+searchButton.onclick = function(){
+    let key = searchKey.value;
+    let value = searchValue.value;
+    let searchResult = SearchModule.filterByChoice(alleRestauranter, key, value);
+    
+    console.log(searchResult)
+    //generateRestauranter(searchResult);
 };
 */
 
