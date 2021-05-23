@@ -9,10 +9,10 @@ const generateMeny = () => {
     MatOgDrikkeModule.getAllMatOgDrikke().forEach(menuObject => {
         if (menuObject.kategori == "Mat"){
         htmlTxt += `
-            <article id ="${menuObject.id}" class="column">
+            <article id ="${menuObject.id}" class="column is-3">
                 <div class="card">
                     <section class="card-header">
-                        <h3 class="card-header-title is-centered"><span class="card-header-icon">(ic)</span>${menuObject.navn}</h3>
+                        <h3 class="card-header-title is-centered"><span class="card-header-icon"><img src="images/Meny/icon1.png" width="25" height="25"></span>${menuObject.navn}</h3>
                     </section>
                     <section class="card-image">
                         <img src="images/Meny/${menuObject.bilde}" alt="bilde av mat">
@@ -33,13 +33,13 @@ const generateMeny = () => {
 
         }else{
             htmlTxt += `
-            <article id ="${menuObject.id}" class="column">
+            <article id ="${menuObject.id}" class="column is-3">
                 <div class="card">
                     <section class="card-header">
-                        <h3 class="card-header-title is-centered"><span class="card-header-icon">(ic)</span>${menuObject.navn}</h3>
+                        <h3 class="card-header-title is-centered"><span class="card-header-icon"><span class="card-header-icon"><img src="images/Meny/beverage.png" width="25" height="25"></span>${menuObject.navn}</h3>
                     </section>
                     <section class="card-image">
-                        <img src="images/${menuObject.bilde}" alt="bilde av drikke">
+                        <img src="images/Meny/${menuObject.bilde}" alt="bilde av drikke">
                     </section> 
                     <section class="card-content">
                         <ul class="content">
