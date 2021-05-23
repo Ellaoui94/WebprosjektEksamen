@@ -6,20 +6,19 @@ const generateForret = () => {
 
     let htmlText = "";
 
-    MatOgDrikkeModule.getAllMatOgDrikke().forEach(forret => {
-        //if (forrett.type == "Forret"){
+    MatOgDrikkeModule.getByTypeForret().forEach(forretObject => {
         htmlText += `
-            <article id ="${forret.id}" class="column">
+            <article id ="${forretObject.id}" class="column">
                 <div class="card">
                     <section class="card-header">
-                        <h3 class="card-header-title is-centered"><span class="card-header-icon">(ic)</span>${forret.navn}</h3>
+                        <h3 class="card-header-title is-centered"><span class="card-header-icon">(ic)</span>${forretObject.navn}</h3>
                     </section>
                     <section class="card-image">
-                        <img src="images/${forret.bilde}" alt="bilde av forret">
+                        <img src="images/${forretObject.bilde}" alt="bilde av forret">
                     </section> 
                     <section class="card-content">
                         <ul class="content">
-                            <li>ID: ${forret.id}</li>
+                            <li>ID: ${forretObject.id}</li>
 
                         </ul>
                     </section>
@@ -30,9 +29,12 @@ const generateForret = () => {
                     </section>
                 </div>
             </article>`;
-        }
+    }
         
     );
+
+    const generateRedPi
+
 
     forretterDiv.innerHTML = htmlText;
 };
@@ -42,4 +44,4 @@ generateForret();
 /*
                             <li>Ingredienser: ${forret.ingredienser[0]}</li>
                             <li>Allergener: ${forret.allergener[0]}</li>
-                            */
+ ;                           */
