@@ -10,6 +10,20 @@
     <script defer type="module" src="script/restauranter-script.js"></script>
 </head>
 <body>
+    
+    <div id="search-test">
+        <select id="search-key">
+            <option value="navn">Navn</option>
+            <option value="id">ID</option>
+            <option value="adresse">Adresse</option>
+            <option value="telefon">Telefon</option>
+            <option value="kapasitet">Kapasitet</option>
+            <option value="leder">Leder</option>
+        </select>
+        <input type="text" id="search-value">
+        <button type="button" id="search-button">Søk</button>
+    </div>
+
     <div class="container">
         <main>
             <section id="restaurant-section" class="columns"></section>
