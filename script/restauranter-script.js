@@ -1,5 +1,5 @@
 import RestaurantModule from "./modules/RestaurantModule.js";
-import SearchModule from "./søkefunksjonalitet.js";
+import SearchModule from "./modules/SearchModule.js";
 // import AnsatteModule from "./modules/AnsatteModule.js";
 
 const restaurantSection = document.querySelector("#restaurant-section");
@@ -55,8 +55,10 @@ generateRestauranter(alleRestauranter);
 
 // Onclick-events:
 
+/* uferdig kode
 searchButton.onclick = function(){
     generateRestauranter(SearchModule.searchFunction(alleRestauranter, searchKey.nodeValue, searchValue.value));
 };
+*/
 
 
