@@ -32,15 +32,15 @@
     position: relative;
     left: 700px;
     top: 50px;
-    color: aliceblue;
-    color: aliceblue;
+    color: hsl(208, 100%, 97%);
+    color: hsl(208, 100%, 97%);
 }
 
 /* For navbaren med knapper */
 .navbarTwo-color {
     border-radius: 0 0 15px 15px;
-    background: #66432A;
-    color: aliceblue;
+    background: hsl(25, 42%, 28%);
+    color: hsl(208, 100%, 97%);
 }
 
 /* For side menyen */
@@ -54,5 +54,5 @@
 }
 
 .container-color {
-    background: #E3BD72;
+    background: hsl(40, 67%, 67%);
 }
