@@ -1,13 +1,13 @@
 import MatOgDrikkeModule from "./modules/Mat&DrikkeModule.js";
 
-const forretterDiv = document.querySelector("#forreter-div");
+const forretterDiv = document.querySelector("#forretter-div");
 
 const generateForret = () => {
 
     let htmlText = "";
 
     MatOgDrikkeModule.getAllMatOgDrikke().forEach(forret => {
-        if (forrett.type == "Forret"){
+        //if (forrett.type == "Forret"){
         htmlText += `
             <article id ="${forret.id}" class="column">
                 <div class="card">
@@ -20,8 +20,7 @@ const generateForret = () => {
                     <section class="card-content">
                         <ul class="content">
                             <li>ID: ${forret.id}</li>
-                            <li>Ingredienser: ${forret.ingredienser[i]}</li>
-                            <li>Allergener: ${forret.allergener[i]}</li>
+
                         </ul>
                     </section>
                     <section class="card-content">
@@ -33,7 +32,14 @@ const generateForret = () => {
             </article>`;
         }
         
-    });
+    );
 
     forretterDiv.innerHTML = htmlText;
 };
+
+generateForret();
+
+/*
+                            <li>Ingredienser: ${forret.ingredienser[0]}</li>
+                            <li>Allergener: ${forret.allergener[0]}</li>
+                            */

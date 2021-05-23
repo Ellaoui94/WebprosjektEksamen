@@ -1,15 +1,23 @@
 import RestaurantModule from "./modules/RestaurantModule.js";
+import SearchModule from "./søkefunksjonalitet.js";
 // import AnsatteModule from "./modules/AnsatteModule.js";
 
-let restaurantSection = document.querySelector("#restaurant-section");
+const restaurantSection = document.querySelector("#restaurant-section");
 
-// let alleRestauranter = RestaurantModule.getAllRestauranter();
+const alleRestauranter = RestaurantModule.getAllRestauranter();
 
-const generateRestauranter = () => {
+const searchButton = document.querySelector("#search-button");
+
+const searchKey = document.querySelector("#search-key");
+
+const searchValue = document.querySelector("#search-value")
+
+
+const generateRestauranter = (chosenArray) => {
 
     let htmlText = "";
 
-    RestaurantModule.getAllRestauranter().forEach(restaurant => {
+    chosenArray.forEach(restaurant => {
         // Klasser på alle html-elementer er ikke satt ennå
         // Denne delen er generelt uferdig
         htmlText += `
@@ -43,7 +51,12 @@ const generateRestauranter = () => {
 
 };
 
-generateRestauranter();
+generateRestauranter(alleRestauranter);
 
+// Onclick-events:
+
+searchButton.onclick = function(){
+    generateRestauranter(SearchModule.searchFunction(alleRestauranter, searchKey.nodeValue, searchValue.value));
+};
 
 

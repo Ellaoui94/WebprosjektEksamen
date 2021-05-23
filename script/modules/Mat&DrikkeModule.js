@@ -310,7 +310,7 @@ const MatOgDrikkeModule = (function(){
         },
     ];
 
-    const getBy
+    //const getBy
 
 
 
