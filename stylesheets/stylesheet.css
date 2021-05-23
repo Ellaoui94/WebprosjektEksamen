@@ -22,7 +22,7 @@
 
 /* CSS for navbaren med bilde */
 .has-bg-img { 
-    background: url('/images/pizza-ham-salami.png'); 
+    background: url('../images/pizza-ham-salami.png'); 
     background-size: cover;
     height: 150px;
 }
