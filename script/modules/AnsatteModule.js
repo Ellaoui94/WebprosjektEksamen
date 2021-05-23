@@ -42,12 +42,16 @@ const AnsatteModule = (function(){
 
     const getByArbeidssted = ( arbeidssted ) => ansatte.filter( ansatt => 
         ansatt.arbeidssted.toLowerCase() === arbeidssted.toLowerCase() );
+
+        const getByNavn = ( navn ) => ansatte.filter( ansatt => 
+            ansatt.navn.toLowerCase() === navn.toLowerCase() );
         
         
     
 
     return {getAllAnsatte,
-        getByArbeidssted
+            getByArbeidssted,
+            getByNavn
     };
 
 }());
