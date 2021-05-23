@@ -5,9 +5,10 @@ const MatOgDrikkeModule = (function(){
     const matOgDrikke = [
         {
             // Denne skal ikke brukes i det ferdige produktet
-            id: 00000,
-            navn: "PLACEHOLDER",
-            kategori: "Hovedrett",
+            id: 001,
+            navn: "Margherita",
+            kategori: "Mat",
+            type: "Pizza",
             bilde: "bildefil.png",
             ingredienser: [
                 "Ingrediens 1",
