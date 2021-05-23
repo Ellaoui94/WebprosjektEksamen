@@ -289,7 +289,27 @@ const MatOgDrikkeModule = (function(){
             ],
             kostnad: getKostnad(),
             pris: getPris()
-        }
+        },
+        {id: "015",
+         navn: "Cola",
+         kategori: "Drikke",
+         type: "Mineralvann" 
+        },
+        {id: "015",
+         navn: "Fanta",
+         kategori: "Drikke",
+         type: "Mineralvann" 
+        },
+        {id: "015",
+         navn: "Cola",
+         kategori: "Drikke",
+         type: "Alkoholfri" 
+        },
+        {id: "015",
+         navn: "Cola",
+         kategori: "Drikke",
+         type: "Alkoholfri" 
+        },
     ];
 
     const muligeIngredienser = IngredienserModule.getAllIngredienser
