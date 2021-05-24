@@ -41,11 +41,42 @@ const generateRestauranter = (chosenArray) => {
                         </ul>
                     </section>
                     <section class="card-footer buttons is-small">
-                        <button type="button" class="card-footer-item button edit-button"><span>(ic)</span>Rediger</button>
+                        <button type="button" class="myBtn card-footer-item button edit-button"><span>(ic)</span>Rediger</button>
                         <button type="button" class="card-footer-item button delete-button"><span>(ic)</span>Slett</button>
                     </section>
                 </div>
             </article>
+            <div class="modal">
+            <div class="modal-background"></div>
+            <div class="modal-content has-background-white py-5 px-5">
+                <h3 class="title mb-6">Join the War</h3>
+                <form>
+                    <div class="field">
+                        <label class="label">Name</label>
+                        <div class="control">
+                            <input type="text" class="input" placeholder="Name">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="label">Email</label>
+                        <div class="control">
+                            <input type="text" class="input" placeholder="Email">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="control">
+                            <label class="checkbox">
+                                <input type="checkbox">
+                                I agree to the <a href="">Terms & Conditions</a>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="mt-6 has-text-centered">
+                        <button class="button is-primary">Sign Up</button>
+                    </div>
+                </form>
+            </div>
+        </div>
         `;
     });
 
@@ -84,6 +115,19 @@ const filterByChoice = (searchedArray, searchKey, searchValue) => {
         
 
 }
+// modal
+const signUpBtn = document.querySelector('.myBtn');
+const modalBg = document.querySelector('.modal-background');
+const modal = document.querySelector('.modal'); 
+
+signUpBtn.addEventListener('click', () => {
+    modal.classList.add('is-active');
+}); 
+
+modalBg.addEventListener('click', () => {
+    modal.classList.remove('is-active');
+});
+
 // Onclick-events:
 
 searchButton.onclick = function(){
