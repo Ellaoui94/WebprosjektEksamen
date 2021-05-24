@@ -27,19 +27,17 @@
 
     <div class="container">
 
-        <main>			
-			<section class="row">				
-				<div class="field">
-					<label class="label">Søk etter mat eller drikke</label>
-					<div class="control">
-                    <button id="search-a-btn" class="button">Søk</button>
-		<input id="search-input" class="input" type="text" placeholder="søk på mat eller drikke.."> 						
-						
-					</div>
-				</div>
-			</section>	
-        </main>	
-        <main class="columns">
+        <div is="search-test">
+            <select id="search-key">
+                <option value="navn">Navn</option>
+                <option value="id">ID</option>
+                <option value="kategori">Kategori</option>
+                <option value="type">Type</option>
+            </select>
+            <input type="text" id="search-value">
+            <button type="button" id="search-button">Søk</button>
+        </div>
+        <main class="container">
 
             <section class="column">
                 <h3>Mat</h3>

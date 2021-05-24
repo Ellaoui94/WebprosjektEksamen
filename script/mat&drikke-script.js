@@ -46,6 +46,7 @@ const generateMeny = () => {
                     <section class="card-content">
                         <ul class="content">
                             <li>ID: ${menuObject.id}</li>
+                            <li>Type: ${menuObject.type}</li>
                         </ul>
                     </section>
                     <section class="card-footer buttons is-small">
