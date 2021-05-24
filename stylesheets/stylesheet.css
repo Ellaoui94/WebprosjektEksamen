@@ -14,8 +14,9 @@
 }
 
 .card {
-    background: hsl(40, 67%, 67%);
+    background: hsl(40, 67%, 86%);
     color: hsl(0,0%,0%);
+    border-radius: 25px;
 }
 
 
@@ -23,7 +24,7 @@
 
 /* CSS for navbaren med bilde */
 .has-bg-img { 
-    background: url('../images/pizza-ham-salami.png'); 
+    background: url('../images/pizza-banner.png'); 
     background-size: cover;
     height: 150px;
 }
@@ -31,10 +32,12 @@
 /* For teksten Gyldne Pizza */
 .title-left {
     position: relative;
-    left: 700px;
+    left: 500px;
     top: 50px;
     color: hsl(208, 100%, 97%);
     color: hsl(208, 100%, 97%);
+    font-style: italic;
+    font-size: 54px;
 }
 
 /* For navbaren med knapper */
