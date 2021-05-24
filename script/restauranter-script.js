@@ -41,13 +41,9 @@ const generateRestauranter = (chosenArray) => {
                         </ul>
                     </section>
                     <section class="card-footer buttons is-small">
-<<<<<<< HEAD
                         <button type="button" class="card-footer-item button edit-button"><span><img src="images/knapp-iconer/edit-white.png" width="25" heigth="25"></span>Rediger</button>
                         <button type="button" class="card-footer-item button delete-button"><span><img src="images/knapp-iconer/delete-white.png" width="25" heigth="25"></span>Slett</button>
-=======
-                        <button type="button" class="myBtn card-footer-item button edit-button"><span>(ic)</span>Rediger</button>
-                        <button type="button" class="card-footer-item button delete-button"><span>(ic)</span>Slett</button>
->>>>>>> bc0e26a31225c9b6c6550f5162118085ba5286de
+    
                     </section>
                 </div>
             </article>
