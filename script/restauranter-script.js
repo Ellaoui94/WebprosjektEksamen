@@ -43,7 +43,6 @@ const generateRestauranter = (chosenArray) => {
                     <section class="card-footer buttons is-small">
                         <button type="button" class="card-footer-item button edit-button"><span><img src="images/knapp-iconer/edit-white.png" width="25" heigth="25"></span>Rediger</button>
                         <button type="button" class="card-footer-item button delete-button"><span><img src="images/knapp-iconer/delete-white.png" width="25" heigth="25"></span>Slett</button>
-    
                     </section>
                 </div>
             </article>
@@ -59,7 +58,9 @@ generateRestauranter(alleRestauranter);
 // testfunksjoner:
 
 
-// til popup
+// til popup:
+
+/*
 const signUpBtn = document.querySelector('.myBtn');
 const modalBg = document.querySelector('.modal-background');
 const modal = document.querySelector('.modal'); 
@@ -71,6 +72,8 @@ signUpBtn.addEventListener('click', () => {
 modalBg.addEventListener('click', () => {
     modal.classList.remove('is-active');
 });
+*/
+
 
 // Onclick-events:
 
@@ -78,6 +81,6 @@ modalBg.addEventListener('click', () => {
 // alleRestauranter er et array som inneholder info hentet fra RestaurantModule
 // searchKey er en dropdown-meny, fikset som en <select>-tag
 // searchValue er et input-felt
-searchButton.onclick = function(){
+searchButton.addEventListener("click", () => {
     generateRestauranter(SearchModule.filterByChoice(alleRestauranter, searchKey, searchValue));
-}
+});
