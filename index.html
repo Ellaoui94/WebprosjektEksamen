@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma-rtl.min.css">
     <link rel="stylesheet" href="./stylesheets/stylesheet.css">
+    <script type="module" src="script/modules/kladdScript.js"></script>
     <title>Hjem - Gyldne Pizza</title>
 </head>
 <body> 
@@ -30,6 +31,8 @@
             <a class="navbar-item navbarTwo-color">Økonomi</a>
         </div>
     </nav>
+
+    <button type="button" class="myBtn card-footer-item button edit-button"><span><img src="images/knapp-iconer/edit-white.png" width="25" heigth="25"></span>Rediger</button>
 
     <div class="container">
         <section class="columns is-multiline">
@@ -76,7 +79,13 @@
                     </main>
                 </div>
         </section>
-    </div>           
+    </div>     
+    
+    <div class="container">
+        <main>
+            <section id="restaurant-section" class="columns"></section>
+        </main>
+    </div>
 
     
 </body>
