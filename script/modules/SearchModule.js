@@ -1,7 +1,7 @@
 const SearchModule = (function() {
 
     const filterByChoice = (searchedArray, searchKey, searchValue) => {
-        switch (searchKey){
+        switch (searchKey.value){
             case "id":
                 searchById(searchedArray, searchValue);
                 break;

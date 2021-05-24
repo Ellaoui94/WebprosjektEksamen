@@ -4,13 +4,15 @@ import SearchModule from "./modules/SearchModule.js";
 
 const restaurantSection = document.querySelector("#restaurant-section");
 
-const alleRestauranter = RestaurantModule.getAllRestauranter();
-
 const searchButton = document.querySelector("#search-button");
 
 const searchKey = document.querySelector("#search-key");
 
-const searchValue = document.querySelector("#search-value")
+const searchValue = document.querySelector("#search-value");
+
+const alleRestauranter = RestaurantModule.getAllRestauranter();
+
+let searchResult = [];
 
 
 const generateRestauranter = (chosenArray) => {
@@ -45,7 +47,6 @@ const generateRestauranter = (chosenArray) => {
                 </div>
             </article>
         `;
-        console.log(restaurant);
     });
 
     restaurantSection.innerHTML = htmlText;
@@ -57,7 +58,16 @@ generateRestauranter(alleRestauranter);
 // Onclick-events:
 
 searchButton.onclick = function(){
-    let searchResult = alleRestauranter.filter(o => o.id == searchValue.value);
+    
+    
+    /*
+    if (searchKey.value == "id"){
+        searchResult = alleRestauranter.filter(o => o.id == searchValue.value);
+    };
+    console.log(searchResult);
+    */
+    searchResult = SearchModule.filterByChoice(alleRestauranter, searchKey, searchValue);
+    console.log(searchResult);
     generateRestauranter(searchResult);
 }
 
