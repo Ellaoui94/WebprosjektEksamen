@@ -41,8 +41,13 @@ const generateRestauranter = (chosenArray) => {
                         </ul>
                     </section>
                     <section class="card-footer buttons is-small">
+<<<<<<< HEAD
                         <button type="button" class="card-footer-item button edit-button"><span><img src="images/knapp-iconer/edit-white.png" width="25" heigth="25"></span>Rediger</button>
                         <button type="button" class="card-footer-item button delete-button"><span><img src="images/knapp-iconer/delete-white.png" width="25" heigth="25"></span>Slett</button>
+=======
+                        <button type="button" class="myBtn card-footer-item button edit-button"><span>(ic)</span>Rediger</button>
+                        <button type="button" class="card-footer-item button delete-button"><span>(ic)</span>Slett</button>
+>>>>>>> bc0e26a31225c9b6c6550f5162118085ba5286de
                     </section>
                 </div>
             </article>
@@ -55,32 +60,28 @@ const generateRestauranter = (chosenArray) => {
 
 generateRestauranter(alleRestauranter);
 
+// testfunksjoner:
+
+
+// til popup
+const signUpBtn = document.querySelector('.myBtn');
+const modalBg = document.querySelector('.modal-background');
+const modal = document.querySelector('.modal'); 
+
+signUpBtn.addEventListener('click', () => {
+    modal.classList.add('is-active');
+}); 
+
+modalBg.addEventListener('click', () => {
+    modal.classList.remove('is-active');
+});
+
 // Onclick-events:
 
+// generateRestauranter() er funksjonen som genererer html for restauranter-siden
+// alleRestauranter er et array som inneholder info hentet fra RestaurantModule
+// searchKey er en dropdown-meny, fikset som en <select>-tag
+// searchValue er et input-felt
 searchButton.onclick = function(){
-    
-    
-    /*
-    if (searchKey.value == "id"){
-        searchResult = alleRestauranter.filter(o => o.id == searchValue.value);
-    };
-    console.log(searchResult);
-    */
-    searchResult = SearchModule.filterByChoice(alleRestauranter, searchKey, searchValue);
-    console.log(searchResult);
-    generateRestauranter(searchResult);
+    generateRestauranter(SearchModule.filterByChoice(alleRestauranter, searchKey, searchValue));
 }
-
-
-/*
-searchButton.onclick = function(){
-    let key = searchKey.value;
-    let value = searchValue.value;
-    let searchResult = SearchModule.filterByChoice(alleRestauranter, key, value);
-    
-    console.log(searchResult)
-    //generateRestauranter(searchResult);
-};
-*/
-
-
