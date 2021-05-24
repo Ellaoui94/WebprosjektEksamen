@@ -88,34 +88,8 @@ generateRestauranter(alleRestauranter);
 
 // testfunksjoner:
 
-const filterByChoice = (searchedArray, searchKey, searchValue) => {
-    console.log(searchedArray);
-    console.log(searchKey.value);
-    console.log(searchValue.value);
-    switch (searchKey.value){
-        case "id":
-            return searchedArray.filter(o => o.id == searchValue.value);
-            break;
-        case "navn":
-            return searchedArray.filter(o => o.navn == searchValue.value);
-            break;
-        case "adresse":
-            return searchedArray.filter(o => o.adresse == searchValue.value);
-            break;
-        case "telefon":
-            return searchedArray.filter(o => o.telefon == searchValue.value);
-            break;
-        case "kapasitet":
-            return searchedArray.filter(o => o.kapasitet == searchValue.value);
-            break;
-        case "leder":
-            return searchedArray.filter(o => o.leder == searchValue.value);
-            break;
-    }
-        
 
-}
-// modal
+// til popup
 const signUpBtn = document.querySelector('.myBtn');
 const modalBg = document.querySelector('.modal-background');
 const modal = document.querySelector('.modal'); 
@@ -130,30 +104,10 @@ modalBg.addEventListener('click', () => {
 
 // Onclick-events:
 
+// generateRestauranter() er funksjonen som genererer html for restauranter-siden
+// alleRestauranter er et array som inneholder info hentet fra RestaurantModule
+// searchKey er en dropdown-meny, fikset som en <select>-tag
+// searchValue er et input-felt
 searchButton.onclick = function(){
-    
-    
-    /*
-    if (searchKey.value == "id"){
-        searchResult = alleRestauranter.filter(o => o.id == searchValue.value);
-    };
-    console.log(searchResult);
-    */
-    searchResult = SearchModule.filterByChoiceShort(alleRestauranter, searchKey, searchValue);
-    console.log(searchResult);
-    generateRestauranter(searchResult);
+    generateRestauranter(SearchModule.filterByChoice(alleRestauranter, searchKey, searchValue));
 }
-
-
-/*
-searchButton.onclick = function(){
-    let key = searchKey.value;
-    let value = searchValue.value;
-    let searchResult = SearchModule.filterByChoice(alleRestauranter, key, value);
-    
-    console.log(searchResult)
-    //generateRestauranter(searchResult);
-};
-*/
-
-
