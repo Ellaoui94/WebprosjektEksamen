@@ -55,6 +55,35 @@ const generateRestauranter = (chosenArray) => {
 
 generateRestauranter(alleRestauranter);
 
+// testfunksjoner:
+
+const filterByChoice = (searchedArray, searchKey, searchValue) => {
+    console.log(searchedArray);
+    console.log(searchKey.value);
+    console.log(searchValue.value);
+    switch (searchKey.value){
+        case "id":
+            return searchedArray.filter(o => o.id == searchValue.value);
+            break;
+        case "navn":
+            return searchedArray.filter(o => o.navn == searchValue.value);
+            break;
+        case "adresse":
+            return searchedArray.filter(o => o.adresse == searchValue.value);
+            break;
+        case "telefon":
+            return searchedArray.filter(o => o.telefon == searchValue.value);
+            break;
+        case "kapasitet":
+            return searchedArray.filter(o => o.kapasitet == searchValue.value);
+            break;
+        case "leder":
+            return searchedArray.filter(o => o.leder == searchValue.value);
+            break;
+    }
+        
+
+}
 // Onclick-events:
 
 searchButton.onclick = function(){
@@ -66,7 +95,7 @@ searchButton.onclick = function(){
     };
     console.log(searchResult);
     */
-    searchResult = SearchModule.filterByChoice(alleRestauranter, searchKey, searchValue);
+    searchResult = SearchModule.filterByChoiceShort(alleRestauranter, searchKey, searchValue);
     console.log(searchResult);
     generateRestauranter(searchResult);
 }
