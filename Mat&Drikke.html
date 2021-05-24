@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
     <link rel="stylesheet" href="./stylesheets/stylesheet.css">
-    <script type="module" src="script/mat&drikke-script.js"></script>
+    <script type="module" src="script/meny-script.js"></script>
+    <script type="module" src="script/modules/SearchModule.js"></script>
 </head>
 <body>
 
@@ -18,28 +19,26 @@
     </nav>
     <nav class="navbar has-shadow navbarTwo-color">
         <div class="navbar-menu">
-            <a class="navbar-item navbarTwo-color">Hjem</a>
-            <a class="navbar-item navbarTwo-color">Ansatte</a>
-            <a class="navbar-item navbarTwo-color">Mat/Drikke</a>
-            <a class="navbar-item navbarTwo-color">Økonomi</a>
+            <a class="navbar-item navbarTwo-color" href="index.html">Hjem</a>
+            <a class="navbar-item navbarTwo-color" href="Ansatte.html">Ansatte</a>
+            <a class="navbar-item navbarTwo-color" href="Mat&Drikke.html">Mat/Drikke</a>
+            <a class="navbar-item navbarTwo-color" href="Økonomi.html">Økonomi</a>
         </div>
     </nav>
 
     <div class="container">
 
-        <main>			
-			<section class="row">				
-				<div class="field">
-					<label class="label">Søk etter mat eller drikke</label>
-					<div class="control">
-                    <button id="search-a-btn" class="button">Søk</button>
-		<input id="search-input" class="input" type="text" placeholder="søk på mat eller drikke.."> 						
-						
-					</div>
-				</div>
-			</section>	
-        </main>	
-        <main class="columns">
+        <div is="search-test">
+            <select id="search-key">
+                <option value="navn">Navn</option>
+                <option value="id">ID</option>
+                <option value="kategori">Kategori</option>
+                <option value="type">Type</option>
+            </select>
+            <input type="text" id="search-value">
+            <button type="button" id="search-button">Søk</button>
+        </div>
+        <main class="container">
 
             <section class="column">
                 <h3>Mat</h3>
@@ -54,9 +53,7 @@
                     </div>
 
             </section>
-
-
-             
+                         
         </main>
     
 </body>

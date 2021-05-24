@@ -3,6 +3,7 @@
 
 .delete-button {
     background: hsl(5, 74%, 33%);
+    border-radius: 25px;
 }
 
 .button {
@@ -11,6 +12,7 @@
 
 .edit-button {
     background: hsl(125, 100%, 19%);
+    border-radius: 25px;
 }
 
 .card {

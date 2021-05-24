@@ -10,6 +10,8 @@ const searchKey = document.querySelector("#search-key");
 
 const searchValue = document.querySelector("#search-value");
 
+const popupSection = document.querySelector("#popup-section")
+
 const alleRestauranter = RestaurantModule.getAllRestauranter();
 
 let searchResult = [];
@@ -18,6 +20,8 @@ let searchResult = [];
 const generateRestauranter = (chosenArray) => {
 
     let htmlText = "";
+
+    let popupHtmlText = "";
 
     chosenArray.forEach(restaurant => {
         // Klasser på alle html-elementer er ikke satt ennå
@@ -41,16 +45,71 @@ const generateRestauranter = (chosenArray) => {
                         </ul>
                     </section>
                     <section class="card-footer buttons is-small">
-                        <button type="button" class="card-footer-item button edit-button"><span><img src="images/knapp-iconer/edit-white.png" width="25" heigth="25"></span>Rediger</button>
-                        <button type="button" class="card-footer-item button delete-button"><span><img src="images/knapp-iconer/delete-white.png" width="25" heigth="25"></span>Slett</button>
-    
+                        <button id="editBtn${restaurant.id}" type="button" class="card-footer-item button edit-button"><span><img src="images/knapp-iconer/edit-white.png" width="25" heigth="25"></span>Rediger</button>
+                        <button id="deleteBtn${restaurant.id}" type="button" class="card-footer-item button delete-button"><span><img src="images/knapp-iconer/delete-white.png" width="25" heigth="25"></span>Slett</button>
                     </section>
+                </div>
+            </article>
+        `;
+
+        popupHtmlText += `
+            <article id="popup${restaurant.id}" class="modal">
+                <div class="modal-background"></div>
+                <div class="modal-content py-5 px-5">
+                    <div class="card restaurant-popup">
+                        <section class="card-header>
+                            <h3 class="card-header-title is-centered"><span class="card-header-icon">(ic)</span>${restaurant.navn}</h3>
+                        </section>
+                        <section class="card-image is-centered">
+                            <img src="images/${restaurant.bilde}" alt="bilde av restaurant">
+                        </section>
+                        <section class="card-content">
+                            <ul class="content">
+                                <li>
+                                    <label class="label">Navn</label>
+                                    <div class="control">
+                                        <input id="popupNavn${restaurant.id}" type="text" class="input" placeholder="${restaurant.navn}">
+                                    </div>
+                                </li>
+                                <li>
+                                    <label class="label">Adresse</label>
+                                    <div class="control">
+                                        <input id="popupAdresse${restaurant.id}" type="text" class="input" placeholder="${restaurant.adresse}">
+                                    </div>
+                                </li>
+                                <li>
+                                    <label class="label">Telefon</label>
+                                    <div class="control">
+                                        <input id="popupTelefon${restaurant.id}" type="text" class="input" placeholder="${restaurant.telefon}">
+                                    </div>
+                                </li>
+                                <li>
+                                    <label class="label">Leder</label>
+                                    <div class="control">
+                                        <input id="popupLeder${restaurant.id}" type="text" class="input" placeholder="${restaurant.leder[0]}">
+                                    </div>
+                                </li>
+                                <li>
+                                    <label class="label">Kapasitet</label>
+                                    <div class="control">
+                                        <input id="popupKapasitet${restaurant.id}" type="text" class="input" placeholder="${restaurant.kapasitet}">
+                                    </div>
+                                </li>
+                            </ul>
+                        </section>
+                        <section class="card-footer buttons is-small">
+                            <button id="closeBtn${restaurant.id}" type="button" class="card-footer-item button close-button"><span><img src="images/SETT_RIKTIG_FILNAVN_HER.png" width="25" heigth="25"></span>Lukk</button>
+                            <button id="saveBtn${restaurant.id}" type="button" class="card-footer-item button save-button"><span><img src="images/SETT_RIKTIG_FILNAVN_HER.png" width="25" heigth="25"></span>Lagre</button>
+                        </section>
+                    </div>
                 </div>
             </article>
         `;
     });
 
     restaurantSection.innerHTML = htmlText;
+
+    popupSection.innerHTML = popupHtmlText;
 
 };
 
@@ -59,12 +118,14 @@ generateRestauranter(alleRestauranter);
 // testfunksjoner:
 
 
-// til popup
-const signUpBtn = document.querySelector('.myBtn');
+// til popup:
+
+
+const editBtn = document.querySelector('#editBtn10000');
 const modalBg = document.querySelector('.modal-background');
 const modal = document.querySelector('.modal'); 
 
-signUpBtn.addEventListener('click', () => {
+editBtn.addEventListener('click', () => {
     modal.classList.add('is-active');
 }); 
 
@@ -72,12 +133,14 @@ modalBg.addEventListener('click', () => {
     modal.classList.remove('is-active');
 });
 
+
+
 // Onclick-events:
 
 // generateRestauranter() er funksjonen som genererer html for restauranter-siden
 // alleRestauranter er et array som inneholder info hentet fra RestaurantModule
 // searchKey er en dropdown-meny, fikset som en <select>-tag
 // searchValue er et input-felt
-searchButton.onclick = function(){
+searchButton.addEventListener("click", () => {
     generateRestauranter(SearchModule.filterByChoice(alleRestauranter, searchKey, searchValue));
-}
+});

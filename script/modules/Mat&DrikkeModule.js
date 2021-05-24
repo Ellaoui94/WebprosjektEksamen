@@ -277,23 +277,41 @@ const MatOgDrikkeModule = (function(){
          type: "Mineralvann",
          bilde: "beverage-icon.png"
         },
-        {id: "015",
+        {id: "016",
          navn: "Fanta",
          kategori: "Drikke",
          type: "Mineralvann" ,
          bilde: "beverage-icon.png"
         },
-        {id: "015",
-         navn: "Cola",
+        {id: "017",
+         navn: "Sprite",
          kategori: "Drikke",
-         type: "Alkoholfri" ,
+         type: "Mineralvann" ,
          bilde: "beverage-icon.png"
         },
-        {id: "015",
-         navn: "Cola",
+        {id: "018",
+         navn: "Lemonade",
          kategori: "Drikke",
-         type: "Alkoholfri" ,
+         type: "Mineralvann" ,
          bilde: "beverage-icon.png"
+        },
+        {id: "019",
+         navn: "Rød vin",
+         kategori: "Drikke",
+         type: "Alkohol" ,
+         bilde: "wine.png"
+        },
+        {id: "020",
+         navn: "Hvit vin",
+         kategori: "Drikke",
+         type: "Alkohol" ,
+         bilde: "wine.png"
+        },
+        {id: "021",
+         navn: "Øl",
+         kategori: "Drikke",
+         type: "Alkohol" ,
+         bilde: "beer.png"
         },
     ];
 
