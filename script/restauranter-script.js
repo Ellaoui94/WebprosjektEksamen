@@ -55,7 +55,10 @@ const generateRestauranter = (chosenArray) => {
 
 generateRestauranter(alleRestauranter);
 
-// modal
+// testfunksjoner:
+
+
+// til popup
 const signUpBtn = document.querySelector('.myBtn');
 const modalBg = document.querySelector('.modal-background');
 const modal = document.querySelector('.modal'); 
@@ -70,30 +73,10 @@ modalBg.addEventListener('click', () => {
 
 // Onclick-events:
 
+// generateRestauranter() er funksjonen som genererer html for restauranter-siden
+// alleRestauranter er et array som inneholder info hentet fra RestaurantModule
+// searchKey er en dropdown-meny, fikset som en <select>-tag
+// searchValue er et input-felt
 searchButton.onclick = function(){
-    
-    
-    /*
-    if (searchKey.value == "id"){
-        searchResult = alleRestauranter.filter(o => o.id == searchValue.value);
-    };
-    console.log(searchResult);
-    */
-    searchResult = SearchModule.filterByChoice(alleRestauranter, searchKey, searchValue);
-    console.log(searchResult);
-    generateRestauranter(searchResult);
+    generateRestauranter(SearchModule.filterByChoice(alleRestauranter, searchKey, searchValue));
 }
-
-
-/*
-searchButton.onclick = function(){
-    let key = searchKey.value;
-    let value = searchValue.value;
-    let searchResult = SearchModule.filterByChoice(alleRestauranter, key, value);
-    
-    console.log(searchResult)
-    //generateRestauranter(searchResult);
-};
-*/
-
-
