@@ -1,6 +1,7 @@
 import MatOgDrikkeModule from "./modules/Mat&DrikkeModule.js";
 
 const menuSection = document.querySelector("#menu-section");
+const drikkeSection = document.querySelector("#drikke-section");
 
 const generateMeny = () => {
 
@@ -21,18 +22,19 @@ const generateMeny = () => {
                         <ul class="content">
                             <li>ID: ${menuObject.id}</li>
                             <li>Type: ${menuObject.type}</li>
+                            <li>Allergener: ${menuObject.allergener}</li>
+                        
                         </ul>
                     </section>
-                    <section class="card-content">
-    
-                        SETT REDIGER / SLETT KNAPP HER
-    
+                    <section class="card-footer buttons is-small">
+                        <button type="button" class="card-footer-item button edit-button"><span><img src="images/knapp-iconer/edit-white.png" width="25" heigth="25"></span>Rediger</button>
+                        <button type="button" class="card-footer-item button delete-button"><span><img src="images/knapp-iconer/delete-white.png" width="25" heigth="25"></span>Slett</button>
                     </section>
                 </div>
             </article>`;
 
         }else{
-            htmlTxt += `
+            drikkeSection.innerHTML += `
             <article id ="${menuObject.id}" class="column is-3">
                 <div class="card">
                     <section class="card-header">
@@ -46,10 +48,9 @@ const generateMeny = () => {
                             <li>ID: ${menuObject.id}</li>
                         </ul>
                     </section>
-                    <section class="card-content">
-    
-                        SETT REDIGER / SLETT KNAPP HER
-    
+                    <section class="card-footer buttons is-small">
+                        <button type="button" class="card-footer-item button edit-button"><span><img src="images/knapp-iconer/edit-white.png" width="25" heigth="25"></span>Rediger</button>
+                        <button type="button" class="card-footer-item button delete-button"><span><img src="images/knapp-iconer/delete-white.png" width="25" heigth="25"></span>Slett</button>
                     </section>
                 </div>
             </article>`;
@@ -59,6 +60,7 @@ const generateMeny = () => {
     );
 
     menuSection.innerHTML = htmlTxt;
+    
     
 
 };

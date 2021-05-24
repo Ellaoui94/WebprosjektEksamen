@@ -30,7 +30,6 @@ const MatOgDrikkeModule = (function(){
             type: "Forret",
             bilde: "pizza-icon.png",
             ingredienser: [
-                "Caprese",
                 "Parmaskinke",
                 "trøffelsalami",
                 "sterk salami",
@@ -269,7 +268,7 @@ const MatOgDrikkeModule = (function(){
                 "Melk",
                 "Pinnekjerner"
             ],
-           // kostnad: getKostnad(),
+            //kostnad: getKostnad(),
             //pris: getPris()
         },
         {id: "015",
@@ -310,8 +309,8 @@ const MatOgDrikkeModule = (function(){
 
 
 
-
-    /*
+/*
+    
 
     const muligeIngredienser = IngredienserModule.getAllIngredienser;
 
@@ -334,6 +333,7 @@ const MatOgDrikkeModule = (function(){
         return pris;
     };
     */
+    
 
     const getAllMatOgDrikke = () => matOgDrikke;
 
