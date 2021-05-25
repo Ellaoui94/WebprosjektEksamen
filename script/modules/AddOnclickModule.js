@@ -1,5 +1,9 @@
 const AddOnclickModule = (function() {
 
+    // For at denne skal fungere, må man legge til en spesifikk klasse på kortene på hver side
+    // F.eks. bruker restauranter-script.js klassen "restaurant-card-article"
+    // Denne må settes inn som argument i parameteret cardClass når man bruker funksjonen
+
     const addOnclickToButtons = (cardClass) => {
 
         let allCards = document.querySelectorAll(`.${cardClass}`);
