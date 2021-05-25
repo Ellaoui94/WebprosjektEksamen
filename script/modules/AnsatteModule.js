@@ -14,7 +14,7 @@ const AnsatteModule = (function(){
             telefon: "92356087"
         },
         {
-            // Denne skal ikke brukes i det ferdige produktet
+        
             id: "00001",
             navn: "Erna Stoltenberg",
             alder: 30,
