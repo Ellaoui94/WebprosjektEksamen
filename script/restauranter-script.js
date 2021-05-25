@@ -1,5 +1,6 @@
 import RestaurantModule from "./modules/RestaurantModule.js";
 import SearchModule from "./modules/SearchModule.js";
+import AddOnclickModule from "./modules/AddOnclickModule.js";
 // import AnsatteModule from "./modules/AnsatteModule.js";
 
 const restaurantSection = document.querySelector("#restaurant-section");
@@ -14,30 +15,6 @@ const popupSection = document.querySelector("#popup-section")
 
 const alleRestauranter = RestaurantModule.getAllRestauranter();
 
-
-
-const addOnclickToButtons = () => {
-
-    let allRestaurantCards = document.querySelectorAll(".restaurant-card-article");
-
-    allRestaurantCards.forEach(card => {
-
-        let connectedEditButton = document.querySelector(`#editBtn${card.id}`);
-
-        let connectedPopup = document.querySelector(`#popup${card.id}`);
-
-        let connectedModalBackground = document.querySelector(`#modalBg${card.id}`);
-
-        connectedEditButton.addEventListener("click", () => {
-            connectedPopup.classList.add("is-active");
-        });
-        
-        connectedModalBackground.addEventListener("click", () => {
-            connectedPopup.classList.remove("is-active");
-        });
-    });
-};
-
 const generateRestauranter = (chosenArray) => {
 
     let htmlText = "";
@@ -48,6 +25,8 @@ const generateRestauranter = (chosenArray) => {
         // Klasser på alle html-elementer er ikke satt ennå
         // Denne delen er generelt uferdig
 
+
+        // For denne delen skal "restaurant-card-article" brukes til AddOnclickModule.addOnclickToButtons()
         htmlText += `
             <article id="${restaurant.id}" class="column restaurant-card-article">
                 <div class="card restaurant-card">
@@ -133,7 +112,7 @@ const generateRestauranter = (chosenArray) => {
 
     popupSection.innerHTML = popupHtmlText;
 
-    addOnclickToButtons();
+    AddOnclickModule.addOnclickToButtons("restaurant-card-article");
 };
 
 generateRestauranter(alleRestauranter);
