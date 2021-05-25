@@ -44,8 +44,8 @@ const generateMatOgDrikke = (chosenArray) => {
                             </ul>
                         </section>
                         <section class="card-footer buttons is-small">
-                            <button type="button" class="card-footer-item button edit-button"><span><img src="images/knapp-iconer/edit-white.png" width="25" heigth="25"></span>Rediger</button>
-                            <button type="button" class="card-footer-item button delete-button"><span><img src="images/knapp-iconer/delete-white.png" width="25" heigth="25"></span>Slett</button>
+                            <button id="editBtn" type="button" class="card-footer-item button edit-button"><span><img src="images/knapp-iconer/edit-white.png" width="25" heigth="25"></span>Rediger</button>
+                            <button id="deleteBtn" type="button" class="card-footer-item button delete-button"><span><img src="images/knapp-iconer/delete-white.png" width="25" heigth="25"></span>Slett</button>
                         </section>
                     </div>
                 </article>`;
@@ -59,7 +59,7 @@ const generateMatOgDrikke = (chosenArray) => {
                                 <h3 class="card-header-title is-centered"><span class="card-header-icon">(ic)</span>${menuObject.navn}</h3>
                             </section>
                             <section class="card-image is-centered">
-                                <img src="images/Meny/${menuObject.bilde}" alt="bilde av restaurant">
+                                <img src="images/Meny/${menuObject.bilde}" alt="bilde av mat">
                             </section>
                             <section class="card-content">
                                 <ul class="content">
@@ -97,13 +97,13 @@ const generateMatOgDrikke = (chosenArray) => {
                             </ul>
                         </section>
                         <section class="card-footer buttons is-small">
-                            <button type="button" class="card-footer-item button edit-button"><span><img src="images/knapp-iconer/edit-white.png" width="25" heigth="25"></span>Rediger</button>
-                            <button type="button" class="card-footer-item button delete-button"><span><img src="images/knapp-iconer/delete-white.png" width="25" heigth="25"></span>Slett</button>
+                            <button id="editBtn" type="button" class="card-footer-item button edit-button"><span><img src="images/knapp-iconer/edit-white.png" width="25" heigth="25"></span>Rediger</button>
+                            <button id="deleteBtn" type="button" class="card-footer-item button delete-button"><span><img src="images/knapp-iconer/delete-white.png" width="25" heigth="25"></span>Slett</button>
                         </section>
                     </div>
                 </article>`;
 
-                /*
+                
                 popupHtmlTxt += `
                 <article id="popup${menuObject.id}" class="modal menu-popup">
                     <div id="modalBg${menuObject.id}" class="modal-background"></div>
@@ -113,7 +113,7 @@ const generateMatOgDrikke = (chosenArray) => {
                                 <h3 class="card-header-title is-centered"><span class="card-header-icon">(ic)</span>${menuObject.navn}</h3>
                             </section>
                             <section class="card-image is-centered">
-                                <img src="images/Meny${menuObject.bilde}" alt="bilde av drikke">
+                                <img src="images/Meny/${menuObject.bilde}" alt="bilde av drikke">
                             </section>
                             <section class="card-content">
                                 <ul class="content">
@@ -133,7 +133,7 @@ const generateMatOgDrikke = (chosenArray) => {
                     </div>
                 </article>
             `;
-            */
+    
             }
         
     });
