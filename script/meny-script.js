@@ -69,11 +69,35 @@ const generateMatOgDrikke = (chosenArray) => {
                                             <input id="popupNavn${menuObject.id}" type="text" class="input" placeholder="${menuObject.navn}">
                                         </div>
                                     </li>
+                                    <li>
+                                        <label class="label">ID</label>
+                                        <div class="control">
+                                            <input id="popupId${menuObject.id}" type="text" class="input" placeholder="${menuObject.id}">
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <label class="label">Type</label>
+                                        <div class="control">
+                                            <input id="popupType${menuObject.id}" type="text" class="input" placeholder="${menuObject.type}">
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <label class="label">Allergener</label>
+                                        <div class="control">
+                                            <input id="popupAllergener${menuObject.id}" type="text" class="input" placeholder="${menuObject.allergener}">
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <label class="label">Ingredienser</label>
+                                        <div class="control">
+                                            <input id="popupIngredienser${menuObject.id}" type="text" class="input" placeholder="${menuObject.ingredienser}">
+                                        </div>
+                                    </li>
                                 </ul>
                             </section>
                             <section class="card-footer buttons is-small">
                                 <button id="closeBtn${menuObject.id}" type="button" class="card-footer-item button close-button"><span><img src="images/knapp-iconer/x-icon.png" width="25" heigth="25"></span>Lukk</button>
-                                <button id="saveBtn${menuObject.id}" type="button" class="card-footer-item button save-button"><span><img src="images/knapp-iconer/x-icon.png" width="25" heigth="25"></span>Lagre</button>
+                                <button id="saveBtn${menuObject.id}" type="button" class="card-footer-item button save-button"><span><img src="images/knapp-iconer/save-icon.png" width="25" heigth="25"></span>Lagre</button>
                             </section>
                         </div>
                     </div>
@@ -81,7 +105,7 @@ const generateMatOgDrikke = (chosenArray) => {
             `;
     
             }else{
-               htmlText += `
+               htmlTxt += `
                 <article id ="${menuObject.id}" class="column is-3 menu-card-article">
                     <div class="card menu-card">
                         <section class="card-header">
@@ -123,11 +147,23 @@ const generateMatOgDrikke = (chosenArray) => {
                                             <input id="popupNavn${menuObject.id}" type="text" class="input" placeholder="${menuObject.navn}">
                                         </div>
                                     </li>
+                                    <li>
+                                        <label class="label">ID</label>
+                                        <div class="control">
+                                            <input id="popupId${menuObject.id}" type="text" class="input" placeholder="${menuObject.id}">
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <label class="label">Type</label>
+                                        <div class="control">
+                                            <input id="popupType${menuObject.id}" type="text" class="input" placeholder="${menuObject.type}">
+                                        </div>
+                                    </li>
                                 </ul>
                             </section>
                             <section class="card-footer buttons is-small">
                                 <button id="closeBtn${menuObject.id}" type="button" class="card-footer-item button close-button"><span><img src="images/knapp-iconer/x-icon.png" width="25" heigth="25"></span>Lukk</button>
-                                <button id="saveBtn${menuObject.id}" type="button" class="card-footer-item button save-button"><span><img src="images/knapp-iconer/x-icon.png" width="25" heigth="25"></span>Lagre</button>
+                                <button id="saveBtn${menuObject.id}" type="button" class="card-footer-item button save-button"><span><img src="images/knapp-iconer/save-icon.png" width="25" heigth="25"></span>Lagre</button>
                             </section>
                         </div>
                     </div>
