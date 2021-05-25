@@ -8,7 +8,7 @@ const RestaurantModule = (function() {
             adresse: "Gateveien 1, 0000 OSLO",
             telefon: "00000000",
             bilde: "placeholderRestaurant.jpg",
-            kapasitet: 100,
+            kapasitet: 50,
             leder: ["Cecilie Clausen", "20001"] // Skal samkjkøres med AnsattModule
         },
         {
@@ -18,7 +18,7 @@ const RestaurantModule = (function() {
             adresse: "Veigata 1, 0001 OSLO",
             telefon: "99999999",
             bilde: "placeholderRestaurant.jpg",
-            kapasitet: 50,
+            kapasitet: 150,
             leder: ["Daniel Davidsen", "20000"] // Skal samkjkøres med AnsattModule
         },
         {
@@ -27,7 +27,7 @@ const RestaurantModule = (function() {
             adresse: "Gategata 1, 0002 OSLO",
             telefon: "45544554",
             bilde: "placeholderRestaurant.jpg",
-            kapasitet: 200,
+            kapasitet: 50,
             leder: ["Anders Andersen", "20002"] // Skal samkjkøres med AnsattModule
         },
         {

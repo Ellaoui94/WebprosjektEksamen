@@ -14,8 +14,29 @@ const popupSection = document.querySelector("#popup-section")
 
 const alleRestauranter = RestaurantModule.getAllRestauranter();
 
-let searchResult = [];
 
+
+const addOnclickToButtons = () => {
+
+    let allRestaurantCards = document.querySelectorAll(".restaurant-card-article");
+
+    allRestaurantCards.forEach(card => {
+
+        let connectedEditButton = document.querySelector(`#editBtn${card.id}`);
+
+        let connectedPopup = document.querySelector(`#popup${card.id}`);
+
+        let connectedModalBackground = document.querySelector(`#modalBg${card.id}`);
+
+        connectedEditButton.addEventListener("click", () => {
+            connectedPopup.classList.add("is-active");
+        });
+        
+        connectedModalBackground.addEventListener("click", () => {
+            connectedPopup.classList.remove("is-active");
+        });
+    });
+};
 
 const generateRestauranter = (chosenArray) => {
 
@@ -26,8 +47,9 @@ const generateRestauranter = (chosenArray) => {
     chosenArray.forEach(restaurant => {
         // Klasser på alle html-elementer er ikke satt ennå
         // Denne delen er generelt uferdig
+
         htmlText += `
-            <article id="${restaurant.id}" class="column">
+            <article id="${restaurant.id}" class="column restaurant-card-article">
                 <div class="card restaurant-card">
                     <section class="card-header">
                         <h3 class="card-header-title is-centered"><span class="card-header-icon">(ic)</span>${restaurant.navn}</h3>
@@ -53,8 +75,8 @@ const generateRestauranter = (chosenArray) => {
         `;
 
         popupHtmlText += `
-            <article id="popup${restaurant.id}" class="modal">
-                <div class="modal-background"></div>
+            <article id="popup${restaurant.id}" class="modal restaurant-popup">
+                <div id="modalBg${restaurant.id}" class="modal-background"></div>
                 <div class="modal-content py-5 px-5">
                     <div class="card restaurant-popup">
                         <section class="card-header>
@@ -111,6 +133,7 @@ const generateRestauranter = (chosenArray) => {
 
     popupSection.innerHTML = popupHtmlText;
 
+    addOnclickToButtons();
 };
 
 generateRestauranter(alleRestauranter);
@@ -120,18 +143,16 @@ generateRestauranter(alleRestauranter);
 
 // til popup:
 
+// Denne delen skal sannsynligvis kjøres i en funksjon, og er foreløpig uferdig
 
-const editBtn = document.querySelector('#editBtn10000');
-const modalBg = document.querySelector('.modal-background');
-const modal = document.querySelector('.modal'); 
 
-editBtn.addEventListener('click', () => {
-    modal.classList.add('is-active');
-}); 
+ 
 
-modalBg.addEventListener('click', () => {
-    modal.classList.remove('is-active');
-});
+
+
+
+
+
 
 
 
