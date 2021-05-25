@@ -11,7 +11,19 @@ const searchKey = document.querySelector("#search-key");
 
 const searchValue = document.querySelector("#search-value");
 
-const popupSection = document.querySelector("#popup-section")
+const popupSection = document.querySelector("#popup-section");
+
+const deletePopup = document.querySelector("#delete-popup");
+
+const modalBgDeletePopup = document.querySelector("#modalBg-delete-popup");
+
+const denyDeleteButton = document.querySelector("#deny-delete-button");
+
+const deleteInput = document.querySelector("#delete-input");
+
+const showAllButton = document.querySelector("#show-all-button");
+
+
 
 const alleRestauranter = RestaurantModule.getAllRestauranter();
 
@@ -112,7 +124,7 @@ const generateRestauranter = (chosenArray) => {
 
     popupSection.innerHTML = popupHtmlText;
 
-    AddOnclickModule.addOnclickToButtons("restaurant-card-article");
+    AddOnclickModule.addOnclickToButtons(alleRestauranter, "restaurant-card-article");
 };
 
 generateRestauranter(alleRestauranter);
@@ -144,3 +156,18 @@ generateRestauranter(alleRestauranter);
 searchButton.addEventListener("click", () => {
     generateRestauranter(SearchModule.filterByChoice(alleRestauranter, searchKey, searchValue));
 });
+
+denyDeleteButton.addEventListener("click", () => {
+    deletePopup.classList.remove("is-active");
+    deleteInput.value = "";
+});
+
+modalBgDeletePopup.addEventListener("click", () => {
+    deletePopup.classList.remove("is-active");
+    deleteInput.value = "";
+});
+
+showAllButton.addEventListener("click", () => {
+    generateRestauranter(alleRestauranter);
+});
+

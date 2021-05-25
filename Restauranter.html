@@ -23,6 +23,7 @@
         </select>
         <input type="text" id="search-value">
         <button type="button" id="search-button">Søk</button>
+        <button type="button" id="show-all-button">Vis alle</button>
     </div>
 
     <div class="container">
@@ -39,6 +40,16 @@
                 <div class="card">
                     <section class="card-header">
                         <h3 class="card-header-title is-centered">Slett</h3>
+                    </section>
+                    <section class="card-content">
+                        <p>
+                            Hvis du ønsker å slette <span id="delete-name">element</span> fra systemet, skriv "SLETT" i feltet under
+                        </p>
+                        <input id="delete-input" type="text" class="input is-centered">
+                    </section>
+                    <section class="card-footer buttons is-small">
+                        <button id="deny-delete-button" type="button" class="card-footer-item button deny-delete-button"><span><img src="images/knapp-iconer/navn_på_tilbake_ikon.png" alt="tilbake-ikon" width="25" height="25">Tilbake</span></button>
+                        <button id="confirm-delete-button" type="button" class="card-footer-item button confirm-delete-button"><span><img src="images/knapp-iconer/delete-white.png" alt="slett-ikon" width="25" height="25">Slett</span></button>
                     </section>
                 </div>
             </div>
