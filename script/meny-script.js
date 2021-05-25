@@ -44,8 +44,8 @@ const generateMatOgDrikke = (chosenArray) => {
                             </ul>
                         </section>
                         <section class="card-footer buttons is-small">
-                            <button id="editBtn" type="button" class="card-footer-item button edit-button"><span><img src="images/knapp-iconer/edit-white.png" width="25" heigth="25"></span>Rediger</button>
-                            <button id="deleteBtn" type="button" class="card-footer-item button delete-button"><span><img src="images/knapp-iconer/delete-white.png" width="25" heigth="25"></span>Slett</button>
+                            <button id="editBtn${menuObject.id}" type="button" class="card-footer-item button edit-button"><span><img src="images/knapp-iconer/edit-white.png" width="25" heigth="25"></span>Rediger</button>
+                            <button id="deleteBtn${menuObject.id}" type="button" class="card-footer-item button delete-button"><span><img src="images/knapp-iconer/delete-white.png" width="25" heigth="25"></span>Slett</button>
                         </section>
                     </div>
                 </article>`;
@@ -56,7 +56,7 @@ const generateMatOgDrikke = (chosenArray) => {
                     <div class="modal-content py-5 px-5">
                         <div class="card menu-popup">
                             <section class="card-header>
-                                <h3 class="card-header-title is-centered"><span class="card-header-icon">(ic)</span>${menuObject.navn}</h3>
+                            <h3 class="card-header-title is-centered"><span class="card-header-icon"><img src="images/Meny/icon1.png" width="25" height="25"></span>${menuObject.navn}</h3>
                             </section>
                             <section class="card-image is-centered">
                                 <img src="images/Meny/${menuObject.bilde}" alt="bilde av mat">
@@ -105,7 +105,7 @@ const generateMatOgDrikke = (chosenArray) => {
             `;
     
             }else{
-               htmlTxt += `
+               htmlText += `
                 <article id ="${menuObject.id}" class="column is-3 menu-card-article">
                     <div class="card menu-card">
                         <section class="card-header">
@@ -121,8 +121,8 @@ const generateMatOgDrikke = (chosenArray) => {
                             </ul>
                         </section>
                         <section class="card-footer buttons is-small">
-                            <button id="editBtn" type="button" class="card-footer-item button edit-button"><span><img src="images/knapp-iconer/edit-white.png" width="25" heigth="25"></span>Rediger</button>
-                            <button id="deleteBtn" type="button" class="card-footer-item button delete-button"><span><img src="images/knapp-iconer/delete-white.png" width="25" heigth="25"></span>Slett</button>
+                            <button id="editBtn${menuObject.id}" type="button" class="card-footer-item button edit-button"><span><img src="images/knapp-iconer/edit-white.png" width="25" heigth="25"></span>Rediger</button>
+                            <button id="deleteBtn${menuObject.id}" type="button" class="card-footer-item button delete-button"><span><img src="images/knapp-iconer/delete-white.png" width="25" heigth="25"></span>Slett</button>
                         </section>
                     </div>
                 </article>`;
@@ -134,7 +134,7 @@ const generateMatOgDrikke = (chosenArray) => {
                     <div class="modal-content py-5 px-5">
                         <div class="card restaurant-popup">
                             <section class="card-header>
-                                <h3 class="card-header-title is-centered"><span class="card-header-icon">(ic)</span>${menuObject.navn}</h3>
+                            <h3 class="card-header-title is-centered"><span class="card-header-icon"><span class="card-header-icon"><img src="images/Meny/beverage.png" width="25" height="25"></span>${menuObject.navn}</h3>
                             </section>
                             <section class="card-image is-centered">
                                 <img src="images/Meny/${menuObject.bilde}" alt="bilde av drikke">
