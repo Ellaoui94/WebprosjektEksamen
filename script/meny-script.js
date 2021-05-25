@@ -16,6 +16,16 @@ const alleMeny = MatOgDrikkeModule.getAllMatOgDrikke();
 
 const popupSection = document.querySelector("#popup-section");
 
+const deletePopup = document.querySelector("#delete-popup");
+
+const modalBgDeletePopup = document.querySelector("#modalBg-delete-popup");
+
+const denyDeleteButton = document.querySelector("#deny-delete-button");
+
+const deleteInput = document.querySelector("#delete-input");
+
+const showAllButton = document.querySelector("#show-all-button");
+
 
 const generateMatOgDrikke = (chosenArray) => {
     let htmlTxt = " ";
@@ -177,7 +187,7 @@ const generateMatOgDrikke = (chosenArray) => {
     menuSection.innerHTML = htmlTxt;
     drikkeSection.innerHTML = htmlText;
     popupSection.innerHTML = popupHtmlTxt;
-    AddOnclickModule.addOnclickToButtons("menu-card-article");
+    AddOnclickModule.addOnclickToButtons(alleMeny, "menu-card-article");
    
 }
 
@@ -186,4 +196,18 @@ generateMatOgDrikke(alleMeny);
 
 searchButton.addEventListener("click", () => {
     generateMatOgDrikke(SearchModule.filterByChoice(alleMeny, searchKey, searchValue));
+});
+
+denyDeleteButton.addEventListener("click", () => {
+    deletePopup.classList.remove("is-active");
+    deleteInput.value = "";
+});
+
+modalBgDeletePopup.addEventListener("click", () => {
+    deletePopup.classList.remove("is-active");
+    deleteInput.value = "";
+});
+
+showAllButton.addEventListener("click", () => {
+    generateMatOgDrikke(alleMeny);
 });

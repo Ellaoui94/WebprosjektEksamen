@@ -11,6 +11,11 @@
     border-radius: 25px;
 }
 
+.deny-delete-button {
+    background: hsl(5, 74%, 33%);
+    border-radius: 25px;
+}
+
 .save-button {
     background: hsl(125, 100%, 19%);
     border-radius: 25px;
@@ -20,6 +25,11 @@
 }
 
 .edit-button {
+    background: hsl(125, 100%, 19%);
+    border-radius: 25px;
+}
+
+.confirm-delete-button {
     background: hsl(125, 100%, 19%);
     border-radius: 25px;
 }
