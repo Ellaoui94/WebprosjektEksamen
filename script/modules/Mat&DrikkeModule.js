@@ -1,3 +1,6 @@
+import IngredienserModule from './IngredienserModule.js';
+
+const allIngredients = IngredienserModule.getAllIngredienser();
 
 const MatOgDrikkeModule = (function(){
 
