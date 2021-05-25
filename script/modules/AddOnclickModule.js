@@ -36,13 +36,28 @@ const AddOnclickModule = (function() {
 
             connectedDeleteButton.addEventListener("click", () => {
                 // Funksjon som sletter kort fra array
+                // Uferdig
+                // removeFromArray() skal kanskje brukes her
             });
 
             connectedSaveButton.addEventListener("click", () => {
                 // Funksjon som lagrer endring i array
+                // Uferdig
             });
         });
     };
+
+
+
+    // Hjelpefunksjoner
+
+    // Denne kan brukes på denne måten:
+    // let alleRestauranter = RestaurantModule.getAllRestauranter();
+    // let idPåTingSomSkalSlettes = "10001"
+    // alleRestauranter = removeFromArray(alleRestauranter, idPåTingSomSkalSlettes);
+    const removeFromArray = (arrayToRemoveFrom, thingToRemove) => {
+        return arrayToRemoveFrom.filter(o => o.id != thingToRemove)
+    }
 
     return {addOnclickToButtons}
 
