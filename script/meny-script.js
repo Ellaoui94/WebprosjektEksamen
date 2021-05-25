@@ -1,5 +1,6 @@
 import MatOgDrikkeModule from './modules/Mat&DrikkeModule.js';
 import SearchModule from './modules/SearchModule.js';
+import AddOnclickModule from "./modules/AddOnclickModule.js";
 
 const menuSection = document.querySelector("#menu-section");
 
@@ -13,16 +14,21 @@ const searchValue = document.querySelector("#search-value");
 
 const alleMeny = MatOgDrikkeModule.getAllMatOgDrikke();
 
-let searchResult = [];
+const popupSection = document.querySelector("#popup-section");
+
 
 const generateMatOgDrikke = (chosenArray) => {
     let htmlTxt = " ";
+
+    let htmlText = " ";
+
+    let popupHtmlTxt = " ";
      
     chosenArray.forEach(menuObject => {
         if (menuObject.kategori == "Mat"){
             htmlTxt += `
-                <article id ="${menuObject.id}" class="column is-3">
-                    <div class="card">
+                <article id ="${menuObject.id}" class="column is-3 menu-card-article">
+                    <div class="card menu-card">
                         <section class="card-header">
                             <h3 class="card-header-title is-centered"><span class="card-header-icon"><img src="images/Meny/icon1.png" width="25" height="25"></span>${menuObject.navn}</h3>
                         </section>
@@ -43,11 +49,41 @@ const generateMatOgDrikke = (chosenArray) => {
                         </section>
                     </div>
                 </article>`;
+
+                popupHtmlTxt += `
+                <article id="popup${menuObject.id}" class="modal menu-popup">
+                    <div id="modalBg${menuObject.id}" class="modal-background"></div>
+                    <div class="modal-content py-5 px-5">
+                        <div class="card menu-popup">
+                            <section class="card-header>
+                                <h3 class="card-header-title is-centered"><span class="card-header-icon">(ic)</span>${menuObject.navn}</h3>
+                            </section>
+                            <section class="card-image is-centered">
+                                <img src="images/Meny/${menuObject.bilde}" alt="bilde av restaurant">
+                            </section>
+                            <section class="card-content">
+                                <ul class="content">
+                                    <li>
+                                        <label class="label">Navn</label>
+                                        <div class="control">
+                                            <input id="popupNavn${menuObject.id}" type="text" class="input" placeholder="${menuObject.navn}">
+                                        </div>
+                                    </li>
+                                </ul>
+                            </section>
+                            <section class="card-footer buttons is-small">
+                                <button id="closeBtn${menuObject.id}" type="button" class="card-footer-item button close-button"><span><img src="images/knapp-iconer/x-icon.png" width="25" heigth="25"></span>Lukk</button>
+                                <button id="saveBtn${menuObject.id}" type="button" class="card-footer-item button save-button"><span><img src="images/knapp-iconer/x-icon.png" width="25" heigth="25"></span>Lagre</button>
+                            </section>
+                        </div>
+                    </div>
+                </article>
+            `;
     
             }else{
-                drikkeSection.innerHTML += `
-                <article id ="${menuObject.id}" class="column is-3">
-                    <div class="card">
+               htmlText += `
+                <article id ="${menuObject.id}" class="column is-3 menu-card-article">
+                    <div class="card menu-card">
                         <section class="card-header">
                             <h3 class="card-header-title is-centered"><span class="card-header-icon"><span class="card-header-icon"><img src="images/Meny/beverage.png" width="25" height="25"></span>${menuObject.navn}</h3>
                         </section>
@@ -66,11 +102,46 @@ const generateMatOgDrikke = (chosenArray) => {
                         </section>
                     </div>
                 </article>`;
+
+                /*
+                popupHtmlTxt += `
+                <article id="popup${menuObject.id}" class="modal menu-popup">
+                    <div id="modalBg${menuObject.id}" class="modal-background"></div>
+                    <div class="modal-content py-5 px-5">
+                        <div class="card restaurant-popup">
+                            <section class="card-header>
+                                <h3 class="card-header-title is-centered"><span class="card-header-icon">(ic)</span>${menuObject.navn}</h3>
+                            </section>
+                            <section class="card-image is-centered">
+                                <img src="images/Meny${menuObject.bilde}" alt="bilde av drikke">
+                            </section>
+                            <section class="card-content">
+                                <ul class="content">
+                                    <li>
+                                        <label class="label">Navn</label>
+                                        <div class="control">
+                                            <input id="popupNavn${menuObject.id}" type="text" class="input" placeholder="${menuObject.navn}">
+                                        </div>
+                                    </li>
+                                </ul>
+                            </section>
+                            <section class="card-footer buttons is-small">
+                                <button id="closeBtn${menuObject.id}" type="button" class="card-footer-item button close-button"><span><img src="images/knapp-iconer/x-icon.png" width="25" heigth="25"></span>Lukk</button>
+                                <button id="saveBtn${menuObject.id}" type="button" class="card-footer-item button save-button"><span><img src="images/knapp-iconer/x-icon.png" width="25" heigth="25"></span>Lagre</button>
+                            </section>
+                        </div>
+                    </div>
+                </article>
+            `;
+            */
             }
         
     });
 
     menuSection.innerHTML = htmlTxt;
+    drikkeSection.innerHTML = htmlText;
+    popupSection.innerHTML = popupHtmlTxt;
+    AddOnclickModule.addOnclickToButtons("menu-card-article");
    
 }
 
@@ -79,4 +150,4 @@ generateMatOgDrikke(alleMeny);
 
 searchButton.addEventListener("click", () => {
     generateMatOgDrikke(SearchModule.filterByChoice(alleMeny, searchKey, searchValue));
-})
+});

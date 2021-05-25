@@ -22,7 +22,7 @@ const MatOgDrikkeModule = (function(){
                 "hvete",
                 "melk"
             ],
-           // kostnad: getKostnad(),
+           //kostnad: getKostnad(),
             //pris: getPris()
         },
         {
@@ -127,7 +127,7 @@ const MatOgDrikkeModule = (function(){
                 "sennep",
                 "Selleri"
             ],
-           // kostnad: getKostnad(),
+           //kostnad: getKostnad(),
             //pris: getPris()
         },
         {
@@ -149,7 +149,7 @@ const MatOgDrikkeModule = (function(){
                 "Melk",
                 "Pinnekjerner"
             ],
-           // kostnad: getKostnad(),
+           //kostnad: getKostnad(),
             //pris: getPris()
         },
         {
@@ -168,7 +168,7 @@ const MatOgDrikkeModule = (function(){
                 "Hvete",
                 "Melk"
             ],
-           // kostnad: getKostnad(),
+           //kostnad: getKostnad(),
             //pris: getPris()
         },
         {
@@ -206,7 +206,7 @@ const MatOgDrikkeModule = (function(){
                 "Hvete",
                 "Melk"
             ],
-           // kostnad: getKostnad(),
+           //kostnad: getKostnad(),
             //pris: getPris()
         },
         {
@@ -226,7 +226,7 @@ const MatOgDrikkeModule = (function(){
                 "Melk",
                 "Skalldyr"
             ],
-           // kostnad: getKostnad(),
+           //kostnad: getKostnad(),
             //pris: getPris()
         },
         {
@@ -248,7 +248,7 @@ const MatOgDrikkeModule = (function(){
                 "Melk",
                 "Pinnekjerner"
             ],
-           // kostnad: getKostnad(),
+            //kostnad: getKostnad(),
             //pris: getPris()
         },
         {
@@ -330,8 +330,8 @@ const MatOgDrikkeModule = (function(){
 
 
 
-/*
-    
+
+    /*
 
     const muligeIngredienser = IngredienserModule.getAllIngredienser;
 
@@ -354,6 +354,7 @@ const MatOgDrikkeModule = (function(){
         return pris;
     };
     */
+    
     
 
     const getAllMatOgDrikke = () => matOgDrikke;
