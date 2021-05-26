@@ -114,7 +114,7 @@
                              </ul>
                          </section>
                          <section class="card-footer buttons is-small">
-                             <button id="closeBtn${ansatte.id}" type="button" class="card-footer-item button close-button"><span><img src="images/SETT_RIKTIG_FILNAVN_HER.png" width="25" heigth="25"></span>Lukk</button>
+                             <button id="closeBtn${ansatte.id}" type="button" class="card-footer-item button close-button"><span><img src="images/SETT_RIKTIG_FILNAVN_HER.png" width="25" heigth="25"></span>Lukk</button> 
                              <button id="saveBtn${ansatte.id}" type="button" class="card-footer-item button save-button"><span><img src="images/SETT_RIKTIG_FILNAVN_HER.png" width="25" heigth="25"></span>Lagre</button>
                          </section>
                      </div>
