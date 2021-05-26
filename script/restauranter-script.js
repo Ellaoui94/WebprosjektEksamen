@@ -65,6 +65,7 @@ const generateRestauranter = (chosenArray) => {
             </article>
         `;
 
+        // Kan hende dette burde flyttes ut til Restauranter.html, og løses på samme måte som delete-popup
         popupHtmlText += `
             <article id="popup${restaurant.id}" class="modal restaurant-popup">
                 <div id="modalBg${restaurant.id}" class="modal-background"></div>

@@ -31,6 +31,8 @@ const AddOnclickModule = (function() {
             let deleteName = document.querySelector("#delete-name");
 
             let deletePopup = document.querySelector("#delete-popup");
+
+            let addCardButton = document.querySelector("#add-new-button") // Elementer med denne id-en finnes foreløpig ikke
     
             connectedEditButton.addEventListener("click", () => {
                 connectedPopup.classList.add("is-active");
@@ -50,10 +52,10 @@ const AddOnclickModule = (function() {
                 // Krever at siden den brukes på har et <input>-element med id="delete-input"
                 // Se eksempel i Restauranter.html, linje 36-57
                 
+                // Hjelpefunksjon som brukes til å velge ID til objekt som skal slettes
                 const checkId = (o) => o.id == card.id; 
 
                 confirmDeleteButton.addEventListener("click", () => {
-                    
                     if (deleteInput.value === "SLETT"){
                         arrayToRemoveFrom.splice(arrayToRemoveFrom.findIndex(checkId), 1);
                         deletePopup.classList.remove("is-active");
@@ -69,6 +71,11 @@ const AddOnclickModule = (function() {
 
             connectedSaveButton.addEventListener("click", () => {
                 // Funksjon som lagrer endring i array
+                // Uferdig
+            });
+
+            addCardButton.addEventListener("click", () => {
+                // Funksjon som legger til nytt kort
                 // Uferdig
             });
         });
