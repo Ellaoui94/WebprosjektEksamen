@@ -22,6 +22,7 @@
 }
 .button {
     color: hsl(0,0%,100%);
+    border-radius: 25px;
 }
 
 .edit-button {
@@ -81,3 +82,5 @@
 .container-color {
     background: hsl(40, 67%, 67%);
 }
+
+

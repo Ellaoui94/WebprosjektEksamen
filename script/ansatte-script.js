@@ -9,8 +9,8 @@
  const searchKey = document.querySelector("#search-key"); //dette er dropdownmeny
  
  const searchValue = document.querySelector("#search-value"); // dette er input
- 
- 
+
+ const mybutton = document.querySelector("myBtn");
  
  const popupSection = document.querySelector("#popup-section");
  
@@ -45,7 +45,7 @@
                          <h3 class="card-header-title is-centered"><span class="card-header-icon">(ic)</span>${ansatte.navn}</h3>
                      </section>
                      <section class="card-image">
-                         <img src="images/${ansatte.bilde}" alt="bilde av ansatt">
+                         <img src="images/Ansatte/${ansatte.bilde}" alt="bilde av ansatt">
                      </section>
                      <section class="card-content">
                          <ul class="content">
@@ -114,7 +114,7 @@
                              </ul>
                          </section>
                          <section class="card-footer buttons is-small">
-                             <button id="closeBtn${ansatte.id}" type="button" class="card-footer-item button close-button"><span><img src="images/SETT_RIKTIG_FILNAVN_HER.png" width="25" heigth="25"></span>Lukk</button>
+                             <button id="closeBtn${ansatte.id}" type="button" class="card-footer-item button close-button"><span><img src="images/SETT_RIKTIG_FILNAVN_HER.png" width="25" heigth="25"></span>Lukk</button> 
                              <button id="saveBtn${ansatte.id}" type="button" class="card-footer-item button save-button"><span><img src="images/SETT_RIKTIG_FILNAVN_HER.png" width="25" heigth="25"></span>Lagre</button>
                          </section>
                      </div>
@@ -131,13 +131,31 @@
  };
  
  generateAnsatte(alleAnsatte);
- 
- 
 
-
+ 
 searchButton.addEventListener("click", () => {
+ 
     generateAnsatte(SearchModule.filterByChoice(alleAnsatte, searchKey, searchValue));
 });
+
+
+searchValue.addEventListener("keyup", function(event) {
+    if (event.keyCode === 13) {
+        
+        searchButton.click();
+    }
+});
+
+searchButton.addEventListener("click", () => {
+if(searchValue.value === "" ){
+    alert("Name must be filled out");
+      return false;
+}
+});
+
+
+
+ 
 
 denyDeleteButton.addEventListener("click", () => {
     deletePopup.classList.remove("is-active");
@@ -152,6 +170,11 @@ modalBgDeletePopup.addEventListener("click", () => {
 showAllButton.addEventListener("click", () => {
     generateAnsatte(alleAnsatte);
 });
+
+
+
+
+
 
 
 

@@ -15,7 +15,7 @@
     <nav class="hero has-bg-img">
         <h1 class="navbar-item has-text-centered title is-fullwidth title-left">Gyldne Pizza</h1>
       </nav>
-    </nav>
+   
     <nav class="navbar has-shadow navbarTwo-color">
         <div class="navbar-menu">
             <a class="navbar-item navbarTwo-color">Hjem</a>
@@ -24,6 +24,8 @@
             <a class="navbar-item navbarTwo-color">Økonomi</a>
         </div>
     </nav>
+
+    <a id="top"></a>
 
 
 <div class="container" id="search-test">
@@ -43,6 +45,7 @@
             <label class="label">Søk etter ansatte</label>
             <div class="control">
             <button id="search-button" >Søk</button>
+            <button type="button" id="show-all-button">Vis alle</button>
     <input id="search-value" class="input" type="text" placeholder="søk på arbeidssted.."> 							
             </div>
         </div>
@@ -54,7 +57,7 @@
 
 			<div class="container">		
                 <main>			
-                    <section id="ansatte-section" class="columns"></section>
+                    <section id="ansatte-section" class="columns is-multiline"></section>
                     <section id="popup-section"></section>		
                 </main>  
             </div> 
@@ -82,8 +85,9 @@
                     </div>
                 </article>
             </div>
-        </body>
-    
+        
+          
 
+            <a href="#top">Jump to top of page</a>
 </body>
 </html>
