@@ -73,11 +73,13 @@ const AddOnclickModule = (function() {
                 // Funksjon som lagrer endring i array
                 // Uferdig
             });
-
+            /*
+            // Midlertidig kommentert ut
             addCardButton.addEventListener("click", () => {
                 // Funksjon som legger til nytt kort
                 // Uferdig
             });
+            */
         });
     };
 

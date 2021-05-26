@@ -208,6 +208,7 @@ modalBgDeletePopup.addEventListener("click", () => {
     deleteInput.value = "";
 });
 
+
 showAllButton.addEventListener("click", () => {
     generateMatOgDrikke(alleMeny);
 });

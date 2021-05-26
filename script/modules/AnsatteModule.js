@@ -1,5 +1,5 @@
 const AnsatteModule = (function(){
-
+// skiftleder, kokk, servitør, leder, kjøkkenmedarbeider, souschef
     const ansatte = [
         {
             // Denne skal ikke brukes i det ferdige produktet
