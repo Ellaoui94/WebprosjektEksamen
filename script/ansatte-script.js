@@ -147,12 +147,7 @@ searchValue.addEventListener("keyup", function(event) {
 });
 
 
-/*
-searchValue.addEventListener("keyup", e, () => {
-    if (e.keyCode===13){
-        searchButton.click()}
-    });
-*/
+
  
 
 denyDeleteButton.addEventListener("click", () => {
