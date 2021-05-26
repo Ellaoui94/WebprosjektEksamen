@@ -131,13 +131,29 @@
  };
  
  generateAnsatte(alleAnsatte);
- 
- 
 
-
+ 
 searchButton.addEventListener("click", () => {
+ 
     generateAnsatte(SearchModule.filterByChoice(alleAnsatte, searchKey, searchValue));
 });
+
+
+searchValue.addEventListener("keyup", function(event) {
+    if (event.keyCode === 13) {
+        
+        searchButton.click();
+    }
+});
+
+
+/*
+searchValue.addEventListener("keyup", e, () => {
+    if (e.keyCode===13){
+        searchButton.click()}
+    });
+*/
+ 
 
 denyDeleteButton.addEventListener("click", () => {
     deletePopup.classList.remove("is-active");
