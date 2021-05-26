@@ -40,7 +40,7 @@ const generateRestauranter = (chosenArray) => {
 
         // For denne delen skal "restaurant-card-article" brukes til AddOnclickModule.addOnclickToButtons()
         htmlText += `
-            <article id="${restaurant.id}" class="column restaurant-card-article">
+            <article id="${restaurant.id}" class="column is-3 restaurant-card-article">
                 <div class="card restaurant-card">
                     <section class="card-header">
                         <h3 class="card-header-title is-centered"><span class="card-header-icon">(ic)</span>${restaurant.navn}</h3>
