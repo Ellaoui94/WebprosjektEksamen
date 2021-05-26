@@ -207,7 +207,9 @@ modalBgDeletePopup.addEventListener("click", () => {
     deletePopup.classList.remove("is-active");
     deleteInput.value = "";
 });
-
+/*
+// Midlertidig kommentert ut
 showAllButton.addEventListener("click", () => {
     generateMatOgDrikke(alleMeny);
 });
+*/
