@@ -29,7 +29,20 @@ const alleRestauranter = RestaurantModule.getAllRestauranter();
 
 const generateRestauranter = (chosenArray) => {
 
-    let htmlText = "";
+    let htmlText = `
+        <article class="column is-2"
+            <div class="card">
+                <section class="card-header">
+                    <h3 class="card-header-title is-centered"><span class="card-header-icon">(ic)</span>Legg til Restaurant</h3>
+                </section>
+                <section class="card-content is-centered">
+                    <button id="add-button" class="button add-button is-centered" type="button"><span><img src="images/knapp-iconer/legg_til_ikon.png" alt="ikon" height="25" width="25"></span>Legg Til</button>
+                </section>
+                <section class="card-footer">
+                </section>
+            </div>
+        </article>
+    `;
 
     let popupHtmlText = "";
 
@@ -40,7 +53,7 @@ const generateRestauranter = (chosenArray) => {
 
         // For denne delen skal "restaurant-card-article" brukes til AddOnclickModule.addOnclickToButtons()
         htmlText += `
-            <article id="${restaurant.id}" class="column is-3 restaurant-card-article">
+            <article id="${restaurant.id}" class="column is-2 restaurant-card-article">
                 <div class="card restaurant-card">
                     <section class="card-header">
                         <h3 class="card-header-title is-centered"><span class="card-header-icon">(ic)</span>${restaurant.navn}</h3>
