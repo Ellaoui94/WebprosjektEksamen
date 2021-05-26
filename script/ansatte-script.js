@@ -146,6 +146,13 @@ searchValue.addEventListener("keyup", function(event) {
     }
 });
 
+searchButton.addEventListener("click", () => {
+if(searchValue.value === "" ){
+    alert("Name must be filled out");
+      return false;
+}
+});
+
 
 
  
