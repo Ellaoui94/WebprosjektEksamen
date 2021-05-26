@@ -41,8 +41,8 @@ const generateRestauranter = (chosenArray) => {
                     <h3 class="card-header-title is-center"><span class="card-header-icon">(ic)</span>Søk Etter Restaurant</h3>
                 </section>
                 <section class="card-content">
-                    <div class="dropdown is-active">
-                        <select id="search-key" class="dropdown-trigger">
+                    
+                        <select id="search-key" class="select">
                             <div class="button" aria-haspopup="true" aria-controls="dropdown-menu">
                                 <option value="navn">Navn</option>
                                 <option value="id">ID</option>
@@ -53,9 +53,11 @@ const generateRestauranter = (chosenArray) => {
                             </div>
                         </select>
                         <input type="text" id="search-value" class="input">
-                        <button type="button" id="search-button" class="button">Søk</button>
-                        <button type="button" id="show-all-button" class="button">Vis alle</button>
-                    </div>
+                    
+                </section>
+                <section class="card-footer">
+                    <button type="button" id="search-button" class="button card-footer-item">Søk</button>
+                    <button type="button" id="show-all-button" class="button card-footer-item">Alle restauranter</button>
                 </section>
             </div>
         </article>
@@ -156,6 +158,23 @@ const generateRestauranter = (chosenArray) => {
     popupSection.innerHTML = popupHtmlText;
 
     AddOnclickModule.addOnclickToButtons(alleRestauranter, "restaurant-card-article");
+
+    const searchButton = document.querySelector("#search-button");
+
+    const searchKey = document.querySelector("#search-key");
+
+    const searchValue = document.querySelector("#search-value");
+
+    const showAllButton = document.querySelector("#show-all-button");
+
+    searchButton.addEventListener("click", () => {
+        generateRestauranter(SearchModule.filterByChoice(alleRestauranter, searchKey, searchValue));
+    });
+    
+    showAllButton.addEventListener("click", () => {
+        generateRestauranter(alleRestauranter);
+    });
+
 };
 
 generateRestauranter(alleRestauranter);
@@ -165,23 +184,13 @@ generateRestauranter(alleRestauranter);
 
 // Onclick-events:
 
-const searchButton = document.querySelector("#search-button");
 
-const searchKey = document.querySelector("#search-key");
-
-const searchValue = document.querySelector("#search-value");
-
-const showAllButton = document.querySelector("#show-all-button");
-
-console.log(showAllButton)
 
 // generateRestauranter() er funksjonen som genererer html for restauranter-siden
 // alleRestauranter er et array som inneholder info hentet fra RestaurantModule
 // searchKey er en dropdown-meny, fikset som en <select>-tag
 // searchValue er et input-felt
-searchButton.addEventListener("click", () => {
-    generateRestauranter(SearchModule.filterByChoice(alleRestauranter, searchKey, searchValue));
-});
+
 
 denyDeleteButton.addEventListener("click", () => {
     deletePopup.classList.remove("is-active");
@@ -193,7 +202,5 @@ modalBgDeletePopup.addEventListener("click", () => {
     deleteInput.value = "";
 });
 
-showAllButton.addEventListener("click", () => {
-    generateRestauranter(alleRestauranter);
-});
+
 
