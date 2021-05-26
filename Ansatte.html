@@ -4,12 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Restauranter - Gyldne Pizza</title>
+    <title>Ansatte - Gyldne Pizza</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
     <link rel="stylesheet" href="./stylesheets/stylesheet.css">
     <script defer type="module" src="script/ansatte-script.js"></script>
-    <script defer type="module" src="script/sokansatte.js"></script>
 </head>
 <body>
 
@@ -26,32 +25,64 @@
         </div>
     </nav>
 
-    
-    <div class="container">		
 
-		<main>			
-			<section class="row">				
-				<div class="field">
-					<label class="label">Søk etter ansatte</label>
-					<div class="control">
-                    <button id="search-a-btn" class="button">Søk</button>
-		<input id="search-input" class="input" type="text" placeholder="søk på arbeidssted.."> 						
-						
-					</div>
-				</div>
-			</section>	
-        </main>	
+<div class="container" id="search-test">
+    <div class="select"  >
+        <select class="is-rounded" class="is-focused"  id="search-key">
+            <option value="navn">Navn</option>
+            <option value="id">ID</option>
+            <option value="adresse">Adresse</option>
+            <option value="telefon">Telefon</option>
+            <option value="kapasitet">Kapasitet</option>
+            <option value="leder">Leder</option>
+        </select>
+    </div>
+
+    <section>
+        <div class="field">
+            <label class="label">Søk etter ansatte</label>
+            <div class="control">
+            <button id="search-button" >Søk</button>
+    <input id="search-value" class="input" type="text" placeholder="søk på arbeidssted.."> 							
+            </div>
+        </div>
+    </section>
+</div>
+
+    
+    
 
 			<div class="container">		
-
                 <main>			
-                    <section id="test-sec" class="columns is-multiline">
-                        
-                    </section>			
-                </main>
-                
-                
+                    <section id="ansatte-section" class="columns"></section>
+                    <section id="popup-section"></section>		
+                </main>  
             </div> 
+
+
+            <div id="delete-container" class="container">
+                <article id="delete-popup" class="modal">
+                    <div id="modalBg-delete-popup" class="modal-background"></div>
+                    <div class="modal-content py-5 px-5">
+                        <div class="card">
+                            <section class="card-header">
+                                <h3 class="card-header-title is-centered">Slett</h3>
+                            </section>
+                            <section class="card-content">
+                                <p>
+                                    Hvis du ønsker å slette <span id="delete-name">element</span> fra systemet, skriv "SLETT" i feltet under
+                                </p>
+                                <input id="delete-input" type="text" class="input is-centered">
+                            </section>
+                            <section class="card-footer buttons is-small">
+                                <button id="deny-delete-button" type="button" class="card-footer-item button deny-delete-button"><span><img src="images/knapp-iconer/navn_på_tilbake_ikon.png" alt="tilbake-ikon" width="25" height="25">Tilbake</span></button>
+                                <button id="confirm-delete-button" type="button" class="card-footer-item button confirm-delete-button"><span><img src="images/knapp-iconer/delete-white.png" alt="slett-ikon" width="25" height="25">Slett</span></button>
+                            </section>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </body>
     
 
 </body>
