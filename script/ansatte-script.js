@@ -9,8 +9,8 @@
  const searchKey = document.querySelector("#search-key"); //dette er dropdownmeny
  
  const searchValue = document.querySelector("#search-value"); // dette er input
- 
- 
+
+ const mybutton = document.querySelector("myBtn");
  
  const popupSection = document.querySelector("#popup-section");
  
@@ -163,6 +163,11 @@ modalBgDeletePopup.addEventListener("click", () => {
 showAllButton.addEventListener("click", () => {
     generateAnsatte(alleAnsatte);
 });
+
+
+
+
+
 
 
 
