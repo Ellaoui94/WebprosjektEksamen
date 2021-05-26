@@ -5,12 +5,6 @@ import AddOnclickModule from "./modules/AddOnclickModule.js";
 
 const restaurantSection = document.querySelector("#restaurant-section");
 
-const searchButton = document.querySelector("#search-button");
-
-const searchKey = document.querySelector("#search-key");
-
-const searchValue = document.querySelector("#search-value");
-
 const popupSection = document.querySelector("#popup-section");
 
 const deletePopup = document.querySelector("#delete-popup");
@@ -21,7 +15,7 @@ const denyDeleteButton = document.querySelector("#deny-delete-button");
 
 const deleteInput = document.querySelector("#delete-input");
 
-const showAllButton = document.querySelector("#show-all-button");
+
 
 
 
@@ -30,15 +24,40 @@ const alleRestauranter = RestaurantModule.getAllRestauranter();
 const generateRestauranter = (chosenArray) => {
 
     let htmlText = `
-        <article class="column is-2"
+        <article class="column is-one-fifth">
             <div class="card">
                 <section class="card-header">
-                    <h3 class="card-header-title is-centered"><span class="card-header-icon">(ic)</span>Legg til Restaurant</h3>
+                    <h3 class="card-header-title is-centered"><span class="card-header-icon">(ic)</span>Legg Til Restaurant</h3>
                 </section>
-                <section class="card-content is-centered">
+                <section class="card-content has-text-centered">
                     <button id="add-button" class="button add-button is-centered" type="button"><span><img src="images/knapp-iconer/legg_til_ikon.png" alt="ikon" height="25" width="25"></span>Legg Til</button>
                 </section>
                 <section class="card-footer">
+                </section>
+            </div>
+            <br>
+            <div id="search-test" class="card">
+                <section class="card-header">
+                    <h3 class="card-header-title is-center"><span class="card-header-icon">(ic)</span>Søk Etter Restaurant</h3>
+                </section>
+                <section class="card-content">
+                    
+                        <select id="search-key" class="select">
+                            <div class="button" aria-haspopup="true" aria-controls="dropdown-menu">
+                                <option value="navn">Navn</option>
+                                <option value="id">ID</option>
+                                <option value="adresse">Adresse</option>
+                                <option value="telefon">Telefon</option>
+                                <option value="kapasitet">Kapasitet</option>
+                                <option value="leder">Leder</option>
+                            </div>
+                        </select>
+                        <input type="text" id="search-value" class="input">
+                    
+                </section>
+                <section class="card-footer">
+                    <button type="button" id="search-button" class="button card-footer-item">Søk</button>
+                    <button type="button" id="show-all-button" class="button card-footer-item">Alle restauranter</button>
                 </section>
             </div>
         </article>
@@ -53,7 +72,7 @@ const generateRestauranter = (chosenArray) => {
 
         // For denne delen skal "restaurant-card-article" brukes til AddOnclickModule.addOnclickToButtons()
         htmlText += `
-            <article id="${restaurant.id}" class="column is-2 restaurant-card-article">
+            <article id="${restaurant.id}" class="column is-one-fifth restaurant-card-article">
                 <div class="card restaurant-card">
                     <section class="card-header">
                         <h3 class="card-header-title is-centered"><span class="card-header-icon">(ic)</span>${restaurant.navn}</h3>
@@ -139,37 +158,39 @@ const generateRestauranter = (chosenArray) => {
     popupSection.innerHTML = popupHtmlText;
 
     AddOnclickModule.addOnclickToButtons(alleRestauranter, "restaurant-card-article");
+
+    const searchButton = document.querySelector("#search-button");
+
+    const searchKey = document.querySelector("#search-key");
+
+    const searchValue = document.querySelector("#search-value");
+
+    const showAllButton = document.querySelector("#show-all-button");
+
+    searchButton.addEventListener("click", () => {
+        generateRestauranter(SearchModule.filterByChoice(alleRestauranter, searchKey, searchValue));
+    });
+    
+    showAllButton.addEventListener("click", () => {
+        generateRestauranter(alleRestauranter);
+    });
+
 };
 
 generateRestauranter(alleRestauranter);
-
-// testfunksjoner:
-
-
-// til popup:
-
-// Denne delen skal sannsynligvis kjøres i en funksjon, og er foreløpig uferdig
-
-
- 
-
-
-
-
-
 
 
 
 
 // Onclick-events:
 
+
+
 // generateRestauranter() er funksjonen som genererer html for restauranter-siden
 // alleRestauranter er et array som inneholder info hentet fra RestaurantModule
 // searchKey er en dropdown-meny, fikset som en <select>-tag
 // searchValue er et input-felt
-searchButton.addEventListener("click", () => {
-    generateRestauranter(SearchModule.filterByChoice(alleRestauranter, searchKey, searchValue));
-});
+
 
 denyDeleteButton.addEventListener("click", () => {
     deletePopup.classList.remove("is-active");
@@ -181,7 +202,5 @@ modalBgDeletePopup.addEventListener("click", () => {
     deleteInput.value = "";
 });
 
-showAllButton.addEventListener("click", () => {
-    generateRestauranter(alleRestauranter);
-});
+
 
