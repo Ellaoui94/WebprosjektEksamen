@@ -462,50 +462,6 @@ const AnsatteModule = (function(){
             timelønn: 250,
             bilde: "image48.jpg",
             telefon: "451 28 394"
-        },
-        {
-            id: "20043",
-            navn: "Carlos Garcia",
-            alder: 19,
-            stilling: "Servitør",
-            arbeidssted: ["Gyldne Pizza Majorstuen", "10003"],
-            stillingsprosent: 100,
-            timelønn: 250,
-            bilde: "image49.jpg",
-            telefon: "596 92 454"
-        },
-        {
-            id: "20044",
-            navn: "Jenny Rambo",
-            alder: 23,
-            stilling: "Servitør",
-            arbeidssted: ["Gyldne Pizza Majorstuen", "10003"],
-            stillingsprosent: 50,
-            timelønn: 250,
-            bilde: "image51.jpg",
-            telefon: "481 03 637"
-        },
-        {
-            id: "20045",
-            navn: "Svetlana Moskva",
-            alder: 22,
-            stilling: "Servitør",
-            arbeidssted: ["Gyldne Pizza Majorstuen", "10003"],
-            stillingsprosent: 100,
-            timelønn: 250,
-            bilde: "image (38).jpg",
-            telefon: "992 59 644"
-        },
-        {
-            id: "20046",
-            navn: "Bella Balsamikum",
-            alder: 25,
-            stilling: "Servitør",
-            arbeidssted: ["Gyldne Pizza Majorstuen", "10003"],
-            stillingsprosent: 50,
-            timelønn: 250,
-            bilde: "image (43).jpg",
-            telefon: "596 42 665"
         }
     ];
 
