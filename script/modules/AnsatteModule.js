@@ -179,7 +179,347 @@ const AnsatteModule = (function(){
             bilde: "bildefil.png",
             telefon: "92356087"
         },
-        
+        {
+            id: "00016",
+            navn: "Yonas Croissant",
+            alder: 43,
+            stilling: "Leder",
+            arbeidssted: "Gyldne Pizza Majorstuen",
+            stillingsprosent: 100,
+            timelønn: 250,
+            bilde: "bildefil.png",
+            telefon: "92356087"
+        },
+        {
+            id: "00017",
+            navn: "Elias Pesto",
+            alder: 43,
+            stilling: "Leder",
+            arbeidssted: "Gyldne Pizza Majorstuen",
+            stillingsprosent: 100,
+            timelønn: 250,
+            bilde: "bildefil.png",
+            telefon: "92356087"
+        },
+        {
+            id: "00018",
+            navn: "Elise Mama",
+            alder: 43,
+            stilling: "Leder",
+            arbeidssted: "Gyldne Pizza Majorstuen",
+            stillingsprosent: 100,
+            timelønn: 250,
+            bilde: "bildefil.png",
+            telefon: "92356087"
+        },
+        {
+            id: "00019",
+            navn: "Mama Mia",
+            alder: 43,
+            stilling: "Leder",
+            arbeidssted: "Gyldne Pizza Majorstuen",
+            stillingsprosent: 100,
+            timelønn: 250,
+            bilde: "bildefil.png",
+            telefon: "92356087"
+        },
+        {
+            id: "00020",
+            navn: "Olava Olive",
+            alder: 43,
+            stilling: "Leder",
+            arbeidssted: "Gyldne Pizza Majorstuen",
+            stillingsprosent: 100,
+            timelønn: 250,
+            bilde: "bildefil.png",
+            telefon: "92356087"
+        },
+        {
+            id: "00021",
+            navn: "Smantha Succina",
+            alder: 43,
+            stilling: "Leder",
+            arbeidssted: "Gyldne Pizza Majorstuen",
+            stillingsprosent: 100,
+            timelønn: 250,
+            bilde: "bildefil.png",
+            telefon: "92356087"
+        },
+        {
+            id: "00022",
+            navn: "Tiril Tommelfinger",
+            alder: 43,
+            stilling: "Leder",
+            arbeidssted: "Gyldne Pizza Majorstuen",
+            stillingsprosent: 100,
+            timelønn: 250,
+            bilde: "bildefil.png",
+            telefon: "92356087"
+        },
+        {
+            id: "00023",
+            navn: "Karius Teethus",
+            alder: 43,
+            stilling: "Leder",
+            arbeidssted: "Gyldne Pizza Majorstuen",
+            stillingsprosent: 100,
+            timelønn: 250,
+            bilde: "bildefil.png",
+            telefon: "92356087"
+        },
+        {
+            id: "00024",
+            navn: "Baktus Teethus",
+            alder: 43,
+            stilling: "Leder",
+            arbeidssted: "Gyldne Pizza Majorstuen",
+            stillingsprosent: 100,
+            timelønn: 250,
+            bilde: "bildefil.png",
+            telefon: "92356087"
+        },
+        {
+            id: "00025",
+            navn: "Mia Ea",
+            alder: 43,
+            stilling: "Leder",
+            arbeidssted: "Gyldne Pizza Majorstuen",
+            stillingsprosent: 100,
+            timelønn: 250,
+            bilde: "bildefil.png",
+            telefon: "92356087"
+        },
+        {
+            id: "00026",
+            navn: "Noor Nordlys",
+            alder: 43,
+            stilling: "Leder",
+            arbeidssted: "Gyldne Pizza Majorstuen",
+            stillingsprosent: 100,
+            timelønn: 250,
+            bilde: "bildefil.png",
+            telefon: "92356087"
+        },
+        {
+            id: "00027",
+            navn: "Bella Twilight",
+            alder: 43,
+            stilling: "Leder",
+            arbeidssted: "Gyldne Pizza Majorstuen",
+            stillingsprosent: 100,
+            timelønn: 250,
+            bilde: "bildefil.png",
+            telefon: "92356087"
+        },
+        {
+            id: "00028",
+            navn: "Edward Ludvig",
+            alder: 43,
+            stilling: "Leder",
+            arbeidssted: "Gyldne Pizza Majorstuen",
+            stillingsprosent: 100,
+            timelønn: 250,
+            bilde: "bildefil.png",
+            telefon: "92356087"
+        },
+        {
+            id: "00029",
+            navn: "Sakura Paprika",
+            alder: 43,
+            stilling: "Leder",
+            arbeidssted: "Gyldne Pizza Majorstuen",
+            stillingsprosent: 100,
+            timelønn: 250,
+            bilde: "bildefil.png",
+            telefon: "92356087"
+        },
+        {
+            id: "00030",
+            navn: "Dona Donuts",
+            alder: 43,
+            stilling: "Leder",
+            arbeidssted: "Gyldne Pizza Majorstuen",
+            stillingsprosent: 100,
+            timelønn: 250,
+            bilde: "bildefil.png",
+            telefon: "92356087"
+        },
+        {
+            id: "00031",
+            navn: "Samira Selleri",
+            alder: 43,
+            stilling: "Leder",
+            arbeidssted: "Gyldne Pizza Majorstuen",
+            stillingsprosent: 100,
+            timelønn: 250,
+            bilde: "bildefil.png",
+            telefon: "92356087"
+        },
+        {
+            id: "00032",
+            navn: "Sonic Eggman",
+            alder: 43,
+            stilling: "Leder",
+            arbeidssted: "Gyldne Pizza Majorstuen",
+            stillingsprosent: 100,
+            timelønn: 250,
+            bilde: "bildefil.png",
+            telefon: "92356087"
+        },
+        {
+            id: "00033",
+            navn: "Bilal Donuts",
+            alder: 43,
+            stilling: "Leder",
+            arbeidssted: "Gyldne Pizza Majorstuen",
+            stillingsprosent: 100,
+            timelønn: 250,
+            bilde: "bildefil.png",
+            telefon: "92356087"
+        },
+        {
+            id: "00034",
+            navn: "Bilal Donuts",
+            alder: 43,
+            stilling: "Leder",
+            arbeidssted: "Gyldne Pizza Majorstuen",
+            stillingsprosent: 100,
+            timelønn: 250,
+            bilde: "bildefil.png",
+            telefon: "92356087"
+        },
+        {
+            id: "00035",
+            navn: "Bilal Donuts",
+            alder: 43,
+            stilling: "Leder",
+            arbeidssted: "Gyldne Pizza Majorstuen",
+            stillingsprosent: 100,
+            timelønn: 250,
+            bilde: "bildefil.png",
+            telefon: "92356087"
+        },
+        {
+            id: "00036",
+            navn: "Bilal Donuts",
+            alder: 43,
+            stilling: "Leder",
+            arbeidssted: "Gyldne Pizza Majorstuen",
+            stillingsprosent: 100,
+            timelønn: 250,
+            bilde: "bildefil.png",
+            telefon: "92356087"
+        },
+        {
+            id: "00037",
+            navn: "Bilal Donuts",
+            alder: 43,
+            stilling: "Leder",
+            arbeidssted: "Gyldne Pizza Majorstuen",
+            stillingsprosent: 100,
+            timelønn: 250,
+            bilde: "bildefil.png",
+            telefon: "92356087"
+        },
+        {
+            id: "00038",
+            navn: "Bilal Donuts",
+            alder: 43,
+            stilling: "Leder",
+            arbeidssted: "Gyldne Pizza Majorstuen",
+            stillingsprosent: 100,
+            timelønn: 250,
+            bilde: "bildefil.png",
+            telefon: "92356087"
+        },
+        {
+            id: "00039",
+            navn: "Bilal Donuts",
+            alder: 43,
+            stilling: "Leder",
+            arbeidssted: "Gyldne Pizza Majorstuen",
+            stillingsprosent: 100,
+            timelønn: 250,
+            bilde: "bildefil.png",
+            telefon: "92356087"
+        },
+        {
+            id: "00040",
+            navn: "Bilal Donuts",
+            alder: 43,
+            stilling: "Leder",
+            arbeidssted: "Gyldne Pizza Majorstuen",
+            stillingsprosent: 100,
+            timelønn: 250,
+            bilde: "bildefil.png",
+            telefon: "92356087"
+        },
+        {
+            id: "00041",
+            navn: "Bilal Donuts",
+            alder: 43,
+            stilling: "Leder",
+            arbeidssted: "Gyldne Pizza Majorstuen",
+            stillingsprosent: 100,
+            timelønn: 250,
+            bilde: "bildefil.png",
+            telefon: "92356087"
+        },
+        {
+            id: "00042",
+            navn: "Bilal Donuts",
+            alder: 43,
+            stilling: "Leder",
+            arbeidssted: "Gyldne Pizza Majorstuen",
+            stillingsprosent: 100,
+            timelønn: 250,
+            bilde: "bildefil.png",
+            telefon: "92356087"
+        },
+        {
+            id: "00043",
+            navn: "Bilal Donuts",
+            alder: 43,
+            stilling: "Leder",
+            arbeidssted: "Gyldne Pizza Majorstuen",
+            stillingsprosent: 100,
+            timelønn: 250,
+            bilde: "bildefil.png",
+            telefon: "92356087"
+        },
+        {
+            id: "00044",
+            navn: "Bilal Donuts",
+            alder: 43,
+            stilling: "Leder",
+            arbeidssted: "Gyldne Pizza Majorstuen",
+            stillingsprosent: 100,
+            timelønn: 250,
+            bilde: "bildefil.png",
+            telefon: "92356087"
+        },
+        {
+            id: "00045",
+            navn: "Bilal Donuts",
+            alder: 43,
+            stilling: "Leder",
+            arbeidssted: "Gyldne Pizza Majorstuen",
+            stillingsprosent: 100,
+            timelønn: 250,
+            bilde: "bildefil.png",
+            telefon: "92356087"
+        },
+        {
+            id: "00046",
+            navn: "Bilal Donuts",
+            alder: 43,
+            stilling: "Leder",
+            arbeidssted: "Gyldne Pizza Majorstuen",
+            stillingsprosent: 100,
+            timelønn: 250,
+            bilde: "bildefil.png",
+            telefon: "92356087"
+        }
     ];
 
     const getAllAnsatte = () => ansatte;
@@ -196,7 +536,7 @@ const AnsatteModule = (function(){
     return {getAllAnsatte,
             getByArbeidssted,
             getByNavn
-    };
+        };
 
 }());
 
