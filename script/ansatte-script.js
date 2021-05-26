@@ -45,7 +45,7 @@
                          <h3 class="card-header-title is-centered"><span class="card-header-icon">(ic)</span>${ansatte.navn}</h3>
                      </section>
                      <section class="card-image">
-                         <img src="images/${ansatte.bilde}" alt="bilde av ansatt">
+                         <img src="images/Ansatte/${ansatte.bilde}" alt="bilde av ansatt">
                      </section>
                      <section class="card-content">
                          <ul class="content">
