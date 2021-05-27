@@ -1,6 +1,7 @@
-const burgerIcon = document.querySelector('#burger');
-const navbarMeny = document.querySelector('#nav-links');
+const navbarBurger = document.querySelector(".navbar-burger")
+const navbarMenu = document.querySelector(".navbar-menu");
 
-burgerIcon.addEventListener('click', () => {
-    navbarMeny.classList.toggle('is-active');
-});
+navbarBurger.addEventListener("click", ( e ) => {
+	navbarBurger.classList.toggle("is-active")
+	navbarMenu.classList.toggle("is-active");
+} );

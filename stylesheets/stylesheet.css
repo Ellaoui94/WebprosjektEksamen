@@ -67,8 +67,8 @@
 
 /* CSS for navbaren med bilde */
 .has-bg-img { 
-    background: url('../images/pizza-banner.png'); 
-    height: 150px;
+    background: linear-gradient(hsl(0, 0%, 89%),hsl(25, 42%, 43%));
+    opacity:1.0;
 }
 
 /* For teksten Gyldne Pizza */
@@ -84,14 +84,16 @@
 
 /* For navbaren med knapper */
 .navbarTwo-color {
+    justify-content: center;
     border-radius: 15px;
     background: hsl(25, 42%, 28%);
     color: hsl(208, 100%, 97%);
+    width: 130px;
 }
 
 .navbarItemClass {
     position: relative;
-    left: 400px; 
+    top: 90px;
 }
 
 /* For side menyen */
