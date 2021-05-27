@@ -22,8 +22,8 @@ const MatOgDrikkeModule = (function(){
                 "hvete",
                 "melk"
             ],
-           //kostnad: getKostnad(),
-            //pris: getPris()
+           kostnad: "55",
+            pris: "200"
         },
         {
             // Denne skal ikke brukes i det ferdige produktet
@@ -43,8 +43,8 @@ const MatOgDrikkeModule = (function(){
                 "Melk",
                 "pinneskjerner"
             ],
-            //kostnad: getKostnad(),
-            //pris: getPris()
+            kostnad: "55",
+            pris: "200"
         },
         {
             id: "003",
@@ -63,8 +63,8 @@ const MatOgDrikkeModule = (function(){
                 "Mel",
                 "Melk"
             ],
-            //kostnad: getKostnad(),
-            //pris: getPris()
+            kostnad: "55",
+            pris: "200"
         },
         {
             id: "004",
@@ -83,8 +83,8 @@ const MatOgDrikkeModule = (function(){
                 "Hvete",
                 "Melk"
             ],
-            //kostnad: getKostnad(),
-            //pris: getPris()
+            kostnad: "55",
+            pris: "200"
         },
         {
             id: "005",
@@ -104,8 +104,8 @@ const MatOgDrikkeModule = (function(){
                 "Melk",
                 "Sennep"
             ],
-            //kostnad: getKostnad(),
-            //pris: getPris()
+            kostnad: "55",
+            pris: "200"
         },
         {
             id: "006",
@@ -127,8 +127,8 @@ const MatOgDrikkeModule = (function(){
                 "sennep",
                 "Selleri"
             ],
-           //kostnad: getKostnad(),
-            //pris: getPris()
+            kostnad: "55",
+            pris: "200"
         },
         {
             id: "007",
@@ -149,8 +149,8 @@ const MatOgDrikkeModule = (function(){
                 "Melk",
                 "Pinnekjerner"
             ],
-           //kostnad: getKostnad(),
-            //pris: getPris()
+            kostnad: "55",
+            pris: "200"
         },
         {
             id: "008",
@@ -168,8 +168,8 @@ const MatOgDrikkeModule = (function(){
                 "Hvete",
                 "Melk"
             ],
-           //kostnad: getKostnad(),
-            //pris: getPris()
+            kostnad: "55",
+            pris: "200"
         },
         {
             id: "009",
@@ -187,8 +187,8 @@ const MatOgDrikkeModule = (function(){
                 "Hvete",
                 "Melk"
             ],
-            //kostnad: getKostnad(),
-            //pris: getPris()
+            kostnad: "55",
+            pris: "200"
         },
         {
             id: "010",
@@ -206,8 +206,8 @@ const MatOgDrikkeModule = (function(){
                 "Hvete",
                 "Melk"
             ],
-           //kostnad: getKostnad(),
-            //pris: getPris()
+            kostnad: "55",
+            pris: "200"
         },
         {
             id: "012",
@@ -226,8 +226,8 @@ const MatOgDrikkeModule = (function(){
                 "Melk",
                 "Skalldyr"
             ],
-           //kostnad: getKostnad(),
-            //pris: getPris()
+            kostnad: "55",
+            pris: "200"
         },
         {
             id: "013",
@@ -248,8 +248,8 @@ const MatOgDrikkeModule = (function(){
                 "Melk",
                 "Pinnekjerner"
             ],
-            //kostnad: getKostnad(),
-            //pris: getPris()
+            kostnad: "55",
+            pris: "200"
         },
         {
             id: "014",
@@ -271,50 +271,64 @@ const MatOgDrikkeModule = (function(){
                 "Melk",
                 "Pinnekjerner"
             ],
-            //kostnad: getKostnad(),
-            //pris: getPris()
+            kostnad: "55",
+            pris: "200"
         },
         {id: "015",
          navn: "Cola",
          kategori: "Drikke",
          type: "Mineralvann",
-         bilde: "beverage-icon.png"
+         bilde: "beverage-icon.png",
+         kostnad: "10",
+         pris: "59"
         },
         {id: "016",
          navn: "Fanta",
          kategori: "Drikke",
          type: "Mineralvann" ,
-         bilde: "beverage-icon.png"
+         bilde: "beverage-icon.png",
+         kostnad: "10",
+         pris: "59"
         },
         {id: "017",
          navn: "Sprite",
          kategori: "Drikke",
          type: "Mineralvann" ,
-         bilde: "beverage-icon.png"
+         bilde: "beverage-icon.png",
+         kostnad: "10",
+         pris: "59"
         },
         {id: "018",
          navn: "Lemonade",
          kategori: "Drikke",
          type: "Mineralvann" ,
-         bilde: "beverage-icon.png"
+         bilde: "beverage-icon.png",
+         kostnad: "10",
+         pris: "69"
         },
         {id: "019",
          navn: "Rød vin",
          kategori: "Drikke",
          type: "Alkohol" ,
-         bilde: "wine.png"
+         bilde: "wine.png",
+         kostnad: "45",
+         pris: "115"
         },
         {id: "020",
          navn: "Hvit vin",
          kategori: "Drikke",
          type: "Alkohol" ,
-         bilde: "wine.png"
+         bilde: "wine.png",
+         kostnad: "45",
+         pris: "115"
         },
         {id: "021",
          navn: "Øl",
          kategori: "Drikke",
          type: "Alkohol" ,
-         bilde: "beer.png"
+         bilde: "beer.png",
+         kostnad: "35",
+         pris: "98"
         },
     ];
 

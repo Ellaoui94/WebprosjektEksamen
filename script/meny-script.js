@@ -51,6 +51,8 @@ const generateMatOgDrikke = (chosenArray) => {
                                 <li>Type: ${menuObject.type}</li>
                                 <li>Allergener: ${menuObject.allergener}</li>
                                 <li>Ingredienser: ${menuObject.ingredienser}</li>
+                                <li>Kostnad: ${menuObject.kostnad} kr</li>
+                                <li>Pris: ${menuObject.pris} kr</li>
                             </ul>
                         </section>
                         <section class="card-footer buttons is-small">
@@ -103,6 +105,18 @@ const generateMatOgDrikke = (chosenArray) => {
                                             <input id="popupIngredienser${menuObject.id}" type="text" class="input" placeholder="${menuObject.ingredienser}">
                                         </div>
                                     </li>
+                                    <li>
+                                    <label class="label">Kostnad</label>
+                                    <div class="control">
+                                        <input id="popupKostnad${menuObject.id}" type="text" class="input" placeholder="${menuObject.kostnad}">
+                                    </div>
+                                </li>
+                                <li>
+                                <label class="label">Pris</label>
+                                <div class="control">
+                                    <input id="popupPris${menuObject.id}" type="text" class="input" placeholder="${menuObject.pris}">
+                                </div>
+                            </li>
                                 </ul>
                             </section>
                             <section class="card-footer buttons is-small">
@@ -128,6 +142,8 @@ const generateMatOgDrikke = (chosenArray) => {
                             <ul class="content">
                                 <li>ID: ${menuObject.id}</li>
                                 <li>Type: ${menuObject.type}</li>
+                                <li>Kostnad: ${menuObject.kostnad} kr</li>
+                                <li>Pris: ${menuObject.pris} kr</li>
                             </ul>
                         </section>
                         <section class="card-footer buttons is-small">
