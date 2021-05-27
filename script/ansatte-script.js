@@ -77,7 +77,7 @@
                              <h3 class="card-header-title is-centered"><span class="card-header-icon">(ic)</span>${ansatte.navn}</h3>
                          </section>
                          <section class="card-image is-centered">
-                             <img src="images/${ansatte.bilde}" alt="bilde av ansatt">
+                             <img src="images/Ansatte/${ansatte.bilde}" alt="bilde av ansatt">
                          </section>
                          <section class="card-content">
                              <ul class="content">
@@ -147,9 +147,21 @@ searchValue.addEventListener("keyup", function(event) {
 });
 
 searchButton.addEventListener("click", () => {
-if(searchValue.value === "" ){
-    alert("Name must be filled out");
-      return false;
+    var n = searchValue.value;
+if(searchValue.value === "" )
+{
+        alert("Name must be filled out");
+        searchValue.style.borderColor = "red";
+        return false;
+    }else{
+    searchValue.style.borderColor = "green";}
+
+    if  (isNaN(n)) {
+        alert("Contains Numbers!");
+        searchValue.style.borderColor = "red";
+        return false;
+    }else{
+        searchValue.style.borderColor = "green";
 }
 });
 

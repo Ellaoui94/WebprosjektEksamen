@@ -69,6 +69,12 @@
     color: hsl(208, 100%, 97%);
 }
 
+.navbarItemClass {
+    position: relative;
+    left: 400px; 
+    padding-right: 80px;
+}
+
 /* For side menyen */
 .menu-bgstyle {
     border-radius: 25px;
