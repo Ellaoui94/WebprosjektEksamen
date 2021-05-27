@@ -38,7 +38,7 @@ const generateRestauranter = (chosenArray) => {
             <br>
             <div id="search-test" class="card">
                 <section class="card-header">
-                    <h3 class="card-header-title is-center"><span class="card-header-icon">(ic)</span>Søk Etter Restaurant</h3>
+                    <h3 class="card-header-title is-centered"><span class="card-header-icon"></span>Søk Etter Restaurant</h3>
                 </section>
                 <section class="card-content">
                     
@@ -56,8 +56,8 @@ const generateRestauranter = (chosenArray) => {
                     
                 </section>
                 <section class="card-footer">
-                    <button type="button" id="search-button" class="button card-footer-item">Søk</button>
-                    <button type="button" id="show-all-button" class="button card-footer-item">Alle restauranter</button>
+                    <button type="button" id="search-button" class="button search-button card-footer-item">Søk</button>
+                    <button type="button" id="show-all-button" class="button show-all-button card-footer-item">Alle restauranter</button>
                 </section>
             </div>
         </article>
@@ -75,7 +75,7 @@ const generateRestauranter = (chosenArray) => {
             <article id="${restaurant.id}" class="column is-one-fifth restaurant-card-article">
                 <div class="card restaurant-card">
                     <section class="card-header">
-                        <h3 class="card-header-title is-centered"><span class="card-header-icon">(ic)</span>${restaurant.navn}</h3>
+                        <h3 class="card-header-title is-centered"><span class="card-header-icon"><img src="images/knapp-iconer/loc-icon.png" alt="ikon" width="25" height="25"></span>${restaurant.navn}</h3>
                     </section>
                     <section class="card-image">
                         <img src="images/${restaurant.bilde}" alt="bilde av restaurant">
