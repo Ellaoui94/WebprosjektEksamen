@@ -6,12 +6,6 @@ const menuSection = document.querySelector("#menu-section");
 
 const drikkeSection = document.querySelector("#drikke-section");
 
-const searchButton = document.querySelector("#search-button");
-
-const searchKey = document.querySelector("#search-key");
-
-const searchValue = document.querySelector("#search-value");
-
 const alleMeny = MatOgDrikkeModule.getAllMatOgDrikke();
 
 const popupSection = document.querySelector("#popup-section");
@@ -24,11 +18,58 @@ const denyDeleteButton = document.querySelector("#deny-delete-button");
 
 const deleteInput = document.querySelector("#delete-input");
 
-const showAllButton = document.querySelector("#show-all-button");
+const denyAddButton = document.querySelector("#deny-add-button");
+
+const addPopup = document.querySelector("#add-popup");
+
+const addPopupBackround = document.querySelector("#modalBg-add-popup");
+
 
 
 const generateMatOgDrikke = (chosenArray) => {
-    let htmlTxt = " ";
+
+
+
+    let htmlTxt = `
+    <article class="column is-one-fifth">
+        <div class="card">
+            <section class="card-header">
+                <h3 class="card-header-title is-centered">Legg Til Mat/Drikke</h3>
+            </section>
+            <section class="card-content has-text-centered">
+                <button id="add-button" class="button add-button is-centered" type="button"><span><img src="images/knapp-iconer/round-plus.png" alt="ikon" height="25" width="25"></span>Legg Til</button>
+            </section>
+            <section class="card-footer">
+            </section>
+        </div>
+        <br>
+        <div id="search-test" class="card">
+            <section class="card-header">
+                <h3 class="card-header-title is-centered"><span class="card-header-icon"></span>Søk Etter Mat/Drikke</h3>
+            </section>
+            <section class="card-content">
+                
+                    <select id="search-key" class="select">
+                        <div class="button" aria-haspopup="true" aria-controls="dropdown-menu">
+                            <option value="navn">Navn</option>
+                            <option value="id">ID</option>
+                            <option value="adresse">Adresse</option>
+                            <option value="telefon">Telefon</option>
+                            <option value="kapasitet">Kapasitet</option>
+                            <option value="leder">Leder</option>
+                        </div>
+                    </select>
+                    <input type="text" id="search-value" class="input">
+                
+            </section>
+            <section class="card-footer">
+                <button type="button" id="search-button" class="button search-button card-footer-item"><span><img src="images/knapp-iconer/search-icon.png" width="25" heigth="25"></span>Søk</button>
+                <button type="button" id="show-all-button" class="button show-all-button card-footer-item">Alle meny</button>
+            </section>
+        </div>
+    </article>
+`;
+
 
     let htmlText = " ";
 
@@ -204,15 +245,35 @@ const generateMatOgDrikke = (chosenArray) => {
     drikkeSection.innerHTML = htmlText;
     popupSection.innerHTML = popupHtmlTxt;
     AddOnclickModule.addOnclickToButtons(alleMeny, "menu-card-article");
+
+    const searchButton = document.querySelector("#search-button");
+
+    const searchKey = document.querySelector("#search-key");
+
+    const searchValue = document.querySelector("#search-value");
+
+    const showAllButton = document.querySelector("#show-all-button");
+
+    const addButton = document.querySelector("#add-button");
+
+    const addPopup = document.querySelector("#add-popup");
+
+    searchButton.addEventListener("click", () => {
+        generateMatOgDrikke(alleMeny);
+    });
+
+    showAllButton.addEventListener("click", () => {
+        generateMatOgDrikke(alleMeny);
+    });
+
+    addButton.addEventListener("click", () => {
+        addPopup.classList.add("is-active");
+    })
    
 }
 
 generateMatOgDrikke(alleMeny);
 
-
-searchButton.addEventListener("click", () => {
-    generateMatOgDrikke(SearchModule.filterByChoice(alleMeny, searchKey, searchValue));
-});
 
 denyDeleteButton.addEventListener("click", () => {
     deletePopup.classList.remove("is-active");
@@ -224,7 +285,10 @@ modalBgDeletePopup.addEventListener("click", () => {
     deleteInput.value = "";
 });
 
-
-showAllButton.addEventListener("click", () => {
-    generateMatOgDrikke(alleMeny);
+addPopupBackground.addEventListener("click", () => {
+    addPopup.classList.remove("is-active");
 });
+
+denyAddButton.addEventListener("click", () => {
+    addPopup.classList.remove("is-active");
+})

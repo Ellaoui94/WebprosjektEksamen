@@ -332,13 +332,13 @@ const MatOgDrikkeModule = (function(){
         },
     ];
 
-    const getByTypeForret  = ( type ) => {
-        return matOgDrikke.filter(forretObjects => forretObjects.type == "Forret");
-    }
-
-    
-    const getByTypePizza = ( type ) => {
-        return matOgDrikke.filter(pizzaObjects => pizzaObjects.type == "Pizza");
+   
+    const prisPerPeson = () => {
+        let salg = " ";
+        salg = matOgDrikke.pris - matOgDrikke.kostnad
+        if(matOgDrikke.kategori == "Drikke"){
+            return (salg + matOgDrikke.pris) - matOgDrikke.kostnad;
+        }
     }
 
 
@@ -373,7 +373,7 @@ const MatOgDrikkeModule = (function(){
 
     const getAllMatOgDrikke = () => matOgDrikke;
 
-    return {getAllMatOgDrikke, getByTypeForret, getByTypePizza};
+    return {getAllMatOgDrikke, prisPerPeson};
 
 }());
 
