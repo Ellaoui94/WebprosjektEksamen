@@ -118,31 +118,31 @@ const generateRestauranter = (chosenArray) => {
                                 <li>
                                     <label class="label">Navn</label>
                                     <div class="control">
-                                        <input id="popupNavn${restaurant.id}" type="text" class="input" placeholder="${restaurant.navn}">
+                                        <input id="popupNavn${restaurant.id}" type="text" class="input edit-input navn" placeholder="${restaurant.navn}">
                                     </div>
                                 </li>
                                 <li>
                                     <label class="label">Adresse</label>
                                     <div class="control">
-                                        <input id="popupAdresse${restaurant.id}" type="text" class="input" placeholder="${restaurant.adresse}">
+                                        <input id="popupAdresse${restaurant.id}" type="text" class="input edit-input adresse" placeholder="${restaurant.adresse}">
                                     </div>
                                 </li>
                                 <li>
                                     <label class="label">Telefon</label>
                                     <div class="control">
-                                        <input id="popupTelefon${restaurant.id}" type="text" class="input" placeholder="${restaurant.telefon}">
+                                        <input id="popupTelefon${restaurant.id}" type="text" class="input edit-input telefon" placeholder="${restaurant.telefon}">
                                     </div>
                                 </li>
                                 <li>
-                                    <label class="label">Leder</label>
+                                    <label class="label">Leder (Id)</label>
                                     <div class="control">
-                                        <input id="popupLeder${restaurant.id}" type="text" class="input" placeholder="${restaurant.leder[0]}">
+                                        <input id="popupLeder${restaurant.id}" type="text" class="input edit-input leder" placeholder="${restaurant.leder[1]}">
                                     </div>
                                 </li>
                                 <li>
                                     <label class="label">Kapasitet</label>
                                     <div class="control">
-                                        <input id="popupKapasitet${restaurant.id}" type="text" class="input" placeholder="${restaurant.kapasitet}">
+                                        <input id="popupKapasitet${restaurant.id}" type="text" class="input edit-input kapasitet" placeholder="${restaurant.kapasitet}">
                                     </div>
                                 </li>
                             </ul>

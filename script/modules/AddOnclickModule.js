@@ -73,6 +73,18 @@ const AddOnclickModule = (function() {
             });
 
 
+
+            // Hjelpefunksjon
+            const addSaveOnClick = () => {
+                let editPopup = document.querySelector(`#popup${card.id}`);
+                let inputFields = editPopup.querySelectorAll(".edit-input");
+            }
+            
+
+
+
+
+
         });
     };
 
