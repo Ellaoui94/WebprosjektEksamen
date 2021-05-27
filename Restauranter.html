@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
     <link rel="stylesheet" href="./stylesheets/stylesheet.css">
     <script type="module" src="script/restauranter-script.js"></script>
-    <script type="module" src="script/modules/SearchModule.js"></script>
 </head>
 <body>
     
@@ -65,7 +64,7 @@
                             <input id="delete-input" type="text" class="input is-centered">
                         </section>
                         <section class="card-footer buttons is-small">
-                            <button id="deny-delete-button" type="button" class="card-footer-item button deny-delete-button"><span><img src="images/knapp-iconer/navn_på_tilbake_ikon.png" alt="tilbake-ikon" width="25" height="25"></span>Tilbake</button>
+                            <button id="deny-delete-button" type="button" class="card-footer-item button deny-delete-button"><span><img src="images/knapp-iconer/tilbake-icon.png" alt="tilbake-ikon" width="25" height="25"></span>Tilbake</button>
                             <button id="confirm-delete-button" type="button" class="card-footer-item button confirm-delete-button"><span><img src="images/knapp-iconer/delete-white.png" alt="slett-ikon" width="25" height="25"></span>Slett</button>
                         </section>
                     </div>
@@ -82,11 +81,42 @@
                             <h3 class="card-header-title is-centered">Legg Til Restaurant</h3>
                         </section>
                         <section class="card-content">
-
+                            <ul class="content">
+                                <li>
+                                    <label class="label">Navn</label>
+                                    <div class="control">
+                                        <input type="text" class="input add-input navn">
+                                    </div>
+                                </li>
+                                <li>
+                                    <label class="label">Adresse</label>
+                                    <div class="control">
+                                        <input type="text" class="input add-input adresse">
+                                    </div>
+                                </li>
+                                <li>
+                                    <label class="label">Telefon</label>
+                                    <div class="control">
+                                        <input type="text" class="input add-input telefon">
+                                    </div>
+                                </li>
+                                <li>
+                                    <label class="label">Leder (id)</label>
+                                    <div class="control">
+                                        <input type="text" class="input add-input leder" placeholder="ID">
+                                    </div>
+                                </li>
+                                <li>
+                                    <label class="label">Kapasitet</label>
+                                    <div class="control">
+                                        <input type="text" class="input add-input kapasitet">
+                                    </div>
+                                </li>
+                            </ul>
                         </section>
                         <section class="card-footer">
-                            <button id="deny-add-button" type="button" class="card-footer-item button deny-add-button"><span><img src="images/knapp-iconer/233-2338172_transparent-back-icon-png-voltron-black-lion-logo.png" alt="tilbake-ikon" width="25" height="25"></span>Tilbake</button>
-                            <button id="confirm-add-button" type="button" class="card-footer-item button confirm-add-button"><span><img src="images/knapp-iconer/legg_til_ikon.png" alt="legg-til-ikon" width="25" height="25"></span>Legg Til</button>
+                            <button id="deny-add-button" type="button" class="card-footer-item button deny-add-button"><span><img src="images/knapp-iconer/tilbake-icon.png" alt="tilbake-ikon" width="25" height="25"></span>Tilbake</button>
+                            <button id="confirm-add-button" type="button" class="card-footer-item button confirm-add-button"><span><img src="images/knapp-iconer/save-icon.png" alt="legg-til-ikon" width="25" height="25"></span>Legg Til</button>
                         </section>
                     </div>
                 </div>
