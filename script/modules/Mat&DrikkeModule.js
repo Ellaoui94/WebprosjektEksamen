@@ -1,24 +1,23 @@
 import IngredienserModule from './IngredienserModule.js';
 
-const allIngredients = IngredienserModule.getAllIngredienser();
+// const allIngredients = IngredienserModule.getAllIngredienser();
 
-const MatOgDrikkeModule = (function(){
+const matOgDrikkeModule = (function(){
 
     const matOgDrikke = [
         {
-            // Denne skal ikke brukes i det ferdige produktet
-            id: "001",
+            id: "30001",
             navn: "Focaccia",
-            kategori: "Mat",
-            type: "Forret",
+            kategori: "mat",
+            type: "forrett",
             bilde: "pizza-icon.png",
             ingredienser: [
-                "Pesto rosso",
+                "pesto rosso",
                 "pesto genovese",
                 "aioli"
             ],
             allergener: [
-                "Egg",
+                "egg",
                 "hvete",
                 "melk"
             ],
@@ -26,318 +25,325 @@ const MatOgDrikkeModule = (function(){
             pris: "200"
         },
         {
-            // Denne skal ikke brukes i det ferdige produktet
-            id: "002",
+            id: "30002",
             navn: "Antipasto all´Italiana	",
-            kategori: "Mat",
-            type: "Forret",
+            kategori: "mat",
+            type: "forrett",
             bilde: "pizza-icon.png",
             ingredienser: [
-                "Parmaskinke",
+                "parmaskinke",
                 "trøffelsalami",
                 "sterk salami",
                 "gorgonzola",
                 "parmesan"
             ],
             allergener: [
-                "Melk",
-                "pinneskjerner"
+                "melk",
+                "pinjekjerner"
             ],
             kostnad: "55",
             pris: "200"
         },
         {
-            id: "003",
+            id: "30003",
             navn: "Mozarella di burrata",
-            kategori: "Mat",
-            type: "Forret",
+            kategori: "mat",
+            type: "forrett",
             bilde: "pizza-icon.png",
             ingredienser: [
-                "Bløt og kremet mozarella",
-                "Chrrytomater",
-                "Ruccola",
-                "Grillet landbrød"
-            ],
-            allergener: [
-                "Egg",
-                "Mel",
-                "Melk"
-            ],
-            kostnad: "55",
-            pris: "200"
-        },
-        {
-            id: "004",
-            navn: "Al prosciutto cotto",
-            kategori: "Mat",
-            type: "Rød Pizza",
-            bilde: "pizza-icon.png",
-            ingredienser: [
-                "Tomat",
-                "Mozarella",
-                "Sopp",
-                "Italiensk skinke",
-                "Paprika"
-            ],
-            allergener: [
-                "Hvete",
-                "Melk"
-            ],
-            kostnad: "55",
-            pris: "200"
-        },
-        {
-            id: "005",
-            navn: "Alla diavola",
-            kategori: "Mat",
-            type: "Rød Pizza",
-            bilde: "pizza-icon.png",
-            ingredienser: [
-                "Tomat",
-                "Mozarella",
-                "Italiensk sterk salami",
-                "Pecorino",
-                "Oregano"
-            ],
-            allergener: [
-                "Hvete",
-                "Melk",
-                "Sennep"
-            ],
-            kostnad: "55",
-            pris: "200"
-        },
-        {
-            id: "006",
-            navn: "Capriciosa",
-            kategori: "Mat",
-            type: "Rød Pizza",
-            bilde: "pizza-icon.png",
-            ingredienser: [
-                "Tomat",
-                "Mozarella",
-                "Sopp",
-                "Italiens skinke",
-                "Artisjokk",
-                "Oliven"
-            ],
-            allergener: [
-                "Hvete",
-                "Melk",
-                "sennep",
-                "Selleri"
-            ],
-            kostnad: "55",
-            pris: "200"
-        },
-        {
-            id: "007",
-            navn: "Prosciutto di parma",
-            kategori: "Mat",
-            type: "Rød Pizza",
-            bilde: "pizza-icon.png",
-            ingredienser: [
-                "Tomat",
-                "Mozarella",
-                "Parmaskinke",
-                "Pinneskjerner",
+                "bløt og kremet mozarella",
+                "cherrytomater",
                 "ruccola",
-                "Parmesan"
+                "grillet landbrød"
             ],
             allergener: [
-                "Hvete",
-                "Melk",
-                "Pinnekjerner"
+                "egg",
+                "hvete",
+                "melk"
             ],
             kostnad: "55",
             pris: "200"
         },
         {
-            id: "008",
+            id: "30004",
+            navn: "Al prosciutto cotto",
+            kategori: "mat",
+            type: "rød pizza",
+            bilde: "pizza-icon.png",
+            ingredienser: [
+                "tomat",
+                "mozarella",
+                "sopp",
+                "italiensk skinke",
+                "paprika"
+            ],
+            allergener: [
+                "hvete",
+                "melk"
+            ],
+            kostnad: "55",
+            pris: "200"
+        },
+        {
+            id: "30005",
+            navn: "Alla diavola",
+            kategori: "mat",
+            type: "rød pizza",
+            bilde: "pizza-icon.png",
+            ingredienser: [
+                "tomat",
+                "mozarella",
+                "sterk salami",
+                "pecorino",
+                "oregano"
+            ],
+            allergener: [
+                "hvete",
+                "melk",
+                "sennep"
+            ],
+            kostnad: "55",
+            pris: "200"
+        },
+        {
+            id: "30006",
+            navn: "Capriciosa",
+            kategori: "mat",
+            type: "rød pizza",
+            bilde: "pizza-icon.png",
+            ingredienser: [
+                "tomat",
+                "mozarella",
+                "sopp",
+                "italiensk skinke",
+                "artisjokk",
+                "oliven",
+                "selleri"
+            ],
+            allergener: [
+                "hvete",
+                "melk",
+                "sennep",
+                "selleri"
+            ],
+            kostnad: "55",
+            pris: "200"
+        },
+        {
+            id: "30007",
+            navn: "Prosciutto di parma",
+            kategori: "mat",
+            type: "rød pizza",
+            bilde: "pizza-icon.png",
+            ingredienser: [
+                "tomat",
+                "mozarella",
+                "parmaskinke",
+                "pinjekjerner",
+                "ruccola",
+                "parmesan"
+            ],
+            allergener: [
+                "hvete",
+                "melk",
+                "pinjekjerner"
+            ],
+            kostnad: "55",
+            pris: "200"
+        },
+        {
+            id: "30008",
             navn: "Calzone al prosciutto cotto",
-            kategori: "Mat",
-            type: "Rød Pizza",
+            kategori: "mat",
+            type: "rød pizza",
             bilde: "pizza-icon.png",
             ingredienser: [
-                "Tomat",
-                "Mozarella",
-                "Oregano",
-                "Italiens skinke"
+                "tomat",
+                "mozarella",
+                "oregano",
+                "italiensk skinke"
             ],
             allergener: [
-                "Hvete",
-                "Melk"
+                "hvete",
+                "melk"
             ],
             kostnad: "55",
             pris: "200"
         },
         {
-            id: "009",
+            id: "30009",
             navn: "Margherita",
-            kategori: "Mat",
-            type: "Rød Pizza",
+            kategori: "mat",
+            type: "rød pizza",
             bilde: "pizza-icon.png",
             ingredienser: [
-                "Tomat",
-                "Mozarella",
-                "Parmesan",
-                "Basilikum"
+                "tomat",
+                "mozarella",
+                "parmesan",
+                "basilikum"
             ],
             allergener: [
-                "Hvete",
-                "Melk"
+                "hvete",
+                "melk"
             ],
             kostnad: "55",
             pris: "200"
         },
         {
-            id: "010",
+            id: "30010",
             navn: "4 formaggi",
-            kategori: "Mat",
-            type: "Hvit Pizza",
+            kategori: "mat",
+            type: "hvit pizza",
             bilde: "pizza-icon.png",
             ingredienser: [
-                "Mozarella",
-                "Pecorino",
-                "Parmesan",
-                "Gorgonzola"
+                "mozarella",
+                "pecorino",
+                "parmesan",
+                "gorgonzola"
             ],
             allergener: [
-                "Hvete",
-                "Melk"
+                "hvete",
+                "melk"
             ],
             kostnad: "55",
             pris: "200"
         },
         {
-            id: "012",
+            id: "30012",
             navn: "Mare e monti",
-            kategori: "Mat",
-            type: "Hvit Pizza",
+            kategori: "mat",
+            type: "hvit pizza",
             bilde: "pizza-icon.png",
             ingredienser: [
-                "Creme fraiche",
-                "Chili og hvitløksmarinert scampi",
-                "Italiensk krydret pølse",
-                "Skogsopp"
+                "creme fraiche",
+                "scampi",
+                "krydret pølse",
+                "skogsopp"
             ],
             allergener: [
-                "Hvete",
-                "Melk",
-                "Skalldyr"
+                "hvete",
+                "melk",
+                "skalldyr"
             ],
             kostnad: "55",
             pris: "200"
         },
         {
-            id: "013",
+            id: "30013",
             navn: "Poolo bianco",
-            kategori: "Mat",
-            type: "Hvit Pizza",
+            kategori: "mat",
+            type: "hvit pizza",
             bilde: "pizza-icon.png",
             ingredienser: [
-                "Mozarella",
-                "Kylling",
-                "Parmesan",
-                "Ruccola",
-                "Pesto rosso",
-                "Sorte oliven"
+                "mozarella",
+                "kylling",
+                "parmesan",
+                "ruccola",
+                "pesto rosso",
+                "sorte oliven"
             ],
             allergener: [
-                "Hvete",
-                "Melk",
-                "Pinnekjerner"
+                "hvete",
+                "melk",
+                "pinjekjerner"
             ],
             kostnad: "55",
             pris: "200"
         },
         {
-            id: "014",
+            id: "30014",
             navn: "Parma ai pomodori secchi",
-            kategori: "Mat",
-            type: "Hvit Pizza",
+            kategori: "mat",
+            type: "hvit pizza",
             bilde: "pizza-icon.png",
             ingredienser: [
-                "Mozarella",
-                "Parmaskinke",
-                "Chevre",
-                "Soltørkede cherrytomater",
-                "Ruccola",
-                "Hønning",
-                "Pinnkjerner"
+                "mozarella",
+                "parmaskinke",
+                "chevre",
+                "cherrytomater",
+                "ruccola",
+                "honning",
+                "pinjekjerner"
             ],
             allergener: [
-                "Hvete",
-                "Melk",
-                "Pinnekjerner"
+                "hvete",
+                "melk",
+                "pinjekjerner"
             ],
             kostnad: "55",
             pris: "200"
         },
-        {id: "015",
-         navn: "Cola",
-         kategori: "Drikke",
-         type: "Mineralvann",
-         bilde: "beverage-icon.png",
-         kostnad: "10",
-         pris: "59"
+        {
+            id: "30015",
+            navn: "Cola",
+            kategori: "drikke",
+            type: "mineralvann",
+            bilde: "beverage-icon.png",
+            kostnad: "10",
+            pris: "59"
         },
-        {id: "016",
-         navn: "Fanta",
-         kategori: "Drikke",
-         type: "Mineralvann" ,
-         bilde: "beverage-icon.png",
-         kostnad: "10",
-         pris: "59"
+        {
+            id: "30016",
+            navn: "Fanta",
+            kategori: "drikke",
+            type: "mineralvann" ,
+            bilde: "beverage-icon.png",
+            kostnad: "10",
+            pris: "59"
         },
-        {id: "017",
-         navn: "Sprite",
-         kategori: "Drikke",
-         type: "Mineralvann" ,
-         bilde: "beverage-icon.png",
-         kostnad: "10",
-         pris: "59"
+        {
+            id: "30017",
+            navn: "Sprite",
+            kategori: "drikke",
+            type: "mineralvann" ,
+            bilde: "beverage-icon.png",
+            kostnad: "10",
+            pris: "59"
         },
-        {id: "018",
-         navn: "Lemonade",
-         kategori: "Drikke",
-         type: "Mineralvann" ,
-         bilde: "beverage-icon.png",
-         kostnad: "10",
-         pris: "69"
+        {
+            id: "30018",
+            navn: "Lemonade",
+            kategori: "drikke",
+            type: "mineralvann" ,
+            bilde: "beverage-icon.png",
+            kostnad: "10",
+            pris: "69"
         },
-        {id: "019",
-         navn: "Rød vin",
-         kategori: "Drikke",
-         type: "Alkohol" ,
-         bilde: "wine.png",
-         kostnad: "45",
-         pris: "115"
+        {
+            id: "30019",
+            navn: "Rødvin",
+            kategori: "drikke",
+            type: "alkohol" ,
+            bilde: "wine.png",
+            kostnad: "45",
+            pris: "115"
         },
-        {id: "020",
-         navn: "Hvit vin",
-         kategori: "Drikke",
-         type: "Alkohol" ,
-         bilde: "wine.png",
-         kostnad: "45",
-         pris: "115"
+        {
+            id: "30020",
+            navn: "Hvitvin",
+            kategori: "drikke",
+            type: "alkohol" ,
+            bilde: "wine.png",
+            kostnad: "45",
+            pris: "115"
         },
-        {id: "021",
-         navn: "Øl",
-         kategori: "Drikke",
-         type: "Alkohol" ,
-         bilde: "beer.png",
-         kostnad: "35",
-         pris: "98"
-        },
+        {
+            id: "30021",
+            navn: "Øl",
+            kategori: "drikke",
+            type: "alkohol" ,
+            bilde: "beer.png",
+            kostnad: "35",
+            pris: "98"
+        }
     ];
 
    
     const prisPerPeson = () => {
         let salg = " ";
-        salg = matOgDrikke.pris - matOgDrikke.kostnad
-        if(matOgDrikke.kategori == "Drikke"){
-            return (salg + matOgDrikke.pris) - matOgDrikke.kostnad;
+        salg = matOgdrikke.pris - matOgdrikke.kostnad
+        if(matOgdrikke.kategori == "drikke"){
+            return (salg + matOgdrikke.pris) - matOgdrikke.kostnad;
         }
     }
 
@@ -377,4 +383,4 @@ const MatOgDrikkeModule = (function(){
 
 }());
 
-export default MatOgDrikkeModule;
+export default matOgDrikkeModule;

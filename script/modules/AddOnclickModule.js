@@ -126,7 +126,7 @@ const AddOnclickModule = (function() {
             if (connectedArray[0].hasOwnProperty("telefon")) {
                 addNewObject(connectedArray, lookUpArray);
             } else {
-                // Uferdig
+                addNewFoodOrDrink(connectedArray, lookUpArray);
             }
             addPopup.classList.remove("is-active");
         });
@@ -181,6 +181,61 @@ const AddOnclickModule = (function() {
             })
             let leaderOrWorkplace = [objectName, id];
             return leaderOrWorkplace;
+        }
+
+        const addNewFoodOrDrink = (connectedArray, lookUpArray) => {
+            let addPopup = document.querySelector("#add-popup");
+            let inputFields = addPopup.querySelectorAll(".add-input");
+            let ingredientFields = addPopup.querySelectorAll(".ingrediens");
+            let arrayLength = connectedArray.length;
+            let newId = parseInt(connectedArray[arrayLength-1].id)+1;
+            let newObject = {id: newId.toString()};
+            inputFields.forEach(field => {
+                if (field.classList.contains("navn")) {
+                    newObject.navn = field.value;
+                } else if (field.classList.contains("kategori")) {
+                    newObject.kategori = field.value;
+                } else if (field.classList.contains("type")) {
+                    newObject.type = field.value;
+                } else if (field.classList.contains("kostnad")) {
+                    newObject.kostnad = field.value;
+                } else if (field.classList.contains("pris")) {
+                    newObject.pris = field.value;
+                }
+            });
+            if (newObject.kategori == "drikke") {
+                newObject.bilde = "beverage-icon.png";
+            } else {
+                newObject.bilde = "pizza-icon.png";
+                newObject.ingredienser = getIngredientsFromInput(ingredientFields);
+                newObject.allergener = getAllergensByIngredients(newObject.ingredienser, lookUpArray);
+                if (newObject.type == "rød pizza" || newObject.type == "hvit pizza") {
+                    newObject.allergener.push("hvete");
+                }
+            }
+            connectedArray.push(newObject);
+        }
+
+        const getAllergensByIngredients = (ingredientsArray, lookUpArray) => {
+            let allergener = [];
+            ingredientsArray.forEach(newItemIngredient => {
+                lookUpArray.forEach(ingrediens => {
+                    if (newItemIngredient == ingrediens.navn && ingrediens.allergen != ""){
+                        allergener.push(ingrediens.allergen);
+                    }
+                });
+            });
+            return allergener;
+        }
+
+        const getIngredientsFromInput = (inputArray) => {
+            let ingredienser = [];
+            inputArray.forEach(input => {
+                if (input.value != ""){
+                    ingredienser.push(input.value);
+                }
+            });
+            return ingredienser;
         }
     };
 
