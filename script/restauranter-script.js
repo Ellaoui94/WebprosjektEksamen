@@ -1,7 +1,7 @@
 import RestaurantModule from "./modules/RestaurantModule.js";
 import SearchModule from "./modules/SearchModule.js";
 import AddOnclickModule from "./modules/AddOnclickModule.js";
-// import AnsatteModule from "./modules/AnsatteModule.js";
+import AnsatteModule from "./modules/AnsatteModule.js";
 
 const restaurantSection = document.querySelector("#restaurant-section");
 
@@ -24,6 +24,8 @@ const addPopup = document.querySelector("#add-popup");
 
 
 const alleRestauranter = RestaurantModule.getAllRestauranter();
+
+const alleAnsatte = AnsatteModule.getAllAnsatte();
 
 const generateRestauranter = (chosenArray) => {
 
@@ -161,7 +163,7 @@ const generateRestauranter = (chosenArray) => {
 
     popupSection.innerHTML = popupHtmlText;
 
-    AddOnclickModule.addOnclickToButtons(alleRestauranter, "restaurant-card-article");
+    AddOnclickModule.addOnclickToButtons(alleRestauranter, alleAnsatte, "restaurant-card-article");
 
     const searchButton = document.querySelector("#search-button");
 
