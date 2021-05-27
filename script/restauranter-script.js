@@ -15,7 +15,11 @@ const denyDeleteButton = document.querySelector("#deny-delete-button");
 
 const deleteInput = document.querySelector("#delete-input");
 
+const addPopupBackround = document.querySelector("#modalBg-add-popup");
 
+const denyAddButton = document.querySelector("#deny-add-button");
+
+const addPopup = document.querySelector("#add-popup");
 
 
 
@@ -167,12 +171,20 @@ const generateRestauranter = (chosenArray) => {
 
     const showAllButton = document.querySelector("#show-all-button");
 
+    const addButton = document.querySelector("#add-button");
+
+    const addPopup = document.querySelector("#add-popup");
+
     searchButton.addEventListener("click", () => {
         generateRestauranter(SearchModule.filterByChoice(alleRestauranter, searchKey, searchValue));
     });
     
     showAllButton.addEventListener("click", () => {
         generateRestauranter(alleRestauranter);
+    });
+
+    addButton.addEventListener("click", () => {
+        addPopup.classList.add("is-active");
     });
 
 };
@@ -202,5 +214,12 @@ modalBgDeletePopup.addEventListener("click", () => {
     deleteInput.value = "";
 });
 
+addPopupBackround.addEventListener("click", () => {
+    addPopup.classList.remove("is-active");
+});
+
+denyAddButton.addEventListener("click", () => {
+    addPopup.classList.remove("is-active");
+})
 
 

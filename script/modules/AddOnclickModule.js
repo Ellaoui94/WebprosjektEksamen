@@ -31,8 +31,6 @@ const AddOnclickModule = (function() {
             let deleteName = document.querySelector("#delete-name");
 
             let deletePopup = document.querySelector("#delete-popup");
-
-            let addCardButton = document.querySelector("#add-new-button") // Elementer med denne id-en finnes foreløpig ikke
     
             connectedEditButton.addEventListener("click", () => {
                 connectedPopup.classList.add("is-active");
@@ -73,13 +71,8 @@ const AddOnclickModule = (function() {
                 // Funksjon som lagrer endring i array
                 // Uferdig
             });
-            /*
-            // Midlertidig kommentert ut
-            addCardButton.addEventListener("click", () => {
-                // Funksjon som legger til nytt kort
-                // Uferdig
-            });
-            */
+
+
         });
     };
 
