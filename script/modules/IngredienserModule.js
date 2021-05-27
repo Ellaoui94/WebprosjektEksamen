@@ -2,183 +2,246 @@ const IngredienserModule = (function (){
 
     const ingredienser = [
         {
-            id: "00000",
-            navn: "Pesto rosso",
-            type: "Saus",
-            allergen: "Nøtter",
+            id: "50000",
+            navn: "pesto rosso",
+            type: "saus",
+            allergen: "nøtter",
             kostnadPerRett: 10
         },
         {
-            id: "00001",
-            navn: "Pesto genovese",
-            type: "Saus",
-            allergen: "Nøtter",
+            id: "50001",
+            navn: "pesto genovese",
+            type: "saus",
+            allergen: "nøtter",
             kostnadPerRett: 10
         },
         {
-            id:" 00002",
-            navn: "Aioli",
-            type: "Saus",
-            allergen: "Egg",
+            id: "50002",
+            navn: "aioli",
+            type: "saus",
+            allergen: "egg",
             kostnadPerRett: 15
         },
         {
-            id: "00003",
-            navn: "Parmaskinke",
-            type: "Kjøtt",
-            allergen: " ",
+            id: "50003",
+            navn: "parmaskinke",
+            type: "kjøtt",
+            allergen: "",
             kostnadPerRett: 20
         },
         {
-            id: "00004",
-            navn: "Trøffelsalami",
-            type: "Kjøtt",
-            allergen: " ",
+            id: "50004",
+            navn: "trøffelsalami",
+            type: "kjøtt",
+            allergen: "",
             kostnadPerRett: 20
         },
         {
-            id: "00005",
-            navn: "Sterk salami",
-            type: "Kjøtt",
-            allergen: " ",
+            id: "50005",
+            navn: "sterk salami",
+            type: "kjøtt",
+            allergen: "",
             kostnadPerRett: 20
         },
         {
-            id: "00006",
-            navn: "Gorgonzola",
-            type: "Ost",
-            allergen: "Melk",
+            id: "50006",
+            navn: "gorgonzola",
+            type: "ost",
+            allergen: "melk",
             kostnadPerRett: 15
         },
-        
         {
-            id: "00007",
-            navn: "Parmesan",
-            type: "Ost",
-            allergen: "Melk",
+            id: "50007",
+            navn: "parmesan",
+            type: "ost",
+            allergen: "melk",
             kostnadPerRett: 15
         },
-        
         {
-            id: "00008",
-            navn: "Pinnekjerner",
-            type: "Nøtter",
-            allergen: "Nøtter",
+            id: "50008",
+            navn: "pinjekjerner",
+            type: "nøtter",
+            allergen: "nøtter",
             kostnadPerRett: 15
         },
-        
         {
-            id: "00009",
-            navn: "Mozarella",
-            type: "Ost",
-            allergen: "Melk",
+            id: "50009",
+            navn: "mozarella",
+            type: "ost",
+            allergen: "melk",
             kostnadPerRett: 15
         },
-        
         {
-            id: "00010",
-            navn: "Bløt og kremet mozarella",
-            type: "Ost",
-            allergen: "Melk",
+            id: "50010",
+            navn: "bløt og kremet mozarella",
+            type: "ost",
+            allergen: "melk",
             kostnadPerRett: 45
         },
         {
-            id: "00011",
-            navn: "Cherrytomater",
-            type: "Grønnsaker",
-            allergen: " ",
+            id: "50011",
+            navn: "cherrytomater",
+            type: "grønnsaker",
+            allergen: "",
             kostnadPerRett: 15
         },
         {
-            id: "00012",
-            navn: "Ruccola",
-            type: "Grønsaker",
-            allergen: " ",
+            id: "50012",
+            navn: "ruccola",
+            type: "grønnsaker",
+            allergen: "",
             kostnadPerRett: 5
         },
         {
-            id: "00013",
-            navn: "Grillet landbrød",
-            type: "Bunn",
-            allergen: "Hvete",
+            id: "50013",
+            navn: "grillet landbrød",
+            type: "brød",
+            allergen: "hvete",
             kostnadPerRett: 10
         },
         {
-            id: "00014",
-            navn: "Tomat",
-            type: "Grønsaker",
-            allergen: " ",
+            id: "50014",
+            navn: "tomat",
+            type: "grønnsaker",
+            allergen: "",
             kostnadPerRett: 10
         },
         {
-            id: "00015",
-            navn: "Sopp",
-            type: "Grønsaker",
-            allergen: " ",
+            id: "50015",
+            navn: "sopp",
+            type: "grønnsaker",
+            allergen: "",
             kostnadPerRett: 15
         },
         {
-            id: "00016",
-            navn: "Italiensk skinke",
-            type: "Kjøtt",
-            allergen: " ",
+            id: "50016",
+            navn: "italiensk skinke",
+            type: "kjøtt",
+            allergen: "",
             kostnadPerRett: 20
         },
         {
-            id: "00017",
-            navn: "Paprika",
-            type: "Grønsaker",
-            allergen: " ",
+            id: "50017",
+            navn: "paprika",
+            type: "grønnsaker",
+            allergen: "",
             kostnadPerRett: 5
         },
         {
-            id: "00018",
-            navn: "Pecorino",
-            type: "Ost",
-            allergen: "Melk",
+            id: "50018",
+            navn: "pecorino",
+            type: "ost",
+            allergen: "melk",
             kostnadPerRett: 25
         },
         {
-            id: "00019",
-            navn: "Artisjokk",
-            type: "Grønsaker",
+            id: "50019",
+            navn: "artisjokk",
+            type: "grønnsaker",
+            allergen: "",
             kostnadPerRett: 15
         },
         {
-            id: "00020",
-            navn: "Oliven",
-            type: "Grønsaker",
+            id: "50020",
+            navn: "oliven",
+            type: "grønnsaker",
+            allergen: "",
             kostnadPerRett: 10
         },
         {
-            id: "00021",
-            navn: "Creme fraiche",
-            type: "Saus",
+            id: "50021",
+            navn: "creme fraiche",
+            type: "saus",
+            allergen: "melk",
             kostnadPerRett: 15
         },
         {
-            id: "00022",
-            navn: "Scampi",
-            type: "Skalldyr",
+            id: "50022",
+            navn: "scampi",
+            type: "skalldyr",
+            allergen: "skalldyr",
             kostnadPerRett: 25
         },
         {
-            id: "00023",
-            navn: "Skogsopp",
-            type: "Grønsaker",
+            id: "50023",
+            navn: "skogsopp",
+            type: "grønnsaker",
+            allergen: "",
             kostnadPerRett: 15
         },
-        
-        
-        
+        {
+            id: "50023",
+            navn: "oregano",
+            type: "krydder",
+            allergen: "",
+            kostnadPerRett: 1
+        },
+        {
+            id: "50023",
+            navn: "focaccia",
+            type: "brød",
+            allergen: "hvete",
+            kostnadPerRett: 20
+        },
+        {
+            id: "50024",
+            navn: "selleri",
+            type: "grønnsaker",
+            allergen: "selleri",
+            kostnadPerRett: 5
+        },
+        {
+            id: "50025",
+            navn: "sennep",
+            type: "saus",
+            allergen: "sennep",
+            kostnadPerRett: 10
+        },
+        {
+            id: "50026",
+            navn: "krydret pølse",
+            type: "kjøtt",
+            allergen: "",
+            kostnadPerRett: 15
+        },
+        {
+            id: "50027",
+            navn: "kylling",
+            type: "kjøtt",
+            allergen: "",
+            kostnadPerRett: 15
+        },
+        {
+            id: "50028",
+            navn: "sorte oliven",
+            type: "grønnsaker",
+            allergen: "",
+            kostnadPerRett: 5
+        },
+        {
+            id: "50029",
+            navn: "honning",
+            type: "saus",
+            allergen: "",
+            kostnadPerRett: 5
+        },
+        {
+            id: "50030",
+            navn: "basilikum",
+            type: "krydder",
+            allergen: "",
+            kostnadPerRett: 5
+        }
     ];
 
-    const getAllIngredienser = () => {
+    const getAllIngredienser = () => ingredienser;/*{
+        
         for (let index = 0; index < ingredienser.length; index++) {
             const allIngredients = ingredienser[index];
             
         }
-    };
+        
+    };*/
 
     return {getAllIngredienser};
 
