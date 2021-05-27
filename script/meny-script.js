@@ -29,7 +29,6 @@ const addPopupBackround = document.querySelector("#modalBg-add-popup");
 const generateMatOgDrikke = (chosenArray) => {
 
 
-
     let htmlTxt = `
     <article class="column is-one-fifth">
         <div class="card">
@@ -242,8 +241,11 @@ const generateMatOgDrikke = (chosenArray) => {
     });
 
     menuSection.innerHTML = htmlTxt;
+
     drikkeSection.innerHTML = htmlText;
+
     popupSection.innerHTML = popupHtmlTxt;
+
     AddOnclickModule.addOnclickToButtons(alleMeny, "menu-card-article");
 
     const searchButton = document.querySelector("#search-button");
@@ -259,7 +261,7 @@ const generateMatOgDrikke = (chosenArray) => {
     const addPopup = document.querySelector("#add-popup");
 
     searchButton.addEventListener("click", () => {
-        generateMatOgDrikke(alleMeny);
+        generateMatOgDrikke(SearchModule.filterByChoice(alleMeny, searchKey, searchValue));
     });
 
     showAllButton.addEventListener("click", () => {
