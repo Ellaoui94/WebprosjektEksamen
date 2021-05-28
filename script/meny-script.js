@@ -3,6 +3,8 @@ import SearchModule from './modules/SearchModule.js';
 import AddOnclickModule from "./modules/AddOnclickModule.js";
 import IngredienserModule from "./modules/IngredienserModule.js"
 
+let addButtonHasOnclick = false;
+
 const menuSection = document.querySelector("#menu-section");
 
 const drikkeSection = document.querySelector("#drikke-section");
@@ -38,7 +40,31 @@ const generateListElements = (array) => {
     return listOfElements;
 }
 
-const generateMatOgDrikke = (chosenArray) => {
+const generateIngredientInputList = (array) => {
+    let ingredientInputList = "";
+    array.forEach(e => {
+        ingredientInputList += `
+        <li>
+            <div class="control">
+                <input type="text" class="input edit-ingrediens" placeholder="${e}">
+            </div>
+        </li>
+        `
+    });
+    let emptyInputs = 7 - array.length;
+    for (let i = 0; i < emptyInputs; i++){
+        ingredientInputList += `
+        <li>
+            <div class="control">
+                <input type="text" class="input edit-ingrediens">
+            </div>
+        </li>
+        `
+    }
+    return ingredientInputList;
+}
+
+const generateMatOgDrikke = (chosenArray, addButtonHasOnclick) => {
 
 
     let htmlTxt = `
@@ -122,14 +148,15 @@ const generateMatOgDrikke = (chosenArray) => {
                             <button id="deleteBtn${menuObject.id}" type="button" class="card-footer-item button delete-button"><span><img src="images/knapp-iconer/delete-white.png" width="25" heigth="25"></span>Slett</button>
                         </section>
                     </div>
-                </article>`;
+                </article>
+            `;
 
-                popupHtmlTxt += `
+            popupHtmlTxt += `
                 <article id="popup${menuObject.id}" class="modal menu-popup">
                     <div id="modalBg${menuObject.id}" class="modal-background"></div>
                     <div class="modal-content py-5 px-5">
                         <div class="card menu-popup">
-                            <section class="card-header>
+                            <section class="card-header">
                             <h3 class="card-header-title is-centered"><span class="card-header-icon"><img src="images/Meny/icon1.png" width="25" height="25"></span>${menuObject.navn}</h3>
                             </section>
                             <section class="card-image is-centered">
@@ -140,31 +167,31 @@ const generateMatOgDrikke = (chosenArray) => {
                                     <li>
                                         <label class="label">Navn</label>
                                         <div class="control">
-                                            <input id="popupNavn${menuObject.id}" type="text" class="input" placeholder="${menuObject.navn}">
+                                            <input id="popupNavn${menuObject.id}" type="text" class="input edit-input navn" placeholder="${menuObject.navn}">
                                         </div>
                                     </li>
                                     <li>
                                         <label class="label">Type</label>
                                         <div class="control">
-                                            <input id="popupType${menuObject.id}" type="text" class="input" placeholder="${menuObject.type}">
+                                            <input id="popupType${menuObject.id}" type="text" class="input edit-input type" placeholder="${menuObject.type}">
                                         </div>
                                     </li>
                                     <li>
-                                        <label class="label">Ingredienser</label>
-                                        <div class="control">
-                                            <input id="popupIngredienser${menuObject.id}" type="text" class="input" placeholder="${menuObject.ingredienser}">
-                                        </div>
+                                        <ul>
+                                            <label class="label">Ingredienser</label>
+                                            ${generateIngredientInputList(menuObject.ingredienser)}
+                                        </ul>
                                     </li>
                                     <li>
                                         <label class="label">Kostnad</label>
                                         <div class="control">
-                                            <input id="popupKostnad${menuObject.id}" type="text" class="input" placeholder="${menuObject.kostnad}">
+                                            <input id="popupKostnad${menuObject.id}" type="text" class="input edit-input kostnad" placeholder="${menuObject.kostnad}">
                                         </div>
                                     </li>
                                     <li>
                                         <label class="label">Pris</label>
                                         <div class="control">
-                                            <input id="popupPris${menuObject.id}" type="text" class="input" placeholder="${menuObject.pris}">
+                                            <input id="popupPris${menuObject.id}" type="text" class="input edit-input pris" placeholder="${menuObject.pris}">
                                         </div>
                                     </li>
                                 </ul>
@@ -178,8 +205,8 @@ const generateMatOgDrikke = (chosenArray) => {
                 </article>
             `;
     
-            }else{
-               htmlText += `
+        } else {
+            htmlText += `
                 <article id ="${menuObject.id}" class="column is-3 menu-card-article">
                     <div class="card menu-card">
                         <section class="card-header">
@@ -203,8 +230,8 @@ const generateMatOgDrikke = (chosenArray) => {
                     </div>
                 </article>`;
 
-                
-                popupHtmlTxt += `
+            
+            popupHtmlTxt += `
                 <article id="popup${menuObject.id}" class="modal menu-popup">
                     <div id="modalBg${menuObject.id}" class="modal-background"></div>
                     <div class="modal-content py-5 px-5">
@@ -220,25 +247,25 @@ const generateMatOgDrikke = (chosenArray) => {
                                     <li>
                                         <label class="label">Navn</label>
                                         <div class="control">
-                                            <input id="popupNavn${menuObject.id}" type="text" class="input" placeholder="${menuObject.navn}">
+                                            <input id="popupNavn${menuObject.id}" type="text" class="input edit-input navn" placeholder="${menuObject.navn}">
                                         </div>
                                     </li>
                                     <li>
                                         <label class="label">Type</label>
                                         <div class="control">
-                                            <input id="popupType${menuObject.id}" type="text" class="input" placeholder="${menuObject.type}">
+                                            <input id="popupType${menuObject.id}" type="text" class="input edit-input type" placeholder="${menuObject.type}">
                                         </div>
                                     </li>
                                     <li>
                                         <label class="label">Kostnad</label>
                                         <div class="control">
-                                            <input id="popupKostnad${menuObject.id}" type="text" class="input" placeholder="${menuObject.kostnad}">
+                                            <input id="popupKostnad${menuObject.id}" type="text" class="input edit-input kostnad" placeholder="${menuObject.kostnad}">
                                         </div>
                                     </li>
                                     <li>
                                         <label class="label">Pris</label>
                                         <div class="control">
-                                            <input id="popupPris${menuObject.id}" type="text" class="input" placeholder="${menuObject.pris}">
+                                            <input id="popupPris${menuObject.id}" type="text" class="input edit-input pris" placeholder="${menuObject.pris}">
                                         </div>
                                     </li>
                                 </ul>
@@ -252,7 +279,7 @@ const generateMatOgDrikke = (chosenArray) => {
                 </article>
             `;
     
-            }
+        }
         
     });
 
@@ -262,7 +289,7 @@ const generateMatOgDrikke = (chosenArray) => {
 
     popupSection.innerHTML = popupHtmlTxt;
 
-    AddOnclickModule.addOnclickToButtons(alleMeny, alleIngredienser, "menu-card-article");
+    AddOnclickModule.addOnclickToButtons(alleMeny, alleIngredienser, "menu-card-article", addButtonHasOnclick);
 
     const searchButton = document.querySelector("#search-button");
 
@@ -277,11 +304,11 @@ const generateMatOgDrikke = (chosenArray) => {
     const addPopup = document.querySelector("#add-popup");
 
     searchButton.addEventListener("click", () => {
-        generateMatOgDrikke(SearchModule.filterByChoice(alleMeny, searchKey, searchValue));
+        generateMatOgDrikke(SearchModule.filterByChoice(alleMeny, searchKey, searchValue), addButtonHasOnclick);
     });
 
     showAllButton.addEventListener("click", () => {
-        generateMatOgDrikke(alleMeny);
+        generateMatOgDrikke(alleMeny, addButtonHasOnclick);
     });
 
     addButton.addEventListener("click", () => {
@@ -290,7 +317,7 @@ const generateMatOgDrikke = (chosenArray) => {
    
 }
 
-generateMatOgDrikke(alleMeny);
+generateMatOgDrikke(alleMeny, addButtonHasOnclick);
 
 
 denyDeleteButton.addEventListener("click", () => {

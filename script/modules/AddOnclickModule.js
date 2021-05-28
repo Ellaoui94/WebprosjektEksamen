@@ -9,8 +9,9 @@ const AddOnclickModule = (function() {
         // For restauranter-script: alleAnsatte (array importert via modul)
         // For ansatte-script: alleRestauranter (array importert via modul)
         // For meny-script: alleIngredienser (array importert via modul); denne er ikke ferdig
+    // addButtonHasOnclick må settes på begynnelsen av hver side, og må være = false for at koden skal virke
 
-    const addOnclickToButtons = (connectedArray, lookUpArray, cardClass) => {
+    const addOnclickToButtons = (connectedArray, lookUpArray, cardClass, addButtonHasOnclick) => {
 
         let allCards = document.querySelectorAll(`.${cardClass}`);
     
@@ -73,11 +74,7 @@ const AddOnclickModule = (function() {
             connectedSaveButton.addEventListener("click", () => {
                 // Funksjon som lagrer endring i array
                 // Uferdig
-                if (connectedArray[0].hasOwnProperty("telefon")) {
-                    editObject(connectedArray, lookUpArray);
-                } else {
-                    // Uferdig
-                }
+                editObject(connectedArray, lookUpArray);
                 connectedPopup.classList.remove("is-active");
             });
 
@@ -87,31 +84,64 @@ const AddOnclickModule = (function() {
             const editObject = (arrayToChange, lookUpArray) => {
                 let editPopup = document.querySelector(`#popup${card.id}`);
                 let inputFields = editPopup.querySelectorAll(".edit-input");
+                let objectToEdit = arrayToChange[arrayToChange.findIndex(checkId)];
                 inputFields.forEach(field => {
-                    if (field.classList.contains("navn")) {
-                        arrayToChange[arrayToChange.findIndex(checkId)].navn = field.value;
-                    } else if (field.classList.contains("adresse")) {
-                        arrayToChange[arrayToChange.findIndex(checkId)].adresse = field.value;
-                    } else if (field.classList.contains("telefon")) {
-                        arrayToChange[arrayToChange.findIndex(checkId)].telefon = field.value;
-                    } else if (field.classList.contains("kapasitet")) {
-                        arrayToChange[arrayToChange.findIndex(checkId)].kapasitet = parseInt(field.value);
-                    } else if (field.classList.contains("leder")) {
-                        arrayToChange[arrayToChange.findIndex(checkId)].leder = getLeaderOrWorkPlace(lookUpArray, field.value);
-                    } else if (field.classList.contains("alder")) {
-                        arrayToChange[arrayToChange.findIndex(checkId)].alder = parseInt(field.value);
-                    } else if (field.classList.contains("stilling")) {
-                        arrayToChange[arrayToChange.findIndex(checkId)].stilling = field.value;
-                    } else if (field.classList.contains("stillingsprosent")) {
-                        arrayToChange[arrayToChange.findIndex(checkId)].stillingsprosent = parseInt(field.value);
-                    } else if (field.classList.contains("timelønn")) {
-                        arrayToChange[arrayToChange.findIndex(checkId)].timelønn = parseInt(field.value);
-                    } else if (field.classList.contains("arbeidssted")) {
-                        arrayToChange[arrayToChange.findIndex(checkId)].arbeidssted = getLeaderOrWorkPlace(lookUpArray, field.value);
+                    if (field.classList.contains("navn") && field.value != "") {
+                        objectToEdit.navn = field.value;
+                    } else if (field.classList.contains("adresse") && field.value != "") {
+                        objectToEdit.adresse = field.value;
+                    } else if (field.classList.contains("telefon") && field.value != "") {
+                        objectToEdit.telefon = field.value;
+                    } else if (field.classList.contains("kapasitet") && field.value != "") {
+                        objectToEdit.kapasitet = parseInt(field.value);
+                    } else if (field.classList.contains("leder") && field.value != "") {
+                        objectToEdit.leder = getLeaderOrWorkPlace(lookUpArray, field.value);
+                    } else if (field.classList.contains("alder") && field.value != "") {
+                        objectToEdit.alder = parseInt(field.value);
+                    } else if (field.classList.contains("stilling") && field.value != "") {
+                        objectToEdit.stilling = field.value;
+                    } else if (field.classList.contains("stillingsprosent") && field.value != "") {
+                        objectToEdit.stillingsprosent = parseInt(field.value);
+                    } else if (field.classList.contains("timelønn") && field.value != "") {
+                        objectToEdit.timelønn = parseInt(field.value);
+                    } else if (field.classList.contains("arbeidssted") && field.value != "") {
+                        objectToEdit.arbeidssted = getLeaderOrWorkPlace(lookUpArray, field.value);
+                    } else if (field.classList.contains("type") && field.value != "") {
+                        objectToEdit.type = field.value;
+                    } else if (field.classList.contains("kostnad") && field.value != "") {
+                        objectToEdit.kostnad = field.value;
+                    } else if (field.classList.contains("pris") && field.value != "") {
+                        objectToEdit.pris = field.value;
                     }
                 });
+                if (objectToEdit.hasOwnProperty("ingredienser")) {
+                    let newIngredients = getIngredientsFromInput(getIngredientsInputArray(editPopup));
+                    changeIngredients(objectToEdit.ingredienser, newIngredients);
+                    let newAllergens = getAllergensByIngredients(objectToEdit.ingredienser, lookUpArray);
+                    objectToEdit.allergener = newAllergens;
+                    if (objectToEdit.type == "rød pizza" || objectToEdit.type == "hvit pizza") {
+                        objectToEdit.allergener.push("hvete");
+                    }
+                }
             }
             
+            const getIngredientsInputArray = (popup) => {
+                let ingredientsInputArray = popup.querySelectorAll(".edit-ingrediens");
+                if (ingredientsInputArray != undefined){
+                    return ingredientsInputArray;
+                }
+            }
+
+            const changeIngredients = (oldIngredients, newIngredients) => {
+                if (oldIngredients != undefined && newIngredients != undefined) {
+                    for (let i = 0; i < newIngredients.length; i++) {
+                        if (newIngredients[i] != "" && newIngredients[i] != oldIngredients[i]) {
+                            oldIngredients[i] = newIngredients[i];
+                        }
+                    }
+                }
+            }
+
             const checkId = (o) => o.id == card.id;
 
         });
@@ -123,12 +153,16 @@ const AddOnclickModule = (function() {
         let addPopup = document.querySelector("#add-popup");
 
         confirmAddButton.addEventListener("click", () => {
-            if (connectedArray[0].hasOwnProperty("telefon")) {
-                addNewObject(connectedArray, lookUpArray);
-            } else {
-                addNewFoodOrDrink(connectedArray, lookUpArray);
+            if (!addButtonHasOnclick){
+                if (connectedArray[0].hasOwnProperty("telefon")) {
+                    addNewObject(connectedArray, lookUpArray);
+                } else {
+                    addNewFoodOrDrink(connectedArray, lookUpArray);
+                }
+                addPopup.classList.remove("is-active");
+                addButtonHasOnclick = true;
             }
-            addPopup.classList.remove("is-active");
+            
         });
 
         
@@ -220,7 +254,7 @@ const AddOnclickModule = (function() {
             let allergener = [];
             ingredientsArray.forEach(newItemIngredient => {
                 lookUpArray.forEach(ingrediens => {
-                    if (newItemIngredient == ingrediens.navn && ingrediens.allergen != ""){
+                    if (newItemIngredient == ingrediens.navn && ingrediens.allergen != "" && !allergener.includes(ingrediens.allergen)){
                         allergener.push(ingrediens.allergen);
                     }
                 });

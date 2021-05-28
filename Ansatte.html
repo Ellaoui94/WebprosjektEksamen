@@ -15,53 +15,45 @@
     <nav class="hero has-bg-img">
         <h1 class="navbar-item has-text-centered title is-fullwidth title-left">Gyldne Pizza</h1>
       </nav>
-   
+    </nav>
     <nav class="navbar has-shadow navbarTwo-color">
         <div class="navbar-menu">
-            <a class="navbar-item navbarTwo-color">Hjem</a>
-            <a class="navbar-item navbarTwo-color">Ansatte</a>
-            <a class="navbar-item navbarTwo-color">Mat/Drikke</a>
-            <a class="navbar-item navbarTwo-color">Økonomi</a>
+            <a class="navbar-item navbarTwo-color" href="index.html">Hjem</a>
+            <a class="navbar-item navbarTwo-color" href="Ansatte.html">Ansatte</a>
+            <a class="navbar-item navbarTwo-color" href="Mat&Drikke.html">Mat/Drikke</a>
+            <a class="navbar-item navbarTwo-color" href="Restauranter.html">Restauranter</a>
+            <a class="navbar-item navbarTwo-color" href="Økonomi.html">Økonomi</a>
         </div>
     </nav>
 
     <a id="top"></a>
 
-
+<!--
 <div class="container" id="search-test">
     <div class="select"  >
         <select class="is-rounded" class="is-focused"  id="search-key">
             <option value="navn">Navn</option>
             <option value="id">ID</option>
-            <option value="adresse">Adresse</option>
+            <option value="arbeidssted">Arbeidssted</option>
             <option value="telefon">Telefon</option>
-            <option value="kapasitet">Kapasitet</option>
-            <option value="leder">Leder</option>
+            <option value="alder">Alder</option>
+            <option value="stilling">Stilling</option>
         </select>
     </div>
+-->
 
-    <section>
-        <div class="field">
-            <label class="label">Søk etter ansatte</label>
-            <div class="control">
-            <button id="search-button" >Søk</button>
-            <button type="button" id="show-all-button">Vis alle</button>
-    <input id="search-value" class="input" type="text" placeholder="søk på arbeidssted.."> 							
-            </div>
-        </div>
-    </section>
-</div>
+
+	
+    <main>			
+        <section id="ansatte-section" class="columns is-multiline"></section>
+        <section id="popup-section"></section>		
+    </main>  
+
 
     
     
 
-			<div class="container">		
-                <main>			
-                    <section id="ansatte-section" class="columns is-multiline"></section>
-                    <section id="popup-section"></section>		
-                </main>  
-            </div> 
-
+		
 
             <div id="delete-container" class="container">
                 <article id="delete-popup" class="modal">
@@ -69,7 +61,7 @@
                     <div class="modal-content py-5 px-5">
                         <div class="card">
                             <section class="card-header">
-                                <h3 class="card-header-title is-centered">Slett</h3>
+                                <h3 class="card-header-title is-centered">Slett Ansatt</h3>
                             </section>
                             <section class="card-content">
                                 <p>
@@ -78,7 +70,7 @@
                                 <input id="delete-input" type="text" class="input is-centered">
                             </section>
                             <section class="card-footer buttons is-small">
-                                <button id="deny-delete-button" type="button" class="card-footer-item button deny-delete-button"><span><img src="images/knapp-iconer/navn_på_tilbake_ikon.png" alt="tilbake-ikon" width="25" height="25">Tilbake</span></button>
+                                <button id="deny-delete-button" type="button" class="card-footer-item button deny-delete-button"><span><img src="images/knapp-iconer/tilbake-icon.png" alt="tilbake-ikon" width="25" height="25">Tilbake</span></button>
                                 <button id="confirm-delete-button" type="button" class="card-footer-item button confirm-delete-button"><span><img src="images/knapp-iconer/delete-white.png" alt="slett-ikon" width="25" height="25">Slett</span></button>
                             </section>
                         </div>
@@ -88,6 +80,75 @@
         
           
 
+
+
+            <div id="add-container" class="container">
+                <article id="add-popup" class="modal">
+                    <div id="modalBg-add-popup" class="modal-background"></div>
+                    <div class="modal-content py-5 px-5">
+                        <div class="card">
+                            <section class="card-header">
+                                <h3 class="card-header-title is-centered">Legg Til Ansatt</h3>
+                            </section>
+                            <section class="card-content">
+                                <ul class="content">
+                                    <li>
+                                        <label class="label">Navn</label>
+                                        <div class="control">
+                                            <input type="text" class="input add-input navn">
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <label class="label">Arbeidssted (id)</label>
+                                        <div class="control">
+                                            <input type="text" class="input add-input arbeidssted" placeholder="ID">
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <label class="label">Telefon</label>
+                                        <div class="control">
+                                            <input type="text" class="input add-input telefon">
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <label class="label">Stilling</label>
+                                        <div class="control">
+                                            <input type="text" class="input add-input stilling">
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <label class="label">Stillingsprosent</label>
+                                        <div class="control">
+                                            <input type="text" class="input add-input stillingsprosent">
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <label class="label">Timelønn</label>
+                                        <div class="control">
+                                            <input type="text" class="input add-input timelønn">
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <label class="label">Alder</label>
+                                        <div class="control">
+                                            <input type="text" class="input add-input alder">
+                                        </div>
+                                    </li>
+                                </ul>
+                            </section>
+                            <section class="card-footer">
+                                <button id="deny-add-button" type="button" class="card-footer-item button deny-add-button"><span><img src="images/knapp-iconer/tilbake-icon.png" alt="tilbake-ikon" width="25" height="25"></span>Tilbake</button>
+                                <button id="confirm-add-button" type="button" class="card-footer-item button confirm-add-button"><span><img src="images/knapp-iconer/save-icon.png" alt="legg-til-ikon" width="25" height="25"></span>Legg Til</button>
+                            </section>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    
             <a href="#top">Jump to top of page</a>
+
+
+
 </body>
 </html>

@@ -21,13 +21,15 @@ const denyAddButton = document.querySelector("#deny-add-button");
 
 const addPopup = document.querySelector("#add-popup");
 
+let addButtonHasOnclick = false;
+
 
 
 const alleRestauranter = RestaurantModule.getAllRestauranter();
 
 const alleAnsatte = AnsatteModule.getAllAnsatte();
 
-const generateRestauranter = (chosenArray) => {
+const generateRestauranter = (chosenArray, addButtonHasOnclick) => {
 
     let htmlText = `
         <article class="column is-one-fifth">
@@ -163,7 +165,7 @@ const generateRestauranter = (chosenArray) => {
 
     popupSection.innerHTML = popupHtmlText;
 
-    AddOnclickModule.addOnclickToButtons(alleRestauranter, alleAnsatte, "restaurant-card-article");
+    AddOnclickModule.addOnclickToButtons(alleRestauranter, alleAnsatte, "restaurant-card-article", addButtonHasOnclick);
 
     const searchButton = document.querySelector("#search-button");
 
@@ -178,11 +180,11 @@ const generateRestauranter = (chosenArray) => {
     const addPopup = document.querySelector("#add-popup");
 
     searchButton.addEventListener("click", () => {
-        generateRestauranter(SearchModule.filterByChoice(alleRestauranter, searchKey, searchValue));
+        generateRestauranter(SearchModule.filterByChoice(alleRestauranter, searchKey, searchValue), addButtonHasOnclick);
     });
     
     showAllButton.addEventListener("click", () => {
-        generateRestauranter(alleRestauranter);
+        generateRestauranter(alleRestauranter, addButtonHasOnclick);
     });
 
     addButton.addEventListener("click", () => {
@@ -191,7 +193,7 @@ const generateRestauranter = (chosenArray) => {
 
 };
 
-generateRestauranter(alleRestauranter);
+generateRestauranter(alleRestauranter, addButtonHasOnclick);
 
 
 

@@ -14,7 +14,8 @@ const matOgDrikkeModule = (function(){
             ingredienser: [
                 "pesto rosso",
                 "pesto genovese",
-                "aioli"
+                "aioli",
+                "focaccia"
             ],
             allergener: [
                 "egg",
