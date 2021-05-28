@@ -64,6 +64,10 @@
 
 /* STILSETTING AV KORT AVSLUTTES HER */
 
+/* Bakgrunns farge */
+body {
+    background-color: hsl(0, 0%, 90%);
+}
 
 /* CSS for navbaren med bilde */
 .has-bg-img { 
