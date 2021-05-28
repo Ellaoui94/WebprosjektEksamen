@@ -3,6 +3,8 @@ import SearchModule from './modules/SearchModule.js';
 import AddOnclickModule from "./modules/AddOnclickModule.js";
 import IngredienserModule from "./modules/IngredienserModule.js"
 
+let addButtonHasOnclick = false;
+
 const menuSection = document.querySelector("#menu-section");
 
 const drikkeSection = document.querySelector("#drikke-section");
@@ -62,7 +64,7 @@ const generateIngredientInputList = (array) => {
     return ingredientInputList;
 }
 
-const generateMatOgDrikke = (chosenArray) => {
+const generateMatOgDrikke = (chosenArray, addButtonHasOnclick) => {
 
 
     let htmlTxt = `
@@ -287,7 +289,7 @@ const generateMatOgDrikke = (chosenArray) => {
 
     popupSection.innerHTML = popupHtmlTxt;
 
-    AddOnclickModule.addOnclickToButtons(alleMeny, alleIngredienser, "menu-card-article");
+    AddOnclickModule.addOnclickToButtons(alleMeny, alleIngredienser, "menu-card-article", addButtonHasOnclick);
 
     const searchButton = document.querySelector("#search-button");
 
@@ -302,11 +304,11 @@ const generateMatOgDrikke = (chosenArray) => {
     const addPopup = document.querySelector("#add-popup");
 
     searchButton.addEventListener("click", () => {
-        generateMatOgDrikke(SearchModule.filterByChoice(alleMeny, searchKey, searchValue));
+        generateMatOgDrikke(SearchModule.filterByChoice(alleMeny, searchKey, searchValue), addButtonHasOnclick);
     });
 
     showAllButton.addEventListener("click", () => {
-        generateMatOgDrikke(alleMeny);
+        generateMatOgDrikke(alleMeny, addButtonHasOnclick);
     });
 
     addButton.addEventListener("click", () => {
@@ -315,7 +317,7 @@ const generateMatOgDrikke = (chosenArray) => {
    
 }
 
-generateMatOgDrikke(alleMeny);
+generateMatOgDrikke(alleMeny, addButtonHasOnclick);
 
 
 denyDeleteButton.addEventListener("click", () => {

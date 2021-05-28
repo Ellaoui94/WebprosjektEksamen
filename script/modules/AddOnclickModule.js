@@ -9,8 +9,9 @@ const AddOnclickModule = (function() {
         // For restauranter-script: alleAnsatte (array importert via modul)
         // For ansatte-script: alleRestauranter (array importert via modul)
         // For meny-script: alleIngredienser (array importert via modul); denne er ikke ferdig
+    // addButtonHasOnclick må settes på begynnelsen av hver side, og må være = false for at koden skal virke
 
-    const addOnclickToButtons = (connectedArray, lookUpArray, cardClass) => {
+    const addOnclickToButtons = (connectedArray, lookUpArray, cardClass, addButtonHasOnclick) => {
 
         let allCards = document.querySelectorAll(`.${cardClass}`);
     
@@ -122,7 +123,6 @@ const AddOnclickModule = (function() {
                         objectToEdit.allergener.push("hvete");
                     }
                 }
-
             }
             
             const getIngredientsInputArray = (popup) => {
@@ -153,12 +153,16 @@ const AddOnclickModule = (function() {
         let addPopup = document.querySelector("#add-popup");
 
         confirmAddButton.addEventListener("click", () => {
-            if (connectedArray[0].hasOwnProperty("telefon")) {
-                addNewObject(connectedArray, lookUpArray);
-            } else {
-                addNewFoodOrDrink(connectedArray, lookUpArray);
+            if (!addButtonHasOnclick){
+                if (connectedArray[0].hasOwnProperty("telefon")) {
+                    addNewObject(connectedArray, lookUpArray);
+                } else {
+                    addNewFoodOrDrink(connectedArray, lookUpArray);
+                }
+                addPopup.classList.remove("is-active");
+                addButtonHasOnclick = true;
             }
-            addPopup.classList.remove("is-active");
+            
         });
 
         
