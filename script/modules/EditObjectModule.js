@@ -1,4 +1,4 @@
-import HelperFunctionsModule from "./HelperFunctionsModule";
+import HelperFunctionsModule from "./HelperFunctionsModule.js";
 
 const EditObjectModule = (function() {
     
@@ -36,9 +36,9 @@ const EditObjectModule = (function() {
             }
         });
         if (objectToEdit.hasOwnProperty("ingredienser")) {
-            let newIngredients = getIngredientsFromInput(getIngredientsInputArray(editPopup));
-            changeIngredients(objectToEdit.ingredienser, newIngredients);
-            let newAllergens = getAllergensByIngredients(objectToEdit.ingredienser, lookUpArray);
+            let newIngredients = HelperFunctionsModule.getIngredientsFromInput(HelperFunctionsModule.getIngredientsInputArray(editPopup));
+            HelperFunctionsModule.changeIngredients(objectToEdit.ingredienser, newIngredients);
+            let newAllergens = HelperFunctionsModule.getAllergensByIngredients(objectToEdit.ingredienser, lookUpArray);
             objectToEdit.allergener = newAllergens;
             if (objectToEdit.type == "rød pizza" || objectToEdit.type == "hvit pizza") {
                 objectToEdit.allergener.push("hvete");
@@ -46,4 +46,8 @@ const EditObjectModule = (function() {
         }
     }
 
+    return {editObject};
+
 }());
+
+export default EditObjectModule;

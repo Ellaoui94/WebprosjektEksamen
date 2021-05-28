@@ -1,3 +1,5 @@
+// En samling hjelpefunksjoner i bruk i en del andre moduler
+
 const HelperFunctionsModule = (function() {
 
     const getLeaderOrWorkPlace = (lookUpArray, id) => {
@@ -50,9 +52,7 @@ const HelperFunctionsModule = (function() {
         }
     }
 
-    const checkId = (object, card) => object.id == card.id;
-
-    return {};
+    return {getLeaderOrWorkPlace, getAllergensByIngredients, getIngredientsFromInput, getIngredientsInputArray, changeIngredients};
 }());
 
 export default HelperFunctionsModule;
