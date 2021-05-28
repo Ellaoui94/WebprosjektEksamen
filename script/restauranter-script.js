@@ -65,7 +65,7 @@ const generateRestauranter = (chosenArray, addButtonHasOnclick) => {
                 </section>
                 <section class="card-footer">
                     <button type="button" id="search-button" class="button search-button card-footer-item"><span><img src="images/knapp-iconer/search-icon.png" width="25" heigth="25"></span>Søk</button>
-                    <button type="button" id="show-all-button" class="button show-all-button card-footer-item">Alle restauranter</button>
+                    <button type="button" id="show-all-button" class="button show-all-button card-footer-item">Vis alle restauranter</button>
                 </section>
             </div>
         </article>

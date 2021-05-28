@@ -28,21 +28,6 @@
 
     <a id="top"></a>
 
-<!--
-<div class="container" id="search-test">
-    <div class="select"  >
-        <select class="is-rounded" class="is-focused"  id="search-key">
-            <option value="navn">Navn</option>
-            <option value="id">ID</option>
-            <option value="arbeidssted">Arbeidssted</option>
-            <option value="telefon">Telefon</option>
-            <option value="alder">Alder</option>
-            <option value="stilling">Stilling</option>
-        </select>
-    </div>
--->
-
-
 	
     <main>			
         <section id="ansatte-section" class="columns is-multiline"></section>
@@ -55,98 +40,98 @@
 
 		
 
-            <div id="delete-container" class="container">
-                <article id="delete-popup" class="modal">
-                    <div id="modalBg-delete-popup" class="modal-background"></div>
-                    <div class="modal-content py-5 px-5">
-                        <div class="card">
-                            <section class="card-header">
-                                <h3 class="card-header-title is-centered">Slett Ansatt</h3>
-                            </section>
-                            <section class="card-content">
-                                <p>
-                                    Hvis du ønsker å slette <span id="delete-name">element</span> fra systemet, skriv "SLETT" i feltet under
-                                </p>
-                                <input id="delete-input" type="text" class="input is-centered">
-                            </section>
-                            <section class="card-footer buttons is-small">
-                                <button id="deny-delete-button" type="button" class="card-footer-item button deny-delete-button"><span><img src="images/knapp-iconer/tilbake-icon.png" alt="tilbake-ikon" width="25" height="25">Tilbake</span></button>
-                                <button id="confirm-delete-button" type="button" class="card-footer-item button confirm-delete-button"><span><img src="images/knapp-iconer/delete-white.png" alt="slett-ikon" width="25" height="25">Slett</span></button>
-                            </section>
-                        </div>
-                    </div>
-                </article>
+    <div id="delete-container" class="container">
+        <article id="delete-popup" class="modal">
+            <div id="modalBg-delete-popup" class="modal-background"></div>
+            <div class="modal-content py-5 px-5">
+                <div class="card">
+                    <section class="card-header">
+                        <h3 class="card-header-title is-centered">Slett Ansatt</h3>
+                    </section>
+                    <section class="card-content">
+                        <p>
+                            Hvis du ønsker å slette <span id="delete-name">element</span> fra systemet, skriv "SLETT" i feltet under
+                        </p>
+                        <input id="delete-input" type="text" class="input is-centered">
+                    </section>
+                    <section class="card-footer buttons is-small">
+                        <button id="deny-delete-button" type="button" class="card-footer-item button deny-delete-button"><span><img src="images/knapp-iconer/tilbake-icon.png" alt="tilbake-ikon" width="25" height="25">Tilbake</span></button>
+                        <button id="confirm-delete-button" type="button" class="card-footer-item button confirm-delete-button"><span><img src="images/knapp-iconer/delete-white.png" alt="slett-ikon" width="25" height="25">Slett</span></button>
+                    </section>
+                </div>
             </div>
+        </article>
+    </div>
         
           
 
 
 
-            <div id="add-container" class="container">
-                <article id="add-popup" class="modal">
-                    <div id="modalBg-add-popup" class="modal-background"></div>
-                    <div class="modal-content py-5 px-5">
-                        <div class="card">
-                            <section class="card-header">
-                                <h3 class="card-header-title is-centered">Legg Til Ansatt</h3>
-                            </section>
-                            <section class="card-content">
-                                <ul class="content">
-                                    <li>
-                                        <label class="label">Navn</label>
-                                        <div class="control">
-                                            <input type="text" class="input add-input navn">
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <label class="label">Arbeidssted (id)</label>
-                                        <div class="control">
-                                            <input type="text" class="input add-input arbeidssted" placeholder="ID">
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <label class="label">Telefon</label>
-                                        <div class="control">
-                                            <input type="text" class="input add-input telefon">
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <label class="label">Stilling</label>
-                                        <div class="control">
-                                            <input type="text" class="input add-input stilling">
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <label class="label">Stillingsprosent</label>
-                                        <div class="control">
-                                            <input type="text" class="input add-input stillingsprosent">
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <label class="label">Timelønn</label>
-                                        <div class="control">
-                                            <input type="text" class="input add-input timelønn">
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <label class="label">Alder</label>
-                                        <div class="control">
-                                            <input type="text" class="input add-input alder">
-                                        </div>
-                                    </li>
-                                </ul>
-                            </section>
-                            <section class="card-footer">
-                                <button id="deny-add-button" type="button" class="card-footer-item button deny-add-button"><span><img src="images/knapp-iconer/tilbake-icon.png" alt="tilbake-ikon" width="25" height="25"></span>Tilbake</button>
-                                <button id="confirm-add-button" type="button" class="card-footer-item button confirm-add-button"><span><img src="images/knapp-iconer/save-icon.png" alt="legg-til-ikon" width="25" height="25"></span>Legg Til</button>
-                            </section>
-                        </div>
-                    </div>
-                </article>
+    <div id="add-container" class="container">
+        <article id="add-popup" class="modal">
+            <div id="modalBg-add-popup" class="modal-background"></div>
+            <div class="modal-content py-5 px-5">
+                <div class="card">
+                    <section class="card-header">
+                        <h3 class="card-header-title is-centered">Legg Til Ansatt</h3>
+                    </section>
+                    <section class="card-content">
+                        <ul class="content">
+                            <li>
+                                <label class="label">Navn</label>
+                                <div class="control">
+                                    <input type="text" class="input add-input navn">
+                                </div>
+                            </li>
+                            <li>
+                                <label class="label">Arbeidssted (id)</label>
+                                <div class="control">
+                                    <input type="text" class="input add-input arbeidssted" placeholder="ID">
+                                </div>
+                            </li>
+                            <li>
+                                <label class="label">Telefon</label>
+                                <div class="control">
+                                    <input type="text" class="input add-input telefon">
+                                </div>
+                            </li>
+                            <li>
+                                <label class="label">Stilling</label>
+                                <div class="control">
+                                    <input type="text" class="input add-input stilling">
+                                </div>
+                            </li>
+                            <li>
+                                <label class="label">Stillingsprosent</label>
+                                <div class="control">
+                                    <input type="text" class="input add-input stillingsprosent">
+                                </div>
+                            </li>
+                            <li>
+                                <label class="label">Timelønn</label>
+                                <div class="control">
+                                    <input type="text" class="input add-input timelønn">
+                                </div>
+                            </li>
+                            <li>
+                                <label class="label">Alder</label>
+                                <div class="control">
+                                    <input type="text" class="input add-input alder">
+                                </div>
+                            </li>
+                        </ul>
+                    </section>
+                    <section class="card-footer">
+                        <button id="deny-add-button" type="button" class="card-footer-item button deny-add-button"><span><img src="images/knapp-iconer/tilbake-icon.png" alt="tilbake-ikon" width="25" height="25"></span>Tilbake</button>
+                        <button id="confirm-add-button" type="button" class="card-footer-item button confirm-add-button"><span><img src="images/knapp-iconer/save-icon.png" alt="legg-til-ikon" width="25" height="25"></span>Legg Til</button>
+                    </section>
+                </div>
             </div>
-        </div>
+        </article>
+    </div>
     
-            <a href="#top">Jump to top of page</a>
+    
+    <a href="#top">Jump to top of page</a>
 
 
 

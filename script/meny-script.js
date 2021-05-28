@@ -68,44 +68,45 @@ const generateMatOgDrikke = (chosenArray, addButtonHasOnclick) => {
 
 
     let htmlTxt = `
-    <article class="column is-one-fifth">
-        <div class="card">
-            <section class="card-header">
-                <h3 class="card-header-title is-centered">Legg Til Mat/Drikke</h3>
-            </section>
-            <section class="card-content has-text-centered">
-                <button id="add-button" class="button add-button is-centered" type="button"><span><img src="images/knapp-iconer/round-plus.png" alt="ikon" height="25" width="25"></span>Legg Til</button>
-            </section>
-            <section class="card-footer">
-            </section>
-        </div>
-        <br>
-        <div id="search-test" class="card">
-            <section class="card-header">
-                <h3 class="card-header-title is-centered"><span class="card-header-icon"></span>Søk Etter Mat/Drikke</h3>
-            </section>
-            <section class="card-content">
-                
-                    <select id="search-key" class="select">
-                        <div class="button" aria-haspopup="true" aria-controls="dropdown-menu">
-                            <option value="navn">Navn</option>
-                            <option value="id">ID</option>
-                            <option value="adresse">Adresse</option>
-                            <option value="telefon">Telefon</option>
-                            <option value="kapasitet">Kapasitet</option>
-                            <option value="leder">Leder</option>
-                        </div>
-                    </select>
-                    <input type="text" id="search-value" class="input">
-                
-            </section>
-            <section class="card-footer">
-                <button type="button" id="search-button" class="button search-button card-footer-item"><span><img src="images/knapp-iconer/search-icon.png" width="25" heigth="25"></span>Søk</button>
-                <button type="button" id="show-all-button" class="button show-all-button card-footer-item">Alle meny</button>
-            </section>
-        </div>
-    </article>
-`;
+        <article class="column is-one-fifth">
+            <div class="card">
+                <section class="card-header">
+                    <h3 class="card-header-title is-centered">Legg Til Mat/Drikke</h3>
+                </section>
+                <section class="card-content has-text-centered">
+                    <button id="add-button" class="button add-button is-centered" type="button"><span><img src="images/knapp-iconer/round-plus.png" alt="ikon" height="25" width="25"></span>Legg Til</button>
+                </section>
+                <section class="card-footer">
+                </section>
+            </div>
+            <br>
+            <div id="search-test" class="card">
+                <section class="card-header">
+                    <h3 class="card-header-title is-centered"><span class="card-header-icon"></span>Søk Etter Mat/Drikke</h3>
+                </section>
+                <section class="card-content">
+                    
+                        <select id="search-key" class="select">
+                            <div class="button" aria-haspopup="true" aria-controls="dropdown-menu">
+                                <option value="navn">Navn</option>
+                                <option value="id">ID</option>
+                                <option value="kategori">Kategori</option>
+                                <option value="ingredienser">Ingredienser</option>
+                                <option value="allergener">Allergener</option>
+                                <option value="kostnad">Kostnad</option>
+                                <option value="pris">Prist</pris>
+                            </div>
+                        </select>
+                        <input type="text" id="search-value" class="input">
+                    
+                </section>
+                <section class="card-footer">
+                    <button type="button" id="search-button" class="button search-button card-footer-item"><span><img src="images/knapp-iconer/search-icon.png" width="25" heigth="25"></span>Søk</button>
+                    <button type="button" id="show-all-button" class="button show-all-button card-footer-item">Vis all mat/drikke</button>
+                </section>
+            </div>
+        </article>
+    `;
 
 
     let htmlText = " ";
