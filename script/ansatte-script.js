@@ -1,4 +1,5 @@
  import AnsatteModule from "./modules/AnsatteModule.js";
+ import RestaurantModule from "./modules/RestaurantModule.js";
  import SearchModule from "./modules/SearchModule.js";
  import AddOnclickModule from "./modules/AddOnclickModule.js";
 
@@ -9,8 +10,6 @@
  const searchKey = document.querySelector("#search-key"); //dette er dropdownmeny
  
  const searchValue = document.querySelector("#search-value"); // dette er input
-
- const mybutton = document.querySelector("myBtn");
  
  const popupSection = document.querySelector("#popup-section");
  
@@ -26,119 +25,167 @@
 
  const alleAnsatte = AnsatteModule.getAllAnsatte();
 
+ const alleRestauranter = RestaurantModule.getAllRestauranter();
+
+ const addButton = document.querySelector("#add-button");
+
+const addPopup = document.querySelector("#add-popup");
+
+const addPopupBackround = document.querySelector("#modalBg-add-popup");
+
+const denyAddButton = document.querySelector("#deny-add-button");
+
+
+
+
  const generateAnsatte = (chosenArray) => {
  
-     let htmlText = "";
- 
-     let popupHtmlText = "";
- 
-     chosenArray.forEach(ansatte => {
-         // Klasser på alle html-elementer er ikke satt ennå
-         // Denne delen er generelt uferdig
- 
- 
-         // For denne delen skal "restaurant-card-article" brukes til AddOnclickModule.addOnclickToButtons()
-         htmlText += `
-             <article id="${ansatte.id}" class="column ansatte-card-article">
-                 <div class="card ansatte-card">
+    
+    let htmlText = `
+    <article class="column is-one-fifth">
+        <div class="card">
+            <section class="card-header">
+                <h3 class="card-header-title is-centered">Legg Til ansatt</h3>
+            </section>
+            <section class="card-content has-text-centered">
+                <button id="add-button" class="button add-button is-centered" type="button"><span><img src="images/knapp-iconer/round-plus.png" alt="ikon" height="25" width="25"></span>Legg Til</button>
+            </section>
+            <section class="card-footer">
+            </section>
+        </div>
+        <br>
+        <div id="search-test" class="card">
+            <section class="card-header">
+                <h3 class="card-header-title is-centered"><span class="card-header-icon"></span>Søk Etter Ansatt </h3>
+            </section>
+            <section class="card-content">
+                
+                    <select id="search-key" class="select">
+                        <div class="button" aria-haspopup="true" aria-controls="dropdown-menu">
+                            <option value="navn">Navn</option>
+                            <option value="id">ID</option>
+                            <option value="arbeidssted">Arbeidssted</option>
+                            <option value="telefon">Telefon</option>
+                            <option value="alder">Alder</option>
+                            <option value="stilling">Stilling</option>
+                        </div>
+                    </select>
+                    <input type="text" id="search-value" class="input">
+                
+            </section>
+            <section class="card-footer">
+                <button type="button" id="search-button" class="button search-button card-footer-item"><span><img src="images/knapp-iconer/search-icon.png" width="25" heigth="25"></span>Søk</button>
+                <button type="button" id="show-all-button" class="button show-all-button card-footer-item">Alle restauranter</button>
+            </section>
+        </div>
+    </article>
+`;
+
+let popupHtmlText = "";
+
+chosenArray.forEach(ansatte => {
+    // Klasser på alle html-elementer er ikke satt ennå
+    // Denne delen er generelt uferdig
+
+
+    // For denne delen skal "restaurant-card-article" brukes til AddOnclickModule.addOnclickToButtons()
+    htmlText += `
+        <article id="${ansatte.id}" class="column is-one-fifth ansatte-card-article">
+            <div class="card ansatte-card">
+                <section class="card-header">
+                    <h3 class="card-header-title is-centered"><span class="card-header-icon"><img src="images/knapp-iconer/loc-icon.png" alt="ikon" width="25" height="25"></span>${ansatte.navn}</h3>
+                </section>
+                <section class="card-image">
+                    <img src="images/Ansatte/${ansatte.bilde}" alt="bilde av ansatt">
+                </section>
+                <section class="card-content">
+                    <ul class="content">
+                        <li>ID: ${ansatte.id}</li>
+                        <li>Navn: ${ansatte.navn}</li>
+                        <li>Arbeidssted: ${ansatte.arbeidssted}</li>
+                        <li>Telefon: ${ansatte.telefon}</li>
+                        <li>Stilling: ${ansatte.stilling}</li>
+                        <li>Stillingsprosent: ${ansatte.stillingsprosent}</li>
+                        <li>timelønn: ${ansatte.timelønn}</li>
+                        <li>alder: ${ansatte.alder}</li>
+                    </ul>
+                </section>
+                <section class="card-footer buttons is-small">
+                    <button id="editBtn${ansatte.id}" type="button" class="card-footer-item button edit-button"><span><img src="images/knapp-iconer/edit-white.png" width="25" heigth="25"></span>Rediger</button>
+                    <button id="deleteBtn${ansatte.id}" type="button" class="card-footer-item button delete-button"><span><img src="images/knapp-iconer/delete-white.png" width="25" heigth="25"></span>Slett</button>
+                </section>
+            </div>
+        </article>
+    `;
+     
+
+     
+         // Kan hende dette burde flyttes ut til Restauranter.html, og løses på samme måte som delete-popup
+         popupHtmlText += `
+         <article id="popup${ansatte.id}" class="modal ansatt-popup">
+             <div id="modalBg${ansatte.id}" class="modal-background"></div>
+             <div class="modal-content py-5 px-5">
+                 <div class="card restaurant-popup">
                      <section class="card-header">
-                         <h3 class="card-header-title is-centered"><span class="card-header-icon">(ic)</span>${ansatte.navn}</h3>
+                         <h3 class="card-header-title is-centered">Rediger ${ansatte.navn}</h3>
                      </section>
-                     <section class="card-image">
-                         <img src="images/Ansatte/${ansatte.bilde}" alt="bilde av ansatt">
+                     <section class="card-image is-centered">
+                         <img src="images/Ansatte/${ansatte.bilde}" alt="bilde av restaurant">
                      </section>
                      <section class="card-content">
                          <ul class="content">
-                             <li>ID: ${ansatte.id}</li>
-                             <li>Navn: ${ansatte.navn}</li>
-                             <li>Alder: ${ansatte.alder}</li>
-                             <li>Stilling: ${ansatte.stilling}</li>
-                             <li>Arbeidssted: ${ansatte.arbeidssted}</li>
-                             <li>Stillingsprosent: ${ansatte.stillingsprosent}</li>
-                             <li>Timelønn: ${ansatte.timelønn}</li>
-                             <li>Telefon: ${ansatte.telefon}</li>
+                             <li>
+                                 <label class="label">Navn</label>
+                                 <div class="control">
+                                     <input id="popupNavn${ansatte.id}" type="text" class="input edit-input navn" placeholder="${ansatte.navn}">
+                                 </div>
+                             </li>
+                             <li>
+                                 <label class="label">Arbeidssted</label>
+                                 <div class="control">
+                                     <input id="popupArbeidssted${ansatte.id}" type="text" class="input edit-input arbeidssted" placeholder="${ansatte.arbeidssted}">
+                                 </div>
+                             </li>
+                             <li>
+                                 <label class="label">Telefon</label>
+                                 <div class="control">
+                                     <input id="popupTelefon${ansatte.id}" type="text" class="input edit-input telefon" placeholder="${ansatte.telefon}">
+                                 </div>
+                             </li>
+                             <li>
+                                 <label class="label">Stilling</label>
+                                 <div class="control">
+                                     <input id="popupLeder${ansatte.id}" type="text" class="input edit-input stilling" placeholder="${ansatte.stilling}">
+                                 </div>
+                             </li>
+                             <li>
+                                 <label class="label">Alder</label>
+                                 <div class="control">
+                                     <input id="popupKapasitet${ansatte.id}" type="text" class="input edit-input kapasitet" placeholder="${ansatte.kapasitet}">
+                                 </div>
+                             </li>
                          </ul>
                      </section>
                      <section class="card-footer buttons is-small">
-                         <button id="editBtn${ansatte.id}" type="button" class="card-footer-item button edit-button"><span><img src="images/knapp-iconer/edit-white.png" width="25" heigth="25"></span>Rediger</button>
-                         <button id="deleteBtn${ansatte.id}" type="button" class="card-footer-item button delete-button"><span><img src="images/knapp-iconer/delete-white.png" width="25" heigth="25"></span>Slett</button>
+                         <button id="closeBtn${ansatte.id}" type="button" class="card-footer-item button close-button"><span><img src="images/knapp-iconer/tilbake-icon.png" width="25" heigth="25"></span>Tilbake</button>
+                         <button id="saveBtn${ansatte.id}" type="button" class="card-footer-item button save-button"><span><img src="images/knapp-iconer/save-icon.png" width="25" heigth="25"></span>Lagre</button>
                      </section>
                  </div>
-             </article>
-         `;
- 
-         // Kan hende dette burde flyttes ut til Restauranter.html, og løses på samme måte som delete-popup
-         popupHtmlText += `
-             <article id="popup${ansatte.id}" class="modal ansatt-popup">
-                 <div id="modalBg${ansatte.id}" class="modal-background"></div>
-                 <div class="modal-content py-5 px-5">
-                     <div class="card ansatte-popup">
-                         <section class="card-header>
-                             <h3 class="card-header-title is-centered"><span class="card-header-icon">(ic)</span>${ansatte.navn}</h3>
-                         </section>
-                         <section class="card-image is-centered">
-                             <img src="images/Ansatte/${ansatte.bilde}" alt="bilde av ansatt">
-                         </section>
-                         <section class="card-content">
-                             <ul class="content">
-                                 <li>
-                                     <label class="label">Navn</label>
-                                     <div class="control">
-                                         <input id="popupNavn${ansatte.id}" type="text" class="input" placeholder="${ansatte.navn}">
-                                     </div>
-                                 </li>
-                                 <li>
-                                     <label class="label">Arbeidssted</label>
-                                     <div class="control">
-                                         <input id="popupAdresse${ansatte.id}" type="text" class="input" placeholder="${ansatte.arbeidssted}">
-                                     </div>
-                                 </li>
-                                 <li>
-                                     <label class="label">Telefon</label>
-                                     <div class="control">
-                                         <input id="popupTelefon${ansatte.id}" type="text" class="input" placeholder="${ansatte.telefon}">
-                                     </div>
-                                 </li>
-                                 <li>
-                                     <label class="label">Stilling</label>
-                                     <div class="control">
-                                         <input id="popupLeder${ansatte.id}" type="text" class="input" placeholder="${ansatte.stilling}">
-                                     </div>
-                                 </li>
-                                 <li>
-                                     <label class="label">Alder</label>
-                                     <div class="control">
-                                         <input id="popupKapasitet${ansatte.id}" type="text" class="input" placeholder="${ansatte.alder}">
-                                     </div>
-                                 </li>
-                             </ul>
-                         </section>
-                         <section class="card-footer buttons is-small">
-                             <button id="closeBtn${ansatte.id}" type="button" class="card-footer-item button close-button"><span><img src="images/SETT_RIKTIG_FILNAVN_HER.png" width="25" heigth="25"></span>Lukk</button> 
-                             <button id="saveBtn${ansatte.id}" type="button" class="card-footer-item button save-button"><span><img src="images/SETT_RIKTIG_FILNAVN_HER.png" width="25" heigth="25"></span>Lagre</button>
-                         </section>
-                     </div>
-                 </div>
-             </article>
-         `;
+             </div>
+         </article>
+     `;
      });
  
      ansattSection.innerHTML = htmlText;
  
      popupSection.innerHTML = popupHtmlText;
  
-     AddOnclickModule.addOnclickToButtons(alleAnsatte, "ansatte-card-article");
- };
+     AddOnclickModule.addOnclickToButtons(alleAnsatte, alleRestauranter, "ansatte-card-article");
  
- generateAnsatte(alleAnsatte);
-
  
-searchButton.addEventListener("click", () => {
- 
-    generateAnsatte(SearchModule.filterByChoice(alleAnsatte, searchKey, searchValue));
-});
+     
 
-
+// funskjon for å kunne søke ved å trykke på enter
 searchValue.addEventListener("keyup", function(event) {
     if (event.keyCode === 13) {
         
@@ -146,8 +193,9 @@ searchValue.addEventListener("keyup", function(event) {
     }
 });
 
+//Validering av inputfelt 
 searchButton.addEventListener("click", () => {
-    var n = searchValue.value;
+   
 if(searchValue.value === "" )
 {
         alert("Name must be filled out");
@@ -155,19 +203,34 @@ if(searchValue.value === "" )
         return false;
     }else{
     searchValue.style.borderColor = "green";}
-
-    if  (isNaN(n)) {
-        alert("Contains Numbers!");
-        searchValue.style.borderColor = "red";
-        return false;
-    }else{
-        searchValue.style.borderColor = "green";
-}
+    
 });
 
 
 
+
+
+searchButton.addEventListener("click", () => {
  
+    generateAnsatte(SearchModule.filterByChoice(alleAnsatte, searchKey, searchValue));
+});
+
+showAllButton.addEventListener("click", () => {
+    generateAnsatte(alleAnsatte);
+});
+
+addButton.addEventListener("click", () => {
+        addPopup.classList.add("is-active");
+    });
+
+};
+
+generateAnsatte(alleAnsatte);
+
+
+
+
+
 
 denyDeleteButton.addEventListener("click", () => {
     deletePopup.classList.remove("is-active");
@@ -179,15 +242,16 @@ modalBgDeletePopup.addEventListener("click", () => {
     deleteInput.value = "";
 });
 
-showAllButton.addEventListener("click", () => {
-    generateAnsatte(alleAnsatte);
+addPopupBackround.addEventListener("click", () => {
+    addPopup.classList.remove("is-active");
 });
 
+denyAddButton.addEventListener("click", () => {
+    addPopup.classList.remove("is-active");
+})
 
 
-
-
-
+    
 
 
 
