@@ -50,9 +50,7 @@ const HelperFunctionsModule = (function() {
         }
     }
 
-    const checkId = (object, card) => object.id == card.id;
-
-    return {};
+    return {getLeaderOrWorkPlace, getAllergensByIngredients, getIngredientsInputArray, changeIngredients};
 }());
 
 export default HelperFunctionsModule;

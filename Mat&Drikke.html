@@ -13,150 +13,168 @@
 </head>
 <body>
 
-    <nav class="hero has-bg-img">
-        <h1 class="navbar-item has-text-centered title is-fullwidth title-left">Gyldne Pizza</h1>
-      </nav>
+    <nav class="navbar has-bg-img" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="index.html">
+                <img src="images/Banner/pizza-icon1.png" style="max-height: 120px" alt="pizza-logo">
+            </a>
+            <div class="navbar-item">
+                <img src="images/Banner/black-gyldne-pizza.png" style="max-height: 120px" alt="pizza-gyldne">
+            </div>
+            <a role="button" class="navbar-burger" id="burger">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+		        <span></span>
+            </a>
+        </div>
+            <div class="">
+                <nav class="navbar-menu">
+                    <div class="navbar-start">
+                        <a class="navbar-item mr-6 navbarItemClass navbarTwo-color" href="index.html">Hjem</a>
+                        <a class="navbar-item mr-6 navbarItemClass navbarTwo-color" href="Ansatte.html">Ansatte</a>
+                        <a class="navbar-item mr-6 navbarItemClass navbarTwo-color" href="Restauranter.html">Resturanter</a>
+                        <a class="navbar-item mr-6 navbarItemClass navbarTwo-color" href="Mat&Drikke.html">Mat/Drikke</a>
+                        <a class="navbar-item mr-6 navbarItemClass navbarTwo-color" href="Økonomi.html">Økonomi</a>
+                    </div>
+                </nav>
+            </div>
+
+            <div class="is-hidden-tablet">
+                <nav class="navbar-menu burger-bg" id="nav-links">
+                    <div class="navbar-start">
+                        <a class="navbar-item has-text-centered burger-css" href="index.html">Hjem</a>
+                        <a class="navbar-item has-text-centered burger-css" href="Ansatte.html">Ansatte</a>
+                        <a class="navbar-item has-text-centered burger-css" href="Restauranter.html">Resturanter</a>
+                        <a class="navbar-item has-text-centered burger-css" href="Mat&Drikke.html">Mat/Drikke</a>
+                        <a class="navbar-item has-text-centered burger-css" href="Økonomi.html">Økonomi</a>
+                    </div>
+                </nav>
+            </div>
+            
+            
+                <div class="navbar-item ml-4 is-hidden-mobile">
+                    <img src="images/Banner/icon3.png" style="max-height: 120px" alt="pizza-gyldne">
+                </div>
+            </div> 
     </nav>
-    <nav class="navbar has-shadow navbarTwo-color">
-        <div class="navbar-menu">
-            <a class="navbar-item navbarTwo-color" href="index.html">Hjem</a>
-            <a class="navbar-item navbarTwo-color" href="Ansatte.html">Ansatte</a>
-            <a class="navbar-item navbarTwo-color" href="Mat&Drikke.html">Mat/Drikke</a>
-            <a class="navbar-item navbarTwo-color" href="Restauranter.html">Restauranter</a>
-            <a class="navbar-item navbarTwo-color" href="Økonomi.html">Økonomi</a>
-        </div>
-    </nav>
 
-    <!---    <div class="container">
 
-        <div is="search-test" class="dropdown is-active">
-            <select id="search-key" class="dropdown-trigger">
-                <div class="button" aria-haspopup="true" aria-controls="dropdown-menu">
-                <option value="navn">Navn</option>
-                <option value="id">ID</option>
-                <option value="kategori">Kategori</option>
-                <option value="type">Type</option>
-                </div>
-            </select>
-            <input type="text" id="search-value" class="input">
-            <button type="button" id="search-button" class="button is-focused">Søk</button>
-            <button type="button" id="show-all-button" class="button is-focused">Vis alle</button>
-        </div>
-        -->
 
-        <main class="container">
+    <main class="container">
 
-            <section class="column">
-                <h1 class="title is-spaced">Mat</h1>
-                <div id="menu-section" class="columns is-multiline">
+        <section class="column">
+            <h1 class="title is-spaced">Mat</h1>
+            <div id="menu-section" class="columns is-multiline">
+            </div>
+
+        </section>
+
+        <section class="column">
+            <h1 class="title is-spaced">Drikke</h1>
+            <div id="drikke-section" class="columns is-multiline">
                 </div>
 
-            </section>
+        </section>
+        <section id="popup-section"></section>
+                        
+    </main>
 
-            <section class="column">
-                <h1 class="title is-spaced">Drikke</h1>
-                <div id="drikke-section" class="columns is-multiline">
-                    </div>
-
-            </section>
-            <section id="popup-section"></section>
-                         
-        </main>
-
-        <div id="delete-container" class="container">
-            <article id="delete-popup" class="modal">
-                <div id="modalBg-delete-popup" class="modal-background"></div>
-                <div class="modal-content py-5 px-5">
-                    <div class="card">
-                        <section class="card-header">
-                            <h3 class="card-header-title is-centered">Slett</h3>
-                        </section>
-                        <section class="card-content">
-                            <p>
-                                Hvis du ønsker å slette <span id="delete-name">element</span> fra systemet, skriv "SLETT" i feltet under
-                            </p>
-                            <input id="delete-input" type="text" class="input is-centered">
-                        </section>
-                        <section class="card-footer buttons is-small">
-                            <button id="deny-delete-button" type="button" class="card-footer-item button deny-delete-button"><span><img src="images/knapp-iconer/tilbake-icon.png" alt="tilbake-ikon" width="25" height="25">Tilbake</span></button>
-                            <button id="confirm-delete-button" type="button" class="card-footer-item button confirm-delete-button"><span><img src="images/knapp-iconer/delete-white.png" alt="slett-ikon" width="25" height="25">Slett</span></button>
-                        </section>
-                    </div>
+    <div id="delete-container" class="container">
+        <article id="delete-popup" class="modal">
+            <div id="modalBg-delete-popup" class="modal-background"></div>
+            <div class="modal-content py-5 px-5">
+                <div class="card">
+                    <section class="card-header">
+                        <h3 class="card-header-title is-centered">Slett</h3>
+                    </section>
+                    <section class="card-content">
+                        <p>
+                            Hvis du ønsker å slette <span id="delete-name">element</span> fra systemet, skriv "SLETT" i feltet under
+                        </p>
+                        <input id="delete-input" type="text" class="input is-centered">
+                    </section>
+                    <section class="card-footer buttons is-small">
+                        <button id="deny-delete-button" type="button" class="card-footer-item button deny-delete-button"><span><img src="images/knapp-iconer/tilbake-icon.png" alt="tilbake-ikon" width="25" height="25">Tilbake</span></button>
+                        <button id="confirm-delete-button" type="button" class="card-footer-item button confirm-delete-button"><span><img src="images/knapp-iconer/delete-white.png" alt="slett-ikon" width="25" height="25">Slett</span></button>
+                    </section>
                 </div>
-            </article>
-        </div>
+            </div>
+        </article>
+    </div>
 
-        <div id="add-container" class="container">
-            <article id="add-popup" class="modal">
-                <div id="modalBg-add-popup" class="modal-background"></div>
-                <div class="modal-content py-5 px-5">
-                    <div class="card">
-                        <section class="card.header">
-                            <h3 class="card-header-title is-centered">Legg til Mat/Drikke</h3>
-                        </section>
-                        <section class="card-content">
-                            <ul class="card-content">
-                                <li>
-                                    <label class="label">Navn</label>
-                                    <div class="control">
-                                        <input type="text" class="input add-input navn">
-                                    </div>
-                                </li>
-                                <li>
-                                    <label class="label">Kategori</label>
-                                    <div class="control">
-                                        <select name="kategori" id="kategori" class="add-input kategori select">
-                                            <option value="mat">Mat</option>
-                                            <option value="drikke">Drikke</option>
-                                        </select>
-                                    </div>
-                                </li>
-                                <li>
-                                    <label class="label">Type</label>
-                                    <div class="control">
-                                        <select name="type" id="type" class="type add-input select">
-                                            <option value="forrett">Forrett</option>
-                                            <option value="rød pizza">Rød Pizza</option>
-                                            <option value="hvit pizza">Hvit Pizza</option>
-                                            <option value="mineralvann">Mineralvann</option>
-                                            <option value="alkohol">Alkohol</option>
-                                        </select>
-                                    </div>
-                                </li>
-                                <li>
-                                    <label class="label">Ingredienser</label>
-                                    <div class="control">
-                                        <input type="text" class="input ingrediens">
-                                        <input type="text" class="input ingrediens">
-                                        <input type="text" class="input ingrediens">
-                                        <input type="text" class="input ingrediens">
-                                        <input type="text" class="input ingrediens">
-                                        <input type="text" class="input ingrediens">
-                                        <input type="text" class="input ingrediens">
-                                    </div>
-                                </li>
-                                <li>
-                                    <label class="label">Kostnad</label>
-                                    <div class="control">
-                                        <input type="text" class="input add-input kostnad">
-                                    </div>
-                                </li>
-                                <li>
-                                    <label class="label">Pris</label>
-                                    <div class="control">
-                                        <input type="text" class="input add-input pris">
-                                    </div>
-                                </li>
-                            </ul>
-                        </section>
-                        <section class="card-footer">
-                            <button id="deny-add-button" type="button" class="card-footer-item button deny-add-button"><span><img src="images/knapp-iconer/tilbake-icon.png" alt="tilbake-ikon" width="25" height="25"></span>Tilbake</button>
-                            <button id="confirm-add-button" type="button" class="card-footer-item button confirm-add-button"><span><img src="images/knapp-iconer/round-plus.png" alt="legg-til-ikon" width="25" height="25"></span>Legg Til</button>
-                        </section>
-                    </div>
+    <div id="add-container" class="container">
+        <article id="add-popup" class="modal">
+            <div id="modalBg-add-popup" class="modal-background"></div>
+            <div class="modal-content py-5 px-5">
+                <div class="card">
+                    <section class="card.header">
+                        <h3 class="card-header-title is-centered">Legg til Mat/Drikke</h3>
+                    </section>
+                    <section class="card-content">
+                        <ul class="card-content">
+                            <li>
+                                <label class="label">Navn</label>
+                                <div class="control">
+                                    <input type="text" class="input add-input navn">
+                                </div>
+                            </li>
+                            <li>
+                                <label class="label">Kategori</label>
+                                <div class="control">
+                                    <select name="kategori" id="kategori" class="add-input kategori select">
+                                        <option value="mat">Mat</option>
+                                        <option value="drikke">Drikke</option>
+                                    </select>
+                                </div>
+                            </li>
+                            <li>
+                                <label class="label">Type</label>
+                                <div class="control">
+                                    <select name="type" id="type" class="type add-input select">
+                                        <option value="forrett">Forrett</option>
+                                        <option value="rød pizza">Rød Pizza</option>
+                                        <option value="hvit pizza">Hvit Pizza</option>
+                                        <option value="mineralvann">Mineralvann</option>
+                                        <option value="alkohol">Alkohol</option>
+                                    </select>
+                                </div>
+                            </li>
+                            <li>
+                                <label class="label">Ingredienser</label>
+                                <div class="control">
+                                    <input type="text" class="input ingrediens">
+                                    <input type="text" class="input ingrediens">
+                                    <input type="text" class="input ingrediens">
+                                    <input type="text" class="input ingrediens">
+                                    <input type="text" class="input ingrediens">
+                                    <input type="text" class="input ingrediens">
+                                    <input type="text" class="input ingrediens">
+                                </div>
+                            </li>
+                            <li>
+                                <label class="label">Kostnad</label>
+                                <div class="control">
+                                    <input type="text" class="input add-input kostnad">
+                                </div>
+                            </li>
+                            <li>
+                                <label class="label">Pris</label>
+                                <div class="control">
+                                    <input type="text" class="input add-input pris">
+                                </div>
+                            </li>
+                        </ul>
+                    </section>
+                    <section class="card-footer">
+                        <button id="deny-add-button" type="button" class="card-footer-item button deny-add-button"><span><img src="images/knapp-iconer/tilbake-icon.png" alt="tilbake-ikon" width="25" height="25"></span>Tilbake</button>
+                        <button id="confirm-add-button" type="button" class="card-footer-item button confirm-add-button"><span><img src="images/knapp-iconer/round-plus.png" alt="legg-til-ikon" width="25" height="25"></span>Legg Til</button>
+                    </section>
                 </div>
-            </article>
-        </div>
+            </div>
+        </article>
+    </div>
     
 </body>
 </html>
