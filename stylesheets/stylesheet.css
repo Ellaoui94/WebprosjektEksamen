@@ -74,6 +74,12 @@ body {
 .has-bg-img { 
     background: linear-gradient(hsl(0, 0%, 89%),hsl(25, 42%, 43%));
     opacity:1.0;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.12), 
+              0 2px 2px rgba(0,0,0,0.12), 
+              0 4px 4px rgba(0,0,0,0.12), 
+              0 8px 8px rgba(0,0,0,0.12),
+              0 16px 16px rgba(0,0,0,0.12);
+
 }
 
 /* For teksten Gyldne Pizza */
@@ -94,6 +100,12 @@ body {
     background: hsl(25, 42%, 28%);
     color: hsl(208, 100%, 97%);
     width: 130px;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.12), 
+              0 2px 2px rgba(0,0,0,0.12), 
+              0 4px 4px rgba(0,0,0,0.12), 
+              0 8px 8px rgba(0,0,0,0.12),
+              0 16px 16px rgba(0,0,0,0.12);
+
 }
 
 .navbarItemClass {
@@ -111,6 +123,12 @@ body {
 
 .burger-bg {
     background: linear-gradient(hsl(0, 0%, 89%),hsl(25, 42%, 43%));
+    box-shadow: 0 1px 1px rgba(0,0,0,0.12), 
+              0 2px 2px rgba(0,0,0,0.12), 
+              0 4px 4px rgba(0,0,0,0.12), 
+              0 8px 8px rgba(0,0,0,0.12),
+              0 16px 16px rgba(0,0,0,0.12);
+
 }
 
 /* For side menyen */
@@ -120,11 +138,23 @@ body {
     padding: 20px;
     color: hsl(0,0%,0%);
     position: relative;
-    left: 30px;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.12), 
+              0 2px 2px rgba(0,0,0,0.12), 
+              0 4px 4px rgba(0,0,0,0.12), 
+              0 8px 8px rgba(0,0,0,0.12),
+              0 16px 16px rgba(0,0,0,0.12);
+
 }
 
 .container-color {
+    border-radius: 15px;
     background: hsl(40, 67%, 67%);
+    box-shadow: 0 1px 1px rgba(0,0,0,0.12), 
+              0 2px 2px rgba(0,0,0,0.12), 
+              0 4px 4px rgba(0,0,0,0.12), 
+              0 8px 8px rgba(0,0,0,0.12),
+              0 16px 16px rgba(0,0,0,0.12);
+
 }
 
 
