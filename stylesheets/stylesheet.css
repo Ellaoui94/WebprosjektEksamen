@@ -67,6 +67,7 @@
 /* Bakgrunns farge */
 body {
     background-color: hsl(0, 0%, 90%);
+    height: 100%;
 }
 
 /* CSS for navbaren med bilde */
