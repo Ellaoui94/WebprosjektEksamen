@@ -96,6 +96,18 @@
     top: 90px;
 }
 
+.burger-css {
+    border-radius: 15px;
+    background: hsl(25, 42%, 28%);
+    color: hsl(208, 100%, 97%);
+    margin: 5px;
+    padding:3px;
+}
+
+.burger-bg {
+    background: linear-gradient(hsl(0, 0%, 89%),hsl(25, 42%, 43%));
+}
+
 /* For side menyen */
 .menu-bgstyle {
     border-radius: 25px;

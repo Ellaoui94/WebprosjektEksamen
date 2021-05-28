@@ -1,5 +1,5 @@
 const navbarBurger = document.querySelector(".navbar-burger")
-const navbarMenu = document.querySelector(".navbar-menu");
+const navbarMenu = document.querySelector("#nav-links");
 
 navbarBurger.addEventListener("click", ( e ) => {
 	navbarBurger.classList.toggle("is-active")
