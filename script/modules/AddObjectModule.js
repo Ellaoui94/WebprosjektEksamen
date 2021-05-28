@@ -6,11 +6,12 @@ const AddObjectModule = (function(){
         let addPopup = document.querySelector("#add-popup");
         let inputFields = addPopup.querySelectorAll(".add-input");
         let arrayLength = arrayToChange.length;
+        let ingredientFields = addPopup.querySelectorAll(".ingrediens");
         let newId = parseInt(arrayToChange[arrayLength-1].id)+1;
         let newObject = {id: newId.toString()};
         if (arrayToChange[0].hasOwnProperty("alder")) {
-            newObject.bilde = "../kokk.png";
-        } else {
+            newObject.bilde = "kokk.png";
+        } else if (arrayToChange[0].hasOwnProperty("kapasitet")) {
             newObject.bilde = "building.png";
         }
         inputFields.forEach(field => {
@@ -34,21 +35,6 @@ const AddObjectModule = (function(){
                 newObject.timelønn = parseInt(field.value);
             } else if (field.classList.contains("arbeidssted")) {
                 newObject.arbeidssted = HelperFunctionsModule.getLeaderOrWorkPlace(lookUpArray, field.value);
-            }
-        });
-        arrayToChange.push(newObject);
-    }
-
-    const addNewFoodOrDrink = (connectedArray, lookUpArray) => {
-        let addPopup = document.querySelector("#add-popup");
-        let inputFields = addPopup.querySelectorAll(".add-input");
-        let ingredientFields = addPopup.querySelectorAll(".ingrediens");
-        let arrayLength = connectedArray.length;
-        let newId = parseInt(connectedArray[arrayLength-1].id)+1;
-        let newObject = {id: newId.toString()};
-        inputFields.forEach(field => {
-            if (field.classList.contains("navn")) {
-                newObject.navn = field.value;
             } else if (field.classList.contains("kategori")) {
                 newObject.kategori = field.value;
             } else if (field.classList.contains("type")) {
@@ -61,7 +47,7 @@ const AddObjectModule = (function(){
         });
         if (newObject.kategori == "drikke") {
             newObject.bilde = "beverage-icon.png";
-        } else {
+        } else if (newObject.kategori == "mat") {
             newObject.bilde = "pizza-icon.png";
             newObject.ingredienser = HelperFunctionsModule.getIngredientsFromInput(ingredientFields);
             newObject.allergener = HelperFunctionsModule.getAllergensByIngredients(newObject.ingredienser, lookUpArray);
@@ -69,10 +55,10 @@ const AddObjectModule = (function(){
                 newObject.allergener.push("hvete");
             }
         }
-        connectedArray.push(newObject);
+        arrayToChange.push(newObject);
     }
 
-    return {addNewObject, addNewFoodOrDrink}
+    return {addNewObject}
 
 }());
 
