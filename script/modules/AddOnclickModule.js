@@ -118,6 +118,9 @@ const AddOnclickModule = (function() {
                     changeIngredients(objectToEdit.ingredienser, newIngredients);
                     let newAllergens = getAllergensByIngredients(objectToEdit.ingredienser, lookUpArray);
                     objectToEdit.allergener = newAllergens;
+                    if (objectToEdit.type == "rød pizza" || objectToEdit.type == "hvit pizza") {
+                        objectToEdit.allergener.push("hvete");
+                    }
                 }
 
             }
