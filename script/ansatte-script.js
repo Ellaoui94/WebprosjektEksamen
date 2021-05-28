@@ -60,7 +60,7 @@ const generateAnsatte = (chosenArray, addButtonHasOnclick) => {
                                 <option value="timelønn">Timelønn</option>
                             </div>
                         </select>
-                        <input type="text" id="search-value" class="input">
+                        <input type="text" id="search-value" class="input" >
                     
                 </section>
                 <section class="card-footer">
@@ -178,6 +178,8 @@ const generateAnsatte = (chosenArray, addButtonHasOnclick) => {
         `;
     });
 
+
+
     ansattSection.innerHTML = htmlText;
 
     popupSection.innerHTML = popupHtmlText;
@@ -202,19 +204,24 @@ const generateAnsatte = (chosenArray, addButtonHasOnclick) => {
     }
     });
 
+    
     //Validering av inputfelt 
     searchButton.addEventListener("click", () => {
 
-    if(searchValue.value === "" )
-    {
-        alert("Name must be filled out");
-        searchValue.style.borderColor = "red";
-        return false;
-    }else{
-    searchValue.style.borderColor = "green";}
-
-});
-
+        if(searchValue.value == "" )
+        {
+            
+            alert("Name must be filled out");
+            searchValue.classList.add("red-input");
+            //searchValue.style.borderColor = "red";
+            return false;
+        
+        }else {
+        searchValue.style.borderColor = "green";
+        }
+        
+    
+    });
 
 
 
