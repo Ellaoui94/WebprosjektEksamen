@@ -95,13 +95,6 @@ const AddOnclickModule = (function() {
 
         confirmAddButton.addEventListener("click", () => {
             if (!addButtonHasOnclick){
-                /*
-                if (connectedArray[0].hasOwnProperty("telefon")) {
-                    AddObjectModule.addNewObject(connectedArray, lookUpArray);
-                } else {
-                    AddObjectModule.addNewFoodOrDrink(connectedArray, lookUpArray);
-                }
-                */
                 AddObjectModule.addNewObject(connectedArray, lookUpArray);
                 addPopup.classList.remove("is-active");
                 addButtonHasOnclick = true;
