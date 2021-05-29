@@ -65,9 +65,8 @@
 /* STILSETTING AV KORT AVSLUTTES HER */
 
 /* Bakgrunns farge */
-body {
-    background-color: hsl(0, 0%, 90%);
-    height: 100%;
+html {
+    background: hsl(0, 0%, 90%);
 }
 
 /* CSS for navbaren med bilde */
