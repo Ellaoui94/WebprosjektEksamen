@@ -58,53 +58,40 @@
         </div>
     </nav>
 
-    <div class="container mt-6">
+    <main class="container mt-6">
         <div class="columns">
-            <div class="columns column is-4 mt-1">
-                <div class="menu menu-bgstyle">
-                    <ul class="menu-list">
-                    <li><a> <img src="images/Kalender/kalender-mai-2021-48sl.jpg" alt="pizza-gyldne"></a></li>
-                    <li><a> <img src="images/Kalender/kalender-juni-2021-48ms.jpg"  alt="pizza-gyldne"></a></li>
-                    <li><a> <img src="images/Kalender/kalender-juli-2021-48ms.jpg"  alt="pizza-gyldne"></a></li>
-                    </ul>
-                </div> 
+            <div class="columns column is-4">
+                <article class="column mt-1">
+                    <div class="card">
+                        <section class="card-header">
+                            <h3 class="card-header-title is-centered">Kalender</h3>
+                        </section>
+                        <section class="card-content">
+                            <ul class="menu-list">
+                            <li><a> <img src="images/Kalender/kalender-mai-2021-48sl.jpg" alt="mai"></a></li>
+                            <li><a> <img src="images/Kalender/kalender-juni-2021-48ms.jpg"  alt="juni"></a></li>
+                            <li><a> <img src="images/Kalender/kalender-juli-2021-48ms.jpg"  alt="juli"></a></li>
+                            </ul>
+                        </section>
+                    </div>
+                </article>
             </div>      
             <div class="columns column is-multiline is-8">
-                <div class="column is-5 mt-3 mr-3 ml-3">
+                <article class="column is-5 mt-3 mr-3 ml-3">
                     <div class="card">
                         <section class="card-header">
                             <h3 class="card-header-title is-centered">Daglig Inntekt</h3>
                         </section>
                         <section class="card-content">
-                            <ul id="daily-income">
-                                
-                            </ul>
+                            <ul id="daily-income"></ul>
                         </section>
                         <section class="card-footer">
                             <p class="card-footer-item">Samlet: <span id="daily-sum"></span>kr</p>
                         </section>
-                        
                     </div>
-                    
-                    <!--
-                    <div class="message container-color">
-                            <div class="message-header">
-                                <p>Dagens Salg</p>
-                            </div>
-                        <div class="column ">    
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. In, rem quidem ea aut molestias nihil quas nam ipsam quia minima!</p>
-                        </div>
-                        <div class="container">
-                            <div class="column">
-                                <div class="has-text-centered">
-                                    <button class="button mt-5" id="signUp">Sign Up</button>
-                                </div>
-                            </div> 
-                        </div>
-                    </div>
-                    -->
-                </div>
-                <div class="column is-5 mt-3 mr-3 ml-3">
+                </article>
+
+                <article class="column is-5 mt-3 mr-3 ml-3">
 
                     <div class="card">
                         <section class="card-header">
@@ -112,107 +99,47 @@
                         </section>
                         <section class="card-content">
                             <ul id="weekly-income">
-                                
                             </ul>
                         </section>
                         <section class="card-footer">
                             <p class="card-footer-item">Samlet: <span id="weekly-sum"></span>kr</p>
                         </section>
                     </div>
-                    <!--
-                    <div class="message container-color">
-                        <div class="message-header">
-                            <p>Ukens Salg</p>
-                        </div>
-
-                        <div class="column">    
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. In, rem quidem ea aut molestias nihil quas nam ipsam quia minima!</p>
-                        </div>
-
-                        <div class="container">
-                            <div class="column">
-                                <div class="has-text-centered">
-                                    <button class="button mt-5" id="signUp">Sign Up</button>
-                                </div>
-                            </div> 
-                        </div>
-                    </div>
-                    -->
-                </div>    
+                </article>    
                     
-                <div class="column is-5 mr-3 ml-3 mt-3">
+                <article class="column is-5 mr-3 ml-3 mt-3">
                     <div class="card">
                         <section class="card-header">
                             <h3 class="card-header-title is-centered">Månedlig Inntekt</h3>
                         </section>
                         <section class="card-content">
                             <ul id="monthly-income">
-                                
                             </ul>
                         </section>
                         <section class="card-footer">
                             <p class="card-footer-item">Samlet: <span id="monthly-sum"></span>kr</p>
                         </section>
                     </div>
-                    
-                    <!--
-                    <div class="message container-color">
-                        <div class="message-header">
-                            <p>Månedens Salg</p>
-                        </div>
+                </article>
 
-                        <div class="column">    
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. In, rem quidem ea aut molestias nihil quas nam ipsam quia minima!</p>
-                        </div>
-
-                        <div class="container">
-                            <div class="column">
-                                <div class="has-text-centered">
-                                    <button class="button mt-5" id="signUp">Sign Up</button>
-                                </div>
-                            </div> 
-                        </div>
-                    </div>
-                    -->
-                </div>
-
-                <div class="column is-5 ml-3 mr-3 mt-3">
+                <article class="column is-5 ml-3 mr-3 mt-3">
                     <div class="card">
                         <section class="card-header">
                             <h3 class="card-header-title is-centered">Årlig Inntekt</h3>
                         </section>
                         <section class="card-content">
                             <ul id="yearly-income">
-                                
                             </ul>
                         </section>
                         <section class="card-footer">
                             <p class="card-footer-item">Samlet: <span id="yearly-sum"></span>kr</p>
                         </section>
                     </div>
-                    
-                    <!--
-                    <div class="message container-color">
-                        <div class="message-header">
-                            <p>Års Inntekt</p>
-                        </div>
-
-                        <div class="column">    
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. In, rem quidem ea aut molestias nihil quas nam ipsam quia minima!</p>
-                        </div>
-
-                        <div class="container">
-                            <div class="column">
-                                <div class="has-text-centered">
-                                    <button class="button mt-5" id="signUp">Sign Up</button>
-                                </div>
-                            </div> 
-                        </div>
-                    </div>
-                    -->
-                </div>    
+                </article>    
                
-            </div> 
+            </div>
+        </div>
+    </main>
 
 </body>
 </html>
