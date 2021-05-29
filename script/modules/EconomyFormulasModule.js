@@ -1,30 +1,18 @@
 const EconomyFormulasModule = (function() {
 
-    const getIncome = (restaurant, menuArray, employeeArray, timeframe) => {
-        let income = 0;
-        let multiplier = 0;
-        switch (timeframe) {
-            case "week":
-                multiplier = 7;
-                break;
-            case "month":
-                multiplier = 30;
-                break;
-            case "year":
-                multiplier = 365;
-                break;
-            default:
-                multiplier = 1;
-                break;
-        }
-        income = getDailyProfit(restaurant, menuArray, employeeArray) * multiplier;
-        return income;
+    const getIncome = (restaurant, menuArray, employeeArray) => {
+        let dailyIncome = getDailyProfit(restaurant, menuArray, employeeArray);
+        let weeklyIncome = dailyIncome * 7;
+        let monthlyIncome = dailyIncome * 30;
+        let yearlyIncome = dailyIncome * 365;
+        let incomeArray = [dailyIncome, weeklyIncome, monthlyIncome, yearlyIncome]
+        return incomeArray;
     }
 
     const getSum = (restaurantIncomeArray) => {
         let sum = 0;
         restaurantIncomeArray.forEach(restaurantIncome => {
-            sum += restaurantIncome;
+            sum += restaurantIncome[2];
         });
         return sum;
     }
@@ -60,8 +48,8 @@ const EconomyFormulasModule = (function() {
             let dailySalary = parseInt(employee.timelønn) * 7.5 * parseInt(employee.stillingsprosent) / 100;
             dailySalaryCost += dailySalary;
         });
-        dailyProfit = dailyIncome - dailySalaryCost;
-        return dailyProfit;
+        let dailyProfit = dailyIncome - dailySalaryCost;
+        return parseInt(dailyProfit);
     }
 
     return {getIncome, getSum}

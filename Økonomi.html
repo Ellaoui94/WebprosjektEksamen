@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
     <link rel="stylesheet" href="./stylesheets/stylesheet.css">
-    <script  defer type="module" src="script/økonomi-script.js"></script>
+    <script type="module" src="script/økonomi-script.js"></script>
+    <script type="module" src="script/burger-meny.js"></script>
 </head>
 <body>
     <nav class="navbar has-bg-img" role="navigation" aria-label="main navigation">
@@ -20,135 +21,125 @@
                 <img src="images/Banner/black-gyldne-pizza.png" style="max-height: 120px" alt="pizza-gyldne">
             </div>
             <a role="button" class="navbar-burger" id="burger">
+                
                 <span></span>
                 <span></span>
                 <span></span>
                 <span></span>
 		        <span></span>
+                
             </a>
         </div>
-            <div class="">
-                <nav class="navbar-menu">
-                    <div class="navbar-start">
-                        <a class="navbar-item mr-6 navbarItemClass navbarTwo-color" href="index.html">Hjem</a>
-                        <a class="navbar-item mr-6 navbarItemClass navbarTwo-color" href="Ansatte.html">Ansatte</a>
-                        <a class="navbar-item mr-6 navbarItemClass navbarTwo-color" href="Restauranter.html">Resturanter</a>
-                        <a class="navbar-item mr-6 navbarItemClass navbarTwo-color" href="Mat&Drikke.html">Mat/Drikke</a>
-                        <a class="navbar-item mr-6 navbarItemClass navbarTwo-color" href="Økonomi.html">Økonomi</a>
-                    </div>
-                </nav>
-            </div>
-
-            <div class="is-hidden-tablet">
-                <nav class="navbar-menu burger-bg" id="nav-links">
-                    <div class="navbar-start">
-                        <a class="navbar-item has-text-centered burger-css" href="index.html">Hjem</a>
-                        <a class="navbar-item has-text-centered burger-css" href="Ansatte.html">Ansatte</a>
-                        <a class="navbar-item has-text-centered burger-css" href="Restauranter.html">Resturanter</a>
-                        <a class="navbar-item has-text-centered burger-css" href="Mat&Drikke.html">Mat/Drikke</a>
-                        <a class="navbar-item has-text-centered burger-css" href="Økonomi.html">Økonomi</a>
-                    </div>
-                </nav>
-            </div>
-            
-            
-                <div class="navbar-item ml-4 is-hidden-mobile">
-                    <img src="images/Banner/icon3.png" style="max-height: 120px" alt="pizza-gyldne">
+        <div class="">
+            <nav class="navbar-menu">
+                <div class="navbar-start">
+                    <a class="navbar-item mr-6 navbarItemClass navbarTwo-color" href="index.html">Hjem</a>
+                    <a class="navbar-item mr-6 navbarItemClass navbarTwo-color" href="Ansatte.html">Ansatte</a>
+                    <a class="navbar-item mr-6 navbarItemClass navbarTwo-color" href="Restauranter.html">Resturanter</a>
+                    <a class="navbar-item mr-6 navbarItemClass navbarTwo-color" href="Mat&Drikke.html">Mat/Drikke</a>
+                    <a class="navbar-item mr-6 navbarItemClass navbarTwo-color" href="Økonomi.html">Økonomi</a>
                 </div>
-            </div> 
+            </nav>
+        </div>
+
+        <div class="is-hidden-tablet">
+            <nav class="navbar-menu burger-bg" id="nav-links">
+                <div class="navbar-start">
+                    <a class="navbar-item has-text-centered burger-css" href="index.html">Hjem</a>
+                    <a class="navbar-item has-text-centered burger-css" href="Ansatte.html">Ansatte</a>
+                    <a class="navbar-item has-text-centered burger-css" href="Restauranter.html">Resturanter</a>
+                    <a class="navbar-item has-text-centered burger-css" href="Mat&Drikke.html">Mat/Drikke</a>
+                    <a class="navbar-item has-text-centered burger-css" href="Økonomi.html">Økonomi</a>
+                </div>
+            </nav>
+        </div>
+        <div class="navbar-item ml-4 is-hidden-mobile">
+            <img src="images/Banner/icon3.png" style="max-height: 120px" alt="pizza-gyldne">
+        </div>
     </nav>
 
-    <div class="container mt-6">
+    <main class="container mt-6">
         <div class="columns">
-                <div class="columns column is-4 mt-1">
-                    <div class="menu menu-bgstyle">
-                        <ul class="menu-list">
-                        <li><a> <img src="images/Kalender/kalender-mai-2021-48sl.jpg" alt="pizza-gyldne"></a></li>
-                        <li><a> <img src="images/Kalender/kalender-juni-2021-48ms.jpg"  alt="pizza-gyldne"></a></li>
-                        <li><a> <img src="images/Kalender/kalender-juli-2021-48ms.jpg"  alt="pizza-gyldne"></a></li>
-                        </ul>
-                    </div> 
-                </div>      
+            <div class="columns column is-4">
+                <article class="column mt-1">
+                    <div class="card">
+                        <section class="card-header">
+                            <h3 class="card-header-title is-centered">Kalender</h3>
+                        </section>
+                        <section class="card-content">
+                            <ul class="menu-list">
+                            <li><a> <img src="images/Kalender/kalender-mai-2021-48sl.jpg" alt="mai"></a></li>
+                            <li><a> <img src="images/Kalender/kalender-juni-2021-48ms.jpg"  alt="juni"></a></li>
+                            <li><a> <img src="images/Kalender/kalender-juli-2021-48ms.jpg"  alt="juli"></a></li>
+                            </ul>
+                        </section>
+                    </div>
+                </article>
+            </div>      
             <div class="columns column is-multiline is-8">
-                <div class="column is-5 mt-5 mr-3 ml-3">
-                    <div class="message container-color">
-                            <div class="message-header">
-                                <p>Dagens Salg</p>
-                            </div>
-                        <div class="column ">    
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. In, rem quidem ea aut molestias nihil quas nam ipsam quia minima!</p>
-                        </div>
-                        <div class="container">
-                            <div class="column">
-                                <div class="has-text-centered">
-                                    <button class="button mt-5" id="signUp">Sign Up</button>
-                                </div>
-                            </div> 
-                        </div>
-                    </div>        
-                </div>
-                <div class="column is-5 mt-5 mr-3 ml-3">
-                    <div class="message container-color">
-                        <div class="message-header">
-                            <p>Ukens Salg</p>
-                        </div>
-
-                        <div class="column">    
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. In, rem quidem ea aut molestias nihil quas nam ipsam quia minima!</p>
-                        </div>
-
-                        <div class="container">
-                            <div class="column">
-                                <div class="has-text-centered">
-                                    <button class="button mt-5" id="signUp">Sign Up</button>
-                                </div>
-                            </div> 
-                        </div>
+                <article class="column is-5 mt-3 mr-3 ml-3">
+                    <div class="card">
+                        <section class="card-header">
+                            <h3 class="card-header-title is-centered">Daglig Inntekt</h3>
+                        </section>
+                        <section class="card-content">
+                            <ul id="daily-income"></ul>
+                        </section>
+                        <section class="card-footer">
+                            <p class="card-footer-item">Samlet: <span id="daily-sum"></span>kr</p>
+                        </section>
                     </div>
-                </div>    
-        
-                <div class="column is-5 mr-3 ml-3">
-                    <div class="message container-color">
-                        <div class="message-header">
-                            <p>Månedens Salg</p>
-                        </div>
+                </article>
 
-                        <div class="column">    
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. In, rem quidem ea aut molestias nihil quas nam ipsam quia minima!</p>
-                        </div>
+                <article class="column is-5 mt-3 mr-3 ml-3">
 
-                        <div class="container">
-                            <div class="column">
-                                <div class="has-text-centered">
-                                    <button class="button mt-5" id="signUp">Sign Up</button>
-                                </div>
-                            </div> 
-                        </div>
+                    <div class="card">
+                        <section class="card-header">
+                            <h3 class="card-header-title is-centered">Ukentlig Inntekt</h3>
+                        </section>
+                        <section class="card-content">
+                            <ul id="weekly-income">
+                            </ul>
+                        </section>
+                        <section class="card-footer">
+                            <p class="card-footer-item">Samlet: <span id="weekly-sum"></span>kr</p>
+                        </section>
                     </div>
-                </div>
+                </article>    
+                    
+                <article class="column is-5 mr-3 ml-3 mt-3">
+                    <div class="card">
+                        <section class="card-header">
+                            <h3 class="card-header-title is-centered">Månedlig Inntekt</h3>
+                        </section>
+                        <section class="card-content">
+                            <ul id="monthly-income">
+                            </ul>
+                        </section>
+                        <section class="card-footer">
+                            <p class="card-footer-item">Samlet: <span id="monthly-sum"></span>kr</p>
+                        </section>
+                    </div>
+                </article>
 
-                <div class="column is-5 ml-3">
+                <article class="column is-5 ml-3 mr-3 mt-3">
+                    <div class="card">
+                        <section class="card-header">
+                            <h3 class="card-header-title is-centered">Årlig Inntekt</h3>
+                        </section>
+                        <section class="card-content">
+                            <ul id="yearly-income">
+                            </ul>
+                        </section>
+                        <section class="card-footer">
+                            <p class="card-footer-item">Samlet: <span id="yearly-sum"></span>kr</p>
+                        </section>
+                    </div>
+                </article>    
                
-                    <div class="message container-color">
-                        <div class="message-header">
-                            <p>Års Inntekt</p>
-                        </div>
-
-                        <div class="column">    
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. In, rem quidem ea aut molestias nihil quas nam ipsam quia minima!</p>
-                        </div>
-
-                        <div class="container">
-                            <div class="column">
-                                <div class="has-text-centered">
-                                    <button class="button mt-5" id="signUp">Sign Up</button>
-                                </div>
-                            </div> 
-                        </div>
-                    </div>
-                </div>    
-               
-            </div> 
+            </div>
+        </div>
+    </main>
 
 </body>
 </html>
