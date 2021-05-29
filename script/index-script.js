@@ -26,10 +26,10 @@ const generateMAnsatte = () => {
 	let randomIndex = getRandomNumber( numberofAnsatt );
 	let randomAnsatt = alleAnsatte[randomIndex];
 
-	AnsatteModule.getAllAnsatte.forEach(randomAnsatt => {    
-
+	  
+/*
 				if(randomAnsatt.navn === "Erna Stoltenberg" || randomAnsatt.navn === "Anders Andersen" ){
-
+*/
 					 htmlTxt = `
 						<article>
 							<h3>Navn: ${ randomAnsatt.navn } </h3>
@@ -37,12 +37,12 @@ const generateMAnsatte = () => {
 						</article>
 					`;
 					
-					outputDiv.innerHTML += htmlTxt;
-				}else return false;
-				}
+					outputDiv.innerHTML = htmlTxt;
+			
+			
 		
-			)};
-
+				};
+		
 			ansattbtn.addEventListener("click", () => {
 				generateMAnsatte();
 				});
