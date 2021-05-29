@@ -56,6 +56,7 @@ const AddOnclickModule = (function() {
                     // DeleteObjectModule.deleteObject(deleteInput, ConnectedArray, deletePopup, card);
                     // Får feilkode som påstår at dette ikke er en funksjon
 
+                    // Kjører denne koden direkte her istedenfor
                     if (deleteInput.value === "SLETT"){
                         connectedArray.splice(connectedArray.findIndex(o => o.id == card.id), 1);
                         deletePopup.classList.remove("is-active");

@@ -131,9 +131,9 @@ const generateAnsatte = (chosenArray, addButtonHasOnclick) => {
                                     </div>
                                 </li>
                                 <li>
-                                    <label class="label">Arbeidssted</label>
+                                    <label class="label">Arbeidssted (ID)</label>
                                     <div class="control">
-                                        <input id="popupArbeidssted${ansatte.id}" type="text" class="input edit-input arbeidssted" placeholder="${ansatte.arbeidssted}">
+                                        <input id="popupArbeidssted${ansatte.id}" type="text" class="input edit-input arbeidssted" placeholder="${ansatte.arbeidssted[1]}">
                                     </div>
                                 </li>
                                 <li>
