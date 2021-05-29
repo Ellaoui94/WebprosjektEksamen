@@ -22,7 +22,6 @@ const generateMAnsatte = () => {
 	
 	let htmlTxt = "";
 	
-	
 	let randomIndex = getRandomNumber( numberofAnsatt );
 	let randomAnsatt = alleAnsatte[randomIndex];
 
