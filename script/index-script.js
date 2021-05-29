@@ -33,6 +33,9 @@ const generateMAnsatte = () => {
 						<article>
 							<h3>Navn: ${ randomAnsatt.navn } </h3>
 							<img src='images/Ansatte/${ randomAnsatt.bilde }'>
+							<h3>Navn: ${ randomAnsatt.arbeidssted } </h3>
+							<h3>Navn: ${ randomAnsatt.alder } </h3>
+
 						</article>
 					`;
 					
@@ -42,10 +45,10 @@ const generateMAnsatte = () => {
 		
 				};
 		
-			ansattbtn.addEventListener("click", () => {
-				generateMAnsatte();
+				ansattbtn.addEventListener("click", () => {
+					generateMAnsatte();
 				});
 
-const getRandomNumber = (numberofAnsatt) => { 
+	const getRandomNumber = (numberofAnsatt) => { 
 	return Math.floor( Math.random() * numberofAnsatt );
 }
