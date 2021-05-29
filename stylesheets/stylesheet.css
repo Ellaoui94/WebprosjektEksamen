@@ -160,4 +160,33 @@ html {
     border: 1px solid red;
   }
 
+ /* Footer */
 
+.footer {
+    background: linear-gradient(hsl(25, 42%, 43%), hsl(0, 0%, 89%));
+}
+
+ /* Gå til toppen button */
+
+ #top-btn {
+    position: fixed;
+    bottom: 10px;
+    float: right;
+    right: 20.5%;
+    left: 77.25%;
+    max-width: 100px;
+    width: 100%;
+    font-size: 14px;
+    border-color: hsl(25, 42%, 28%);
+    background-color: hsl(25, 42%, 28%);
+    padding: .5px;
+    border-radius: 25px;
+
+ }
+ 
+
+ a {
+    color: hsl(0,0%,100%);
+}
+
+ 
