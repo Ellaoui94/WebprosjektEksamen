@@ -30,42 +30,43 @@
 		        <span></span>
             </a>
         </div>
-            <div class="">
-                <nav class="navbar-menu">
-                    <div class="navbar-start">
-                        <a class="navbar-item mr-6 navbarItemClass navbarTwo-color" href="index.html">Hjem</a>
-                        <a class="navbar-item mr-6 navbarItemClass navbarTwo-color" href="Ansatte.html">Ansatte</a>
-                        <a class="navbar-item mr-6 navbarItemClass navbarTwo-color" href="Restauranter.html">Resturanter</a>
-                        <a class="navbar-item mr-6 navbarItemClass navbarTwo-color" href="Mat&Drikke.html">Mat/Drikke</a>
-                        <a class="navbar-item mr-6 navbarItemClass navbarTwo-color" href="Økonomi.html">Økonomi</a>
-                    </div>
-                </nav>
-            </div>
 
-            <div class="is-hidden-tablet">
-                <nav class="navbar-menu burger-bg" id="nav-links">
-                    <div class="navbar-start">
-                        <a class="navbar-item has-text-centered burger-css" href="index.html">Hjem</a>
-                        <a class="navbar-item has-text-centered burger-css" href="Ansatte.html">Ansatte</a>
-                        <a class="navbar-item has-text-centered burger-css" href="Restauranter.html">Resturanter</a>
-                        <a class="navbar-item has-text-centered burger-css" href="Mat&Drikke.html">Mat/Drikke</a>
-                        <a class="navbar-item has-text-centered burger-css" href="Økonomi.html">Økonomi</a>
-                    </div>
-                </nav>
-            </div>
-            
-            
-                <div class="navbar-item ml-4 is-hidden-tablet is-hidden-mobile">
-                    <img src="images/Banner/icon3.png" style="max-height: 120px" alt="pizza-gyldne">
+        <div class="">
+            <nav class="navbar-menu">
+                <div class="navbar-start">
+                    <a class="navbar-item mr-6 navbarItemClass navbarTwo-color" href="index.html">Hjem</a>
+                    <a class="navbar-item mr-6 navbarItemClass navbarTwo-color" href="Ansatte.html">Ansatte</a>
+                    <a class="navbar-item mr-6 navbarItemClass navbarTwo-color" href="Restauranter.html">Resturanter</a>
+                    <a class="navbar-item mr-6 navbarItemClass navbarTwo-color" href="Mat&Drikke.html">Mat/Drikke</a>
+                    <a class="navbar-item mr-6 navbarItemClass navbarTwo-color" href="Økonomi.html">Økonomi</a>
                 </div>
-            </div> 
+            </nav>
+        </div>
+
+        <div class="is-hidden-tablet">
+            <nav class="navbar-menu burger-bg" id="nav-links">
+                <div class="navbar-start">
+                    <a class="navbar-item has-text-centered burger-css" href="index.html">Hjem</a>
+                    <a class="navbar-item has-text-centered burger-css" href="Ansatte.html">Ansatte</a>
+                    <a class="navbar-item has-text-centered burger-css" href="Restauranter.html">Resturanter</a>
+                    <a class="navbar-item has-text-centered burger-css" href="Mat&Drikke.html">Mat/Drikke</a>
+                    <a class="navbar-item has-text-centered burger-css" href="Økonomi.html">Økonomi</a>
+                </div>
+            </nav>
+        </div>
+
+        <div class="navbar-item ml-4 is-hidden-tablet is-hidden-mobile">
+            <img src="images/Banner/icon3.png" style="max-height: 120px" alt="pizza-gyldne">
+        </div>
     </nav>
 <!--Slutten av navbar --> 
+
+<!--Starten av Popp up-->
 <article id="popup-rett" class="modal ansatt-popup">
     <div id="modalBg" class="modal-background"></div>
     <div class="modal-content py-5 px-5">
         <div class="card restaurant-popup">
-            <div id="out-div"></div>
+            <div id="out-rett"></div>
         </div>
     </div>
 </article>  
@@ -73,7 +74,7 @@
     <div id="modalBg" class="modal-background"></div>
     <div class="modal-content py-5 px-5">
         <div class="card restaurant-popup">
-            <div id="out-div"></div>
+            <div id="out-restaurant"></div>
         </div>
     </div>
 </article>  
@@ -81,104 +82,90 @@
     <div id="modalBg" class="modal-background"></div>
     <div class="modal-content py-5 px-5">
         <div class="card restaurant-popup">
-            <div id="out-div"></div>
+            <div id="out-ansatt"></div>
         </div>
     </div>
 </article>
+<!--Slutten av Popp up-->
     
 
-       <div class="container mt-6">
-            <div class="columns">
-                    <div class="columns column is-4 mt-1">
-                        <div class="column">
-                            <div class="menu menu-bgstyle">
-                                <ul class="menu-list">
-                                <li><a>Ansatte Med Mest Salg</a></li>
-                                <li><a>Resturant Med Mest Salg</a></li>
-                                <li><a>Mest Solgt Pizza</a></li>
-                                </ul>
-                            </div>
-                        </div>  
-                    </div>      
-                <div class="columns column is-multiline is-8">
-                    <div class="column is-5 mt-5 mr-3 ml-3">
-                        <div class="message is-2">
-                            <div class="columns is-multiline container-color">
-                                <div class="column is-12">
-                                    <div class="">
-                                        <img src="images/Banner/icon4.png" alt="pizza-icon">
-                                    </div>
-                                </div>
-                            
-                                <div class="column">
-                                    <div class="has-text-centered">
-                                        <button value="Vis månedens mat & drikke " id="random-rett-btn" class="button is-dark" id="signUp">Vis månedens Mat & Drikke</button>
-                                    </div>
-                                </div>
-                            </div>        
-                        </div>
-                    </div>
-                    <div class="column is-5 mt-5 mr-3 ml-3">
-                        <div class="message is-2">
-                            <div class="columns is-multiline container-color">
-
-                                <div class="column is-12">
-                                    <div class="">
-                                        <img src="images/building.png" alt="pizza-icon">
-                                    </div>
-                                </div>
-        
-                                <div class="column">
-                                    <div class="has-text-centered">
-                                        <button value="Vis månedens resturant" id="random-restaurant-btn" class="button is-dark" id="signUp">Vis månedens resturant</button>
-                                    </div>
-                                </div> 
-                                
-                            </div>        
-                        </div>
-                    </div>
-                    <div class="column is-5 mt-5 mr-3 ml-3">
-                        <div class="message is-2">
-                            <div class="columns is-multiline container-color">
-
-                                <div class="column is-12">
-                                    <div class="has-text-centered">
-                                        <img src="images/Ansatte/kokk.png" alt="pizza-icon">
-                                    </div>
-                                </div>
-
-                                <div class="column">
-                                    <div class="has-text-centered">
-                                        <button value="Vis månedens ansatt" id="random-ansatt-btn" class="button is-dark" id="signUp">Vis månedens ansatt</button>
-                                    </div>
-                                </div> 
-
-                            </div>        
-                        </div>
-                    </div>
-                    <div class="column is-5 mt-5 ml-3 mr-3">
-                        <div class="message is-2">
-                            <div class="columns is-multiline container-color">
-
-                                <div class="column is-12">
-                                    <div class="">
-                                        <img src="images/knapp-iconer/budghet.png" alt="pizza-icon">
-                                    </div>
-                                </div>
-                              
-                                <div class="column">
-                                    <div class="has-text-centered">
-                                        <button value="Vis månedens ansatt" id="random-ansatt-btn" class="button is-dark" id="signUp">Vis månedens ansatt</button>
-                                    </div>
-                                </div> 
-                                
-                            </div>        
-                        </div>
-                    </div>
+<main class="container mt-6">
+    <div class="columns">
+        <div class="columns column is-4 mt-1">
+            <article class="column">
+                <div class="card">
+                    <section class="card-header">
+                        <h3 class="card-header-title is-centered">For denne måneden:</h3>
+                    </section>
+                    <section class="card-content menu">
+                        <ul class="menu-list">
+                            <li><a>Mest Solgte Pizza</a></li>
+                            <li><a>Restaurant med høyest inntekt</a></li>
+                            <li><a>Månedens Ansatt</a></li>
+                        </ul>
+                    </section>
+                    <section class="card-footer">
+                        <p class="card-footer-item">Ha en fin dag!</p>
+                    </section>
                 </div>
-            </div>
+            </article>  
         </div>
-    </div> 
+        <div class="columns column is-multiline is-8">
+            <article class="column is-5 mt-5 mr-3 ml-3">
+                <div class="card is-6">
+                    <section class="card-header">
+                        <h3 class="card-header-title is-centered">Mat & Drikke</h3>
+                    </section>
+                    <section class="card-content has-text-centered">
+                        <img src="images/Banner/icon4.png" alt="mat&drikke">
+                    </section>
+                    <section class="card-footer">
+                        <button class="button card-footer-item is-dark"> <a style="text-decoration: none;" href="Mat&Drikke.html">Gå til Mat & Drikke</a> </button>
+                    </section>        
+                </div>
+            </article>
+            <article class="column is-5 mt-5 mr-3 ml-3">
+                <div class="card is-6">
+                    <section class="card-header">
+                        <h3 class="card-header-title is-centered">Restauranter</h3>
+                    </section>
+                    <section class="card-content has-text-centered">
+                        <img src="images/building.png" alt="restaurant">
+                    </section>
+                    <section class="card-footer">
+                        <button class="button card-footer-item is-dark"> <a style="text-decoration: none;" href="Restauranter.html">Gå til Restaurant</a> </button>
+                    </section>        
+                </div>
+            </article>
+            <article class="column is-5 mt-5 mr-3 ml-3">
+                <div class="card is-6">
+                    <section class="card-header">
+                        <h3 class="card-header-title is-centered">Ansatte</h3>
+                    </section>
+                    <section class="card-content has-text-centered">
+                        <img src="images/Ansatte/kokk.png" alt="ansatte">
+                    </section>
+                    <section class="card-footer">
+                        <button class="button card-footer-item is-dark"> <a style="text-decoration: none;" href="Ansatte.html">Gå til Mat & Drikke</a> </button>
+                    </section>        
+                </div>
+            </article>
+            <article class="column is-5 mt-5 mr-3 ml-3">
+                <div class="card is-6">
+                    <section class="card-header">
+                        <h3 class="card-header-title is-centered">Økonomi</h3>
+                    </section>
+                    <section class="card-content has-text-centered">
+                        <img src="images/knapp-iconer/budghet.png" alt="økonomi">
+                    </section>
+                    <section class="card-footer">
+                        <button class="button card-footer-item is-dark"> <a style="text-decoration: none;" href="Økonomi.html">Gå til Mat & Drikke</a> </button>
+                    </section>        
+                </div>
+            </article>
+        </div>
+    </div>
+</main> 
 
 </body>
 </html>

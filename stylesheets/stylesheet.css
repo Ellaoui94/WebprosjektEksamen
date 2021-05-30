@@ -4,77 +4,37 @@
 .delete-button {
     background: hsl(5, 74%, 33%);
     border-radius: 25px;
-    box-shadow: 0 1px 1px rgba(0,0,0,0.12), 
-              0 2px 2px rgba(0,0,0,0.12), 
-              0 4px 4px rgba(0,0,0,0.12), 
-              0 8px 8px rgba(0,0,0,0.12),
-              0 16px 16px rgba(0,0,0,0.12);
 }
 
 .close-button {
     background: hsl(197, 61%, 25%);
     border-radius: 25px;
-    box-shadow: 0 1px 1px rgba(0,0,0,0.12), 
-              0 2px 2px rgba(0,0,0,0.12), 
-              0 4px 4px rgba(0,0,0,0.12), 
-              0 8px 8px rgba(0,0,0,0.12),
-              0 16px 16px rgba(0,0,0,0.12);
 }
 
 .deny-delete-button {
     background: hsl(197, 61%, 25%);
     border-radius: 25px;
-    box-shadow: 0 1px 1px rgba(0,0,0,0.12), 
-              0 2px 2px rgba(0,0,0,0.12), 
-              0 4px 4px rgba(0,0,0,0.12), 
-              0 8px 8px rgba(0,0,0,0.12),
-              0 16px 16px rgba(0,0,0,0.12);
 }
 
 .deny-add-button {
     background: hsl(197, 61%, 25%);
-    box-shadow: 0 1px 1px rgba(0,0,0,0.12), 
-              0 2px 2px rgba(0,0,0,0.12), 
-              0 4px 4px rgba(0,0,0,0.12), 
-              0 8px 8px rgba(0,0,0,0.12),
-              0 16px 16px rgba(0,0,0,0.12);
 }
 
 .confirm-add-button {
     background: hsl(125, 100%, 19%);
-    box-shadow: 0 1px 1px rgba(0,0,0,0.12), 
-              0 2px 2px rgba(0,0,0,0.12), 
-              0 4px 4px rgba(0,0,0,0.12), 
-              0 8px 8px rgba(0,0,0,0.12),
-              0 16px 16px rgba(0,0,0,0.12);
 }
 
 .save-button {
     background: hsl(125, 100%, 19%);
     border-radius: 25px;
-    box-shadow: 0 1px 1px rgba(0,0,0,0.12), 
-              0 2px 2px rgba(0,0,0,0.12), 
-              0 4px 4px rgba(0,0,0,0.12), 
-              0 8px 8px rgba(0,0,0,0.12),
-              0 16px 16px rgba(0,0,0,0.12);
 }
 
 .search-button {
     background: hsl(197, 61%, 25%);
-    box-shadow: 0 1px 1px rgba(0,0,0,0.12), 
-              0 2px 2px rgba(0,0,0,0.12), 
-              0 4px 4px rgba(0,0,0,0.12), 
-              0 8px 8px rgba(0,0,0,0.12),
-              0 16px 16px rgba(0,0,0,0.12);
 }
 
 .show-all-button {
     background: hsl(197, 61%, 25%);
-    box-shadow: 0 1px 1px rgba(0,0,0,0.12), 
-              0 2px 2px rgba(0,0,0,0.12), 
-              0 4px 4px rgba(0,0,0,0.12), 
-              0 8px 8px rgba(0,0,0,0.12),
-              0 16px 16px rgba(0,0,0,0.12);
 }
 
 .button {
@@ -90,30 +50,15 @@
 .edit-button {
     background: hsl(125, 100%, 19%);
     border-radius: 25px;
-    box-shadow: 0 1px 1px rgba(0,0,0,0.12), 
-              0 2px 2px rgba(0,0,0,0.12), 
-              0 4px 4px rgba(0,0,0,0.12), 
-              0 8px 8px rgba(0,0,0,0.12),
-              0 16px 16px rgba(0,0,0,0.12);
 }
 
 .confirm-delete-button {
     background: hsl(5, 74%, 33%);
     border-radius: 25px;
-    box-shadow: 0 1px 1px rgba(0,0,0,0.12), 
-              0 2px 2px rgba(0,0,0,0.12), 
-              0 4px 4px rgba(0,0,0,0.12), 
-              0 8px 8px rgba(0,0,0,0.12),
-              0 16px 16px rgba(0,0,0,0.12);
 }
 
 .add-button {
     background: hsl(125, 100%, 19%);
-    box-shadow: 0 1px 1px rgba(0,0,0,0.12), 
-              0 2px 2px rgba(0,0,0,0.12), 
-              0 4px 4px rgba(0,0,0,0.12), 
-              0 8px 8px rgba(0,0,0,0.12),
-              0 16px 16px rgba(0,0,0,0.12);
 }
 
 .card {
