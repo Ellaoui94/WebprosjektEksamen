@@ -4,16 +4,6 @@ import MatOgDrikkeModule from "./modules/Mat&DrikkeModule.js";
 import EconomyFormulasModule from "./modules/EconomyFormulasModule.js";
 
 
-// Burger-kode start
-const navbarBurger = document.querySelector(".navbar-burger")
-const navbarMenu = document.querySelector(".navbar-menu");
-navbarBurger.addEventListener("click", ( e ) => {
-	navbarBurger.classList.toggle("is-active")
-	navbarMenu.classList.toggle("is-active");
-});
-// Burger-kode slutt
-
-
 const matPopup = document.querySelector("#popup-mat");
 const restaurantPopup = document.querySelector("#popup-restaurant");
 const ansattPopup = document.querySelector("#popup-ansatt");
