@@ -75,6 +75,7 @@
 /* Bakgrunns farge */
 html {
     background: hsl(0, 0%, 90%);
+    scroll-behavior: smooth;
 }
 
 /* CSS for navbaren med bilde */
