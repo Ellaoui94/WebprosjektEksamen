@@ -198,10 +198,10 @@ const generateAnsatte = (chosenArray, addButtonHasOnclick) => {
 
     // funskjon for å kunne søke ved å trykke på enter
     searchValue.addEventListener("keyup", function(event) {
-    if (event.keyCode === 13) {
-        
-        searchButton.click();
-    }
+        if (event.keyCode === 13) {
+            
+            searchButton.click();
+        }
     });
 
     
@@ -216,33 +216,33 @@ const generateAnsatte = (chosenArray, addButtonHasOnclick) => {
 
 
 
-searchButton.addEventListener("click", () => {
+    searchButton.addEventListener("click", () => {
 
-    if(searchValue.value == "" )
-        {
+        if(searchValue.value == "" )
+            {
+                
+                alert("Name must be filled out");
+                searchValue.classList.add("red-input");
+                //searchValue.style.borderColor = "red";
+                return false;
             
-            alert("Name must be filled out");
-            searchValue.classList.add("red-input");
-            //searchValue.style.borderColor = "red";
-            return false;
-        
-        }else {
+        } else {
 
             generateAnsatte(SearchModule.filterByChoice(alleAnsatte, searchKey, searchValue), addButtonHasOnclick);
-};
+        };
 
-      //  searchValue.style.borderColor = "green";
-}
+        //  searchValue.style.borderColor = "green";
+    });
 
 
 
-showAllButton.addEventListener("click", () => {
-generateAnsatte(alleAnsatte, addButtonHasOnclick);
-});
+    showAllButton.addEventListener("click", () => {
+        generateAnsatte(alleAnsatte, addButtonHasOnclick);
+    });
 
-addButton.addEventListener("click", () => {
-    addPopup.classList.add("is-active");
-});
+    addButton.addEventListener("click", () => {
+        addPopup.classList.add("is-active");
+    });
 
 };
 
