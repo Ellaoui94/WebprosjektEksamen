@@ -305,7 +305,12 @@ const generateMatOgDrikke = (chosenArray, addButtonHasOnclick) => {
     const addPopup = document.querySelector("#add-popup");
 
     searchButton.addEventListener("click", () => {
-        generateMatOgDrikke(SearchModule.filterByChoice(alleMeny, searchKey, searchValue), addButtonHasOnclick);
+        if(searchValue.value == "" ) {                
+            alert("Søkefeltet kan ikke være tomt");
+            searchValue.classList.add("red-input");
+        } else {
+            generateMatOgDrikke(SearchModule.filterByChoice(alleMeny, searchKey, searchValue), addButtonHasOnclick);
+        }
     });
 
     showAllButton.addEventListener("click", () => {

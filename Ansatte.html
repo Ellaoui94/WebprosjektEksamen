@@ -8,66 +8,64 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
     <link rel="stylesheet" href="./stylesheets/stylesheet.css">
-    <script defer type="module" src="script/ansatte-script.js"></script>
+    <script type="module" src="script/ansatte-script.js"></script>
+    <script type="module" src="script/burger-meny.js"></script>
 </head>
 <body>
     <!-- Brukes for gå til toppen knappen -->
     <a name="gettop"></a>
     <!-------------------------------------->
 
-    <nav class="navbar has-bg-img" role="navigation" aria-label="main navigation">
+    <!--Start av Navbar-->
+    <nav class="navbar has-bg-img">
         <div class="navbar-brand">
-            <a class="navbar-item" href="index.html">
-                <img src="images/Banner/pizza-icon1.png" style="max-height: 120px" alt="pizza-logo">
-            </a>
-            <div class="navbar-item">
-                <img src="images/Banner/black-gyldne-pizza.png" style="max-height: 120px" alt="pizza-gyldne">
-            </div>
-            <a role="button" class="navbar-burger" id="burger">
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-		        <span></span>
+            <!--<img src="images/Banner/pizza-icon1.png" style="max-height: 120px" alt="pizza-logo">-->
+            <img src="images/Banner/black-gyldne-pizza.png" style="max-height: 120px" alt="pizza-gyldne">
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
             </a>
         </div>
-            <div class="">
-                <nav class="navbar-menu">
-                    <div class="navbar-start">
-                        <a class="navbar-item mr-6 navbarItemClass navbarTwo-color" href="index.html">Hjem</a>
-                        <a class="navbar-item mr-6 navbarItemClass navbarTwo-color" href="Ansatte.html">Ansatte</a>
-                        <a class="navbar-item mr-6 navbarItemClass navbarTwo-color" href="Restauranter.html">Resturanter</a>
-                        <a class="navbar-item mr-6 navbarItemClass navbarTwo-color" href="Mat&Drikke.html">Mat/Drikke</a>
-                        <a class="navbar-item mr-6 navbarItemClass navbarTwo-color" href="Økonomi.html">Økonomi</a>
-                    </div>
-                </nav>
-            </div>
-
-            <div class="is-hidden-tablet">
-                <nav class="navbar-menu burger-bg" id="nav-links">
-                    <div class="navbar-start">
-                        <a class="navbar-item has-text-centered burger-css" href="index.html">Hjem</a>
-                        <a class="navbar-item has-text-centered burger-css" href="Ansatte.html">Ansatte</a>
-                        <a class="navbar-item has-text-centered burger-css" href="Restauranter.html">Resturanter</a>
-                        <a class="navbar-item has-text-centered burger-css" href="Mat&Drikke.html">Mat/Drikke</a>
-                        <a class="navbar-item has-text-centered burger-css" href="Økonomi.html">Økonomi</a>
-                    </div>
-                </nav>
-            </div>
-            
-            
-                <div class="navbar-item ml-4 is-hidden-mobile">
-                    <img src="images/Banner/icon3.png" style="max-height: 120px" alt="pizza-gyldne">
+        <div class="navbar-menu has-text-centered has-bg-img" id="nav-links">
+            <div class="navbar-start">
+                <div class="navbar-item">
+                    <button class="button link-button">
+                        <a href="index.html">Hjem</a>
+                    </button>
                 </div>
-            </div> 
+                <div class="navbar-item">
+                    <button class="button link-button">
+                        <a href="Ansatte.html">Ansatte</a>
+                    </button>
+                </div>
+                <div class="navbar-item">
+                    <button class="button link-button">
+                        <a href="Restauranter.html">Restauranter</a>
+                    </button>
+                </div>
+                <div class="navbar-item">
+                    <button class="button link-button">
+                        <a href="Mat&Drikke.html">Mat & Drikke</a>
+                    </button>
+                </div>
+                <div class="navbar-item">
+                    <button class="button link-button">
+                        <a href="Økonomi.html">Økonomi</a>
+                    </button>
+                </div>
+            </div>
+            <div class="navbar-end"></div>
+        </div>
     </nav>
+    <!--Slutt på Navbar-->
 
-<!--- Starten avstand mellom navbar og resten av siden -->
+    <!--- Starten avstand mellom navbar og resten av siden -->
     <section class="column">
         <div id="menu-section" class="columns is-multiline">
         </div>
     </section>
-<!-- Slutten avstand mellom navbar og resten av siden -->
+    <!-- Slutten avstand mellom navbar og resten av siden -->
 
 
 	

@@ -1,7 +1,3 @@
-import IngredienserModule from './IngredienserModule.js';
-
-// const allIngredients = IngredienserModule.getAllIngredienser();
-
 const matOgDrikkeModule = (function(){
 
     const matOgDrikke = [
@@ -339,48 +335,9 @@ const matOgDrikkeModule = (function(){
         }
     ];
 
-   
-    const prisPerPeson = () => {
-        let salg = " ";
-        salg = matOgdrikke.pris - matOgdrikke.kostnad
-        if(matOgdrikke.kategori == "drikke"){
-            return (salg + matOgdrikke.pris) - matOgdrikke.kostnad;
-        }
-    }
-
-
-
-
-
-    /*
-
-    const muligeIngredienser = IngredienserModule.getAllIngredienser;
-
-    // Funksjon som beregner kostnad på noe på menyen utifra kostnad på ingrediensene
-    const getKostnad = () => {
-        let kostnad = 0
-        this.ingredienser.forEach(rettIngrediens => {
-            muligeIngredienser.forEach(ingrediens => {
-                if (rettIngrediens == ingrediens.navn){
-                    kostnad += ingrediens.kostnadPerRett;
-                };
-            });
-        });
-        return kostnad;
-    };
-
-    // Funksjon som beregner prisen på noe på menyen
-    const getPris = () => {
-        pris = this.kostnad * 2;
-        return pris;
-    };
-    */
-    
-    
-
     const getAllMatOgDrikke = () => matOgDrikke;
 
-    return {getAllMatOgDrikke, prisPerPeson};
+    return {getAllMatOgDrikke};
 
 }());
 

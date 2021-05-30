@@ -180,7 +180,12 @@ const generateRestauranter = (chosenArray, addButtonHasOnclick) => {
     const addPopup = document.querySelector("#add-popup");
 
     searchButton.addEventListener("click", () => {
-        generateRestauranter(SearchModule.filterByChoice(alleRestauranter, searchKey, searchValue), addButtonHasOnclick);
+        if(searchValue.value == "" ) {                
+            alert("Søkefeltet kan ikke være tomt");
+            searchValue.classList.add("red-input");
+        } else {
+            generateRestauranter(SearchModule.filterByChoice(alleRestauranter, searchKey, searchValue), addButtonHasOnclick);
+        }
     });
     
     showAllButton.addEventListener("click", () => {

@@ -234,14 +234,7 @@ const IngredienserModule = (function (){
         }
     ];
 
-    const getAllIngredienser = () => ingredienser;/*{
-        
-        for (let index = 0; index < ingredienser.length; index++) {
-            const allIngredients = ingredienser[index];
-            
-        }
-        
-    };*/
+    const getAllIngredienser = () => ingredienser;
 
     return {getAllIngredienser};
 

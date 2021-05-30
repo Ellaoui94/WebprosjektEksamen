@@ -74,11 +74,7 @@ const generateAnsatte = (chosenArray, addButtonHasOnclick) => {
     let popupHtmlText = "";
 
     chosenArray.forEach(ansatte => {
-        // Klasser på alle html-elementer er ikke satt ennå
-        // Denne delen er generelt uferdig
-
-
-        // For denne delen skal "restaurant-card-article" brukes til AddOnclickModule.addOnclickToButtons()
+        
         htmlText += `
             <article id="${ansatte.id}" class="column is-one-fifth ansatte-card-article">
                 <div class="card ansatte-card">
@@ -107,10 +103,7 @@ const generateAnsatte = (chosenArray, addButtonHasOnclick) => {
                 </div>
             </article>
         `;
-        
 
-        
-        // Kan hende dette burde flyttes ut til Restauranter.html, og løses på samme måte som delete-popup
         popupHtmlText += `
             <article id="popup${ansatte.id}" class="modal ansatt-popup">
                 <div id="modalBg${ansatte.id}" class="modal-background"></div>
@@ -196,13 +189,17 @@ const generateAnsatte = (chosenArray, addButtonHasOnclick) => {
 
     const addButton = document.querySelector("#add-button");
 
-    // funskjon for å kunne søke ved å trykke på enter
+    // Funskjon for å kunne søke ved å trykke på enter
+    // Vi valgte å ikke implementere denne, da den kun ville være knytte til søk, og sidene har mange knapper
+    // Vi beholder fortsatt koden (kommentert ut), for å vise at vi fikk dette til
+    /*
     searchValue.addEventListener("keyup", function(event) {
         if (event.keyCode === 13) {
             
             searchButton.click();
         }
     });
+    */
 
     
    
@@ -210,22 +207,13 @@ const generateAnsatte = (chosenArray, addButtonHasOnclick) => {
 
     searchButton.addEventListener("click", () => {
 
-        if(searchValue.value == "" )
-            {
-                
-                alert("Name must be filled out");
-                searchValue.classList.add("red-input");
-                //searchValue.style.borderColor = "red";
-                return false;
-            
-        } if(searchValue.value != alleAnsatte){
-            alert("Dette finnes ikke i databasen, søk på noe annet")
-        }else {
-
+        if(searchValue.value == "" ) {                
+            alert("Søkefeltet kan ikke være tomt");
+            searchValue.classList.add("red-input");
+        } else {
             generateAnsatte(SearchModule.filterByChoice(alleAnsatte, searchKey, searchValue), addButtonHasOnclick);
         };
 
-        //  searchValue.style.borderColor = "green";
     });
 
 
@@ -241,11 +229,6 @@ const generateAnsatte = (chosenArray, addButtonHasOnclick) => {
 };
 
 generateAnsatte(alleAnsatte, addButtonHasOnclick);
-
-
-
-
-
 
 denyDeleteButton.addEventListener("click", () => {
 deletePopup.classList.remove("is-active");

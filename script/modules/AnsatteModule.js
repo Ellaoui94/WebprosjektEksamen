@@ -1,5 +1,4 @@
 const AnsatteModule = (function(){
-// skiftleder, kokk, servitør, leder, kjøkkenmedarbeider, souschef
     const ansatte = [
         {
             id: "20001",
@@ -467,19 +466,7 @@ const AnsatteModule = (function(){
 
     const getAllAnsatte = () => ansatte;
 
-    const getByArbeidssted = ( arbeidssted ) => ansatte.filter( ansatt => 
-        ansatt.arbeidssted.toLowerCase() === arbeidssted.toLowerCase() );
-
-        const getByNavn = ( navn ) => ansatte.filter( ansatt => 
-            ansatt.navn.toLowerCase() === navn.toLowerCase() );
-        
-        
-    
-
-    return {getAllAnsatte,
-            getByArbeidssted,
-            getByNavn
-        };
+    return {getAllAnsatte};
 
 }());
 
