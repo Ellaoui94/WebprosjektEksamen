@@ -3,17 +3,14 @@
 
 .delete-button {
     background: hsl(5, 74%, 33%);
-    border-radius: 25px;
 }
 
 .close-button {
     background: hsl(197, 61%, 25%);
-    border-radius: 25px;
 }
 
 .deny-delete-button {
     background: hsl(197, 61%, 25%);
-    border-radius: 25px;
 }
 
 .deny-add-button {
@@ -26,7 +23,6 @@
 
 .save-button {
     background: hsl(125, 100%, 19%);
-    border-radius: 25px;
 }
 
 .search-button {
@@ -35,6 +31,10 @@
 
 .show-all-button {
     background: hsl(197, 61%, 25%);
+}
+
+.link-button {
+    background: hsl(25, 42%, 28%);
 }
 
 .button {
@@ -49,12 +49,10 @@
 
 .edit-button {
     background: hsl(125, 100%, 19%);
-    border-radius: 25px;
 }
 
 .confirm-delete-button {
     background: hsl(5, 74%, 33%);
-    border-radius: 25px;
 }
 
 .add-button {
@@ -77,6 +75,7 @@
 /* Bakgrunns farge */
 html {
     background: hsl(0, 0%, 90%);
+    scroll-behavior: smooth;
 }
 
 /* CSS for navbaren med bilde */

@@ -11,161 +11,158 @@
     <script type="module" src="script/index-script.js"></script>
     <title>Hjem - Gyldne Pizza</title>
 </head>
-<body> 
+<body>
 
-<!--Starten av Navbar -->
-    <nav class="navbar has-bg-img" role="navigation" aria-label="main navigation">
+    <!--Start av Navbar-->
+    <nav class="navbar has-bg-img">
         <div class="navbar-brand">
-            <a class="navbar-item" href="index.html">
-                <img src="images/Banner/pizza-icon1.png" style="max-height: 120px" alt="pizza-logo">
+            <!--<img src="images/Banner/pizza-icon1.png" style="max-height: 120px" alt="pizza-logo">-->
+            <img src="images/Banner/black-gyldne-pizza.png" style="max-height: 120px" alt="pizza-gyldne">
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
             </a>
-            <div class="navbar-item">
-                <img src="images/Banner/black-gyldne-pizza.png" style="max-height: 120px" alt="pizza-gyldne">
+        </div>
+        <div class="navbar-menu has-text-centered has-bg-img" id="nav-links">
+            <div class="navbar-start">
+                <div class="navbar-item">
+                    <button class="button link-button">
+                        <a href="index.html">Hjem</a>
+                    </button>
+                </div>
+                <div class="navbar-item">
+                    <button class="button link-button">
+                        <a href="Ansatte.html">Ansatte</a>
+                    </button>
+                </div>
+                <div class="navbar-item">
+                    <button class="button link-button">
+                        <a href="Restauranter.html">Restauranter</a>
+                    </button>
+                </div>
+                <div class="navbar-item">
+                    <button class="button link-button">
+                        <a href="Mat&Drikke.html">Mat & Drikke</a>
+                    </button>
+                </div>
+                <div class="navbar-item">
+                    <button class="button link-button">
+                        <a href="Økonomi.html">Økonomi</a>
+                    </button>
+                </div>
             </div>
-            <a role="button" class="navbar-burger" id="burger">
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-		        <span></span>
-            </a>
-        </div>
-
-        <div class="">
-            <nav class="navbar-menu">
-                <div class="navbar-start">
-                    <a class="navbar-item mr-6 navbarItemClass navbarTwo-color" href="index.html">Hjem</a>
-                    <a class="navbar-item mr-6 navbarItemClass navbarTwo-color" href="Ansatte.html">Ansatte</a>
-                    <a class="navbar-item mr-6 navbarItemClass navbarTwo-color" href="Restauranter.html">Resturanter</a>
-                    <a class="navbar-item mr-6 navbarItemClass navbarTwo-color" href="Mat&Drikke.html">Mat/Drikke</a>
-                    <a class="navbar-item mr-6 navbarItemClass navbarTwo-color" href="Økonomi.html">Økonomi</a>
-                </div>
-            </nav>
-        </div>
-
-        <div class="is-hidden-tablet">
-            <nav class="navbar-menu burger-bg" id="nav-links">
-                <div class="navbar-start">
-                    <a class="navbar-item has-text-centered burger-css" href="index.html">Hjem</a>
-                    <a class="navbar-item has-text-centered burger-css" href="Ansatte.html">Ansatte</a>
-                    <a class="navbar-item has-text-centered burger-css" href="Restauranter.html">Resturanter</a>
-                    <a class="navbar-item has-text-centered burger-css" href="Mat&Drikke.html">Mat/Drikke</a>
-                    <a class="navbar-item has-text-centered burger-css" href="Økonomi.html">Økonomi</a>
-                </div>
-            </nav>
-        </div>
-
-        <div class="navbar-item ml-4 is-hidden-tablet is-hidden-mobile">
-            <img src="images/Banner/icon3.png" style="max-height: 120px" alt="pizza-gyldne">
+            <div class="navbar-end"></div>
         </div>
     </nav>
-<!--Slutten av navbar --> 
+    <!--Slutt på Navbar-->
 
-<!--Starten av Popp up-->
-<article id="popup-rett" class="modal ansatt-popup">
-    <div id="modalBg" class="modal-background"></div>
-    <div class="modal-content py-5 px-5">
-        <div class="card restaurant-popup">
-            <div id="out-rett"></div>
+    <!--Starten av Popup-->
+    <article id="popup-rett" class="modal ansatt-popup">
+        <div id="modalBg" class="modal-background"></div>
+        <div class="modal-content py-5 px-5">
+            <div class="card restaurant-popup">
+                <div id="out-rett"></div>
+            </div>
         </div>
-    </div>
-</article>  
-<article id="popup-restaurant" class="modal ansatt-popup">
-    <div id="modalBg" class="modal-background"></div>
-    <div class="modal-content py-5 px-5">
-        <div class="card restaurant-popup">
-            <div id="out-restaurant"></div>
+    </article>  
+    <article id="popup-restaurant" class="modal ansatt-popup">
+        <div id="modalBg" class="modal-background"></div>
+        <div class="modal-content py-5 px-5">
+            <div class="card restaurant-popup">
+                <div id="out-restaurant"></div>
+            </div>
         </div>
-    </div>
-</article>  
-<article id="popup-ansatt" class="modal ansatt-popup">
-    <div id="modalBg" class="modal-background"></div>
-    <div class="modal-content py-5 px-5">
-        <div class="card restaurant-popup">
-            <div id="out-ansatt"></div>
+    </article>  
+    <article id="popup-ansatt" class="modal ansatt-popup">
+        <div id="modalBg" class="modal-background"></div>
+        <div class="modal-content py-5 px-5">
+            <div class="card restaurant-popup">
+                <div id="out-ansatt"></div>
+            </div>
         </div>
-    </div>
-</article>
-<!--Slutten av Popp up-->
-    
-
-<main class="container mt-6">
-    <div class="columns">
-        <div class="columns column is-4 mt-1">
-            <article class="column">
-                <div class="card">
-                    <section class="card-header">
-                        <h3 class="card-header-title is-centered">For denne måneden:</h3>
-                    </section>
-                    <section class="card-content menu">
-                        <ul class="menu-list">
-                            <li><a>Mest Solgte Pizza</a></li>
-                            <li><a>Restaurant med høyest inntekt</a></li>
-                            <li><a>Månedens Ansatt</a></li>
-                        </ul>
-                    </section>
-                    <section class="card-footer">
-                        <p class="card-footer-item">Ha en fin dag!</p>
-                    </section>
-                </div>
-            </article>  
+    </article>
+    <!--Slutten av Popup-->
+        
+    <!--Start av Main-->
+    <main class="container mt-6">
+        <div class="columns">
+            <div class="columns column is-4 mt-1">
+                <article class="column">
+                    <div class="card">
+                        <section class="card-header">
+                            <h3 class="card-header-title is-centered">For denne måneden:</h3>
+                        </section>
+                        <section class="card-content menu">
+                            <ul class="menu-list">
+                                <li><a>Mest Solgte Pizza</a></li>
+                                <li><a>Restaurant med høyest inntekt</a></li>
+                                <li><a>Månedens Ansatt</a></li>
+                            </ul>
+                        </section>
+                        <section class="card-footer">
+                            <p class="card-footer-item">Ha en fin dag!</p>
+                        </section>
+                    </div>
+                </article>  
+            </div>
+            <div class="columns column is-multiline is-8">
+                <article class="column is-5 mt-5 mr-3 ml-3">
+                    <div class="card is-6">
+                        <section class="card-header">
+                            <h3 class="card-header-title is-centered">Mat & Drikke</h3>
+                        </section>
+                        <section class="card-content has-text-centered">
+                            <img src="images/Banner/icon4.png" alt="mat&drikke">
+                        </section>
+                        <section class="card-footer">
+                            <button class="button card-footer-item link-button"> <a style="text-decoration: none;" href="Mat&Drikke.html">Gå til Mat & Drikke</a> </button>
+                        </section>        
+                    </div>
+                </article>
+                <article class="column is-5 mt-5 mr-3 ml-3">
+                    <div class="card is-6">
+                        <section class="card-header">
+                            <h3 class="card-header-title is-centered">Restauranter</h3>
+                        </section>
+                        <section class="card-content has-text-centered">
+                            <img src="images/building.png" alt="restaurant">
+                        </section>
+                        <section class="card-footer">
+                            <button class="button card-footer-item link-button"> <a style="text-decoration: none;" href="Restauranter.html">Gå til Restaurant</a> </button>
+                        </section>        
+                    </div>
+                </article>
+                <article class="column is-5 mt-5 mr-3 ml-3">
+                    <div class="card is-6">
+                        <section class="card-header">
+                            <h3 class="card-header-title is-centered">Ansatte</h3>
+                        </section>
+                        <section class="card-content has-text-centered">
+                            <img src="images/Ansatte/kokk.png" alt="ansatte">
+                        </section>
+                        <section class="card-footer">
+                            <button class="button card-footer-item link-button"> <a style="text-decoration: none;" href="Ansatte.html">Gå til Mat & Drikke</a> </button>
+                        </section>        
+                    </div>
+                </article>
+                <article class="column is-5 mt-5 mr-3 ml-3">
+                    <div class="card is-6">
+                        <section class="card-header">
+                            <h3 class="card-header-title is-centered">Økonomi</h3>
+                        </section>
+                        <section class="card-content has-text-centered">
+                            <img src="images/knapp-iconer/budghet.png" alt="økonomi">
+                        </section>
+                        <section class="card-footer">
+                            <button class="button card-footer-item link-button"> <a style="text-decoration: none;" href="Økonomi.html">Gå til Økonomi</a> </button>
+                        </section>        
+                    </div>
+                </article>
+            </div>
         </div>
-        <div class="columns column is-multiline is-8">
-            <article class="column is-5 mt-5 mr-3 ml-3">
-                <div class="card is-6">
-                    <section class="card-header">
-                        <h3 class="card-header-title is-centered">Mat & Drikke</h3>
-                    </section>
-                    <section class="card-content has-text-centered">
-                        <img src="images/Banner/icon4.png" alt="mat&drikke">
-                    </section>
-                    <section class="card-footer">
-                        <button class="button card-footer-item is-dark"> <a style="text-decoration: none;" href="Mat&Drikke.html">Gå til Mat & Drikke</a> </button>
-                    </section>        
-                </div>
-            </article>
-            <article class="column is-5 mt-5 mr-3 ml-3">
-                <div class="card is-6">
-                    <section class="card-header">
-                        <h3 class="card-header-title is-centered">Restauranter</h3>
-                    </section>
-                    <section class="card-content has-text-centered">
-                        <img src="images/building.png" alt="restaurant">
-                    </section>
-                    <section class="card-footer">
-                        <button class="button card-footer-item is-dark"> <a style="text-decoration: none;" href="Restauranter.html">Gå til Restaurant</a> </button>
-                    </section>        
-                </div>
-            </article>
-            <article class="column is-5 mt-5 mr-3 ml-3">
-                <div class="card is-6">
-                    <section class="card-header">
-                        <h3 class="card-header-title is-centered">Ansatte</h3>
-                    </section>
-                    <section class="card-content has-text-centered">
-                        <img src="images/Ansatte/kokk.png" alt="ansatte">
-                    </section>
-                    <section class="card-footer">
-                        <button class="button card-footer-item is-dark"> <a style="text-decoration: none;" href="Ansatte.html">Gå til Mat & Drikke</a> </button>
-                    </section>        
-                </div>
-            </article>
-            <article class="column is-5 mt-5 mr-3 ml-3">
-                <div class="card is-6">
-                    <section class="card-header">
-                        <h3 class="card-header-title is-centered">Økonomi</h3>
-                    </section>
-                    <section class="card-content has-text-centered">
-                        <img src="images/knapp-iconer/budghet.png" alt="økonomi">
-                    </section>
-                    <section class="card-footer">
-                        <button class="button card-footer-item is-dark"> <a style="text-decoration: none;" href="Økonomi.html">Gå til Mat & Drikke</a> </button>
-                    </section>        
-                </div>
-            </article>
-        </div>
-    </div>
-</main> 
+    </main>
+    <!--Slutt på Main-->
 
 </body>
 </html>

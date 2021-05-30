@@ -7,7 +7,7 @@ import AddOnclickModule from "./modules/AddOnclickModule.js";
 //Burger
 
 const navbarBurger = document.querySelector(".navbar-burger")
-const navbarMenu = document.querySelector("#nav-links");
+const navbarMenu = document.querySelector(".navbar-menu");
 
 navbarBurger.addEventListener("click", ( e ) => {
 	navbarBurger.classList.toggle("is-active")
