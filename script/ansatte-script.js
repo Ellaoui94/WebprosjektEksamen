@@ -232,7 +232,7 @@ searchButton.addEventListener("click", () => {
 };
 
       //  searchValue.style.borderColor = "green";
-        }
+}
 
 
 
