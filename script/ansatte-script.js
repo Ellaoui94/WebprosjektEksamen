@@ -219,7 +219,7 @@ const generateAnsatte = (chosenArray, addButtonHasOnclick) => {
                 return false;
             
         } if(searchValue.value != alleAnsatte){
-            alert("Dette finnes ikke i databasen")
+            alert("Dette finnes ikke i databasen, søk på noe annet")
         }else {
 
             generateAnsatte(SearchModule.filterByChoice(alleAnsatte, searchKey, searchValue), addButtonHasOnclick);
