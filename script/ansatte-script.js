@@ -205,15 +205,7 @@ const generateAnsatte = (chosenArray, addButtonHasOnclick) => {
     });
 
     
-    //Validering av inputfelt 
-  //  searchButton.addEventListener("click", () => {
-
-        
-        
-    
-  //  });
-
-
+   
 
 
     searchButton.addEventListener("click", () => {
@@ -226,7 +218,9 @@ const generateAnsatte = (chosenArray, addButtonHasOnclick) => {
                 //searchValue.style.borderColor = "red";
                 return false;
             
-        } else {
+        } if(searchValue.value != alleAnsatte){
+            alert("Dette finnes ikke i databasen")
+        }else {
 
             generateAnsatte(SearchModule.filterByChoice(alleAnsatte, searchKey, searchValue), addButtonHasOnclick);
         };
