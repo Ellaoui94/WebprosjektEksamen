@@ -206,9 +206,19 @@ const generateAnsatte = (chosenArray, addButtonHasOnclick) => {
 
     
     //Validering av inputfelt 
-    searchButton.addEventListener("click", () => {
+  //  searchButton.addEventListener("click", () => {
 
-        if(searchValue.value == "" )
+        
+        
+    
+  //  });
+
+
+
+
+searchButton.addEventListener("click", () => {
+
+    if(searchValue.value == "" )
         {
             
             alert("Name must be filled out");
@@ -217,19 +227,14 @@ const generateAnsatte = (chosenArray, addButtonHasOnclick) => {
             return false;
         
         }else {
-        searchValue.style.borderColor = "green";
+
+            generateAnsatte(SearchModule.filterByChoice(alleAnsatte, searchKey, searchValue), addButtonHasOnclick);
+};
+
+      //  searchValue.style.borderColor = "green";
         }
-        
-    
-    });
 
 
-
-
-searchButton.addEventListener("click", () => {
-
-generateAnsatte(SearchModule.filterByChoice(alleAnsatte, searchKey, searchValue), addButtonHasOnclick);
-});
 
 showAllButton.addEventListener("click", () => {
 generateAnsatte(alleAnsatte, addButtonHasOnclick);
